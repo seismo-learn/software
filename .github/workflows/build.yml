@@ -13,8 +13,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0  # Fetch all history so that Hugo .GitInfo and .Lastmod work
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -25,15 +23,17 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          sudo git clone --branch release --depth 1 'https://github.com/adobe-fonts/source-code-pro.git' /usr/share/fonts/opentype
-          fc-cache -f -v
 
       - name: Build sphinx document
-        run: |
-          make html
+        run: make html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
+        if: success() && github.event_name == 'push'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build/html
+          # Only keep the latest commit to avoid bloating the repository
+          force_orphan: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
