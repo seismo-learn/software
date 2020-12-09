@@ -25,14 +25,14 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build sphinx document
-        run: make html
+        run: make dirhtml
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: success() && github.event_name == 'push'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/html
+          publish_dir: ./build/dirhtml
           # Only keep the latest commit to avoid bloating the repository
           force_orphan: true
           user_name: 'github-actions[bot]'
