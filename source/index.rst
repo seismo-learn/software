@@ -7,7 +7,7 @@
    :caption: 地震波
    :hidden:
 
-   seismic-wave/index
+   ray-theory
 
 
 .. toctree::
