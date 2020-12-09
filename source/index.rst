@@ -7,7 +7,7 @@
    :caption: 地震波
    :hidden:
 
-   ray-theory
+   taup
 
 
 .. toctree::
