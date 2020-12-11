@@ -2,6 +2,23 @@
 
 ![build](https://github.com/seismo-learn/software/workflows/Build%20Website/badge.svg)
 
+## 构建文档
+
+本文档使用 [Sphinx](http://www.sphinx-doc.org/) 构建得到。Sphinx 是基于 Python 的
+文档生成工具。
+
+1. 下载文档源码
+
+		git clone --depth=50 https://github.com/seismo-learn/software.git
+
+2.  安装文档所需依赖
+
+        cd software/
+        pip install -r requirements.txt
+
+3.  编译生成HTML格式的文档。生成的文档位于 `build/html/` 目录下
+
+        make html
 
 ## 许可协议
 
