@@ -16,14 +16,14 @@
 
 1. 通过 GitHub 修改教程源码并提交 Pull Request
 2. 在 GitHub 上提交 Issue
-3. 发送相关建议或投稿至 `seisman.info@gmail.com` | `coreman.seism@gmail.com`
+3. 在 GitHub Discussions 留言: General | Ideas | Q&A
 
 ## 分支模型
 
 项目中存在如下长期分支：
 
 - `main`: 主分支，对应最新版本的教程
-- `gh-pages`: 用户存放网页的分支，自动更新，无需人工修改
+- `gh-pages`: 存放网页的分支，自动更新，无需人工修改
 
 其它分支均属于短期分支，在合并到 `main` 分支后会删除。
 
