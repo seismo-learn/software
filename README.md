@@ -25,6 +25,11 @@
 
         make html
 
+## 文档维护
+
+本文档尚有很多不完善之处，欢迎使用这些软件的用户参与到教程的维护与更新中。
+详情见 [维护指南](CONTRIBUTING.md)。
+
 ## 许可协议
 
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh)
