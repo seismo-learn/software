@@ -1,6 +1,8 @@
 # 地震学常用软件教程
 
 ![build](https://github.com/seismo-learn/software/workflows/Build%20Website/badge.svg)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh)
+
 
 本文档主要介绍地震学常用软件，包括简介、安装、用法等。
 
@@ -31,8 +33,6 @@
 详情见 [维护指南](CONTRIBUTING.md)。
 
 ## 许可协议
-
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh)
 
 本作品采用 [知识共享署名-非商业性使用 4.0 国际许可协议 (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh) 。
 任何人都可以自由地分享、修改本作品，但必须遵循如下条件：
