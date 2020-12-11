@@ -1,6 +1,11 @@
-# software
+# 地震学常用软件教程
 
 ![build](https://github.com/seismo-learn/software/workflows/Build%20Website/badge.svg)
+
+本文档主要介绍地震学常用软件，包括简介、安装、用法等。
+
+- 项目主页：https://github.com/seismo-learn/software
+- 网页版：https://seismo-learn.org/software/
 
 ## 构建文档
 
@@ -19,6 +24,11 @@
 3.  编译生成HTML格式的文档。生成的文档位于 `build/html/` 目录下
 
         make html
+
+## 文档维护
+
+本文档尚有很多不完善之处，欢迎使用这些软件的用户参与到教程的维护与更新中。
+详情见 [维护指南](CONTRIBUTING.md)。
 
 ## 许可协议
 
