@@ -61,4 +61,18 @@ html_context = {
     "github_version": "main",
     "conf_py_path": "/source/",
     "theme_vcs_pageview_mode": "blob",
+    "menu_links": [
+        (
+            '<i class="fa fa-github fa-fw"></i> 源代码',
+            "https://github.com/seismo-learn/software",
+        ),
+        (
+            '<i class="fa fa-edit fa-fw"></i> 贡献指南',
+            "https://github.com/seismo-learn/software/blob/main/CONTRIBUTING.md",
+        ),
+        (
+            '<i class="fa fa-comments fa-fw"></i> 参与讨论',
+            "https://github.com/seismo-learn/software/discussions",
+        ),
+    ],
 }
