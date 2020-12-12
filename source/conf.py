@@ -53,6 +53,7 @@ import sphinx_rtd_theme
 html_theme = "sphinx_rtd_theme"
 html_static_path = []
 html_extra_path = []
+html_last_updated_fmt = "%Y年%m月%d日"
 
 html_context = {
     "display_github": True,
