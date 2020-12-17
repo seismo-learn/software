@@ -54,6 +54,7 @@ html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
 html_extra_path = []
 html_last_updated_fmt = "%Y年%m月%d日"
+html_title = project
 
 html_context = {
     "favicon" : "favicon.ico",
