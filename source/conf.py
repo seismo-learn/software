@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Software"
+project = '地震"学"软件'
 author = "seismo-learn"
 copyright = f"2020, {author}."
 
