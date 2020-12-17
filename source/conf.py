@@ -65,7 +65,7 @@ html_context = {
     "theme_vcs_pageview_mode": "blob",
     "menu_links": [
         (
-            '<i class="fa fa-github fa-fw"></i> 源代码',
+            '<i class="fa fa-github fa-fw"></i> 网站源码',
             "https://github.com/seismo-learn/software",
         ),
         (
