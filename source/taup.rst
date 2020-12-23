@@ -64,12 +64,10 @@ TauP 提供了多个工具:
 
     # 在 Ubuntu 上
     $ sudo apt update
-    $ sudo apt install default-jre
-    $ sudo apt install default-jdk
-    $ sudo apt upgrade
+    $ sudo apt install default-jre default-jdk
 
     # 在 macOS 上
-    $ brew cask install java
+    $ brew install openjdk
 
 TauP 最新版本为 2.4.5，该版本要求 Java 版本大于 1.8。若你的机器的 Java 版本小于 1.8，
 可以考虑下载使用旧版本的 TauP。但要注意，旧版本 TauP 可能存在已知的 BUG。
@@ -88,8 +86,7 @@ TauP 最新版本为 2.4.5，该版本要求 Java 版本大于 1.8。若你的�
 
 5. 修改环境变量::
 
-    $ echo 'export TAUPHOME=/opt/TauP-2.4.5' >> ~/.bashrc
-    $ echo 'export PATH=${TAUPHOME}/bin:${PATH}' >> ~/.bashrc
+    $ echo 'export PATH=/opt/TauP-2.4.5/bin:${PATH}' >> ~/.bashrc
     $ source ~/.bashrc
 
 6. 执行测试
