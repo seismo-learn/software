@@ -6,7 +6,7 @@
 :源码地址: https://github.com/seismo-learn/software
 :作者: `seismo-learn <https://seismo-learn.org>`__
 :最新版本: v1.2.3 (2020-01-01)
-:编程语言: Python + C
+:编程语言: Python、C
 :许可协议: GPL/LGPL/MIT/未知
 
 :教程作者: `seismo-learn <https://seismo-learg.org>`__
