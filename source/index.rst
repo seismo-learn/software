@@ -22,5 +22,5 @@
    :caption: 附录
    :hidden:
 
-   template
+   template/index
 
