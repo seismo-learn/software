@@ -60,6 +60,7 @@ jobs:
 
       - name: Find Comment
         uses: peter-evans/find-comment@v1
+        if: github.event_name == 'pull_request'
         id: fc
         with:
           issue-number: ${{ github.event.pull_request.number }}
@@ -67,7 +68,7 @@ jobs:
           body-includes: This comment was written by the Continuous Documentation bot!
 
       - name: Create comment
-        if: ${{ steps.fc.outputs.comment-id == 0 }}
+        if: steps.fc.outputs.comment-id == 0 && github.event_name == 'pull_request'
         uses: peter-evans/create-or-update-comment@v1
         with:
           issue-number: ${{ github.event.pull_request.number }}
@@ -78,7 +79,7 @@ jobs:
             - **Commit hash**: ${{ github.event.pull_request.head.sha }}
 
       - name: Update comment
-        if: ${{ steps.fc.outputs.comment-id != 0 }}
+        if: steps.fc.outputs.comment-id != 0 && github.event_name == 'pull_request'
         uses: peter-evans/create-or-update-comment@v1
         with:
           comment-id: ${{ steps.fc.outputs.comment-id }}
