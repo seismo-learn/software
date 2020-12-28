@@ -75,7 +75,7 @@ jobs:
           body: |
             This comment was written by the Continuous Documentation bot!
 
-            - **Preview**: http://seismo-learn.org/sitepreview/${{ github.repository }}/${{ github.head_ref }}
+            - **Preview**: https://seismo-learn.org/sitepreview/${{ github.repository }}/${{ github.head_ref }}
             - **Commit hash**: ${{ github.event.pull_request.head.sha }}
 
       - name: Update comment
@@ -87,5 +87,5 @@ jobs:
           body: |
             This comment was written by the Continuous Documentation bot!
 
-            - **Preview**: http://seismo-learn.org/sitepreview/${{ github.repository }}/${{ github.head_ref }}
+            - **Preview**: https://seismo-learn.org/sitepreview/${{ github.repository }}/${{ github.head_ref }}
             - **Commit hash**: ${{ github.event.pull_request.head.sha }}
