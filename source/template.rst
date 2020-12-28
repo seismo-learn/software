@@ -10,7 +10,7 @@
 :编程语言: Python、C
 :许可协议: GPL、LGPL、MIT、未知
 
-:教程作者: `seismo-learn <https://seismo-learg.org>`__
+:教程作者: `seismo-learn <https://seismo-learn.org>`__
 :教程更新日期: 2020-01-01
 
 .. note::
