@@ -5,7 +5,7 @@
 :主页: https://www.seis.sc.edu/taup/
 :源码地址: https://github.com/crotwell/TauP
 :作者: `Philip Crotwell <https://sc.edu/study/colleges_schools/artsandsciences/earth_ocean_and_environment/our_people/directory/crotwell_philip.php>`__
-:最新版本: v2.4.5 (2017-11-03)
+:最新版本: v2.4.5 (2017-11-02)
 :适用平台: Linux、macOS、Windows
 :编程语言: Java
 :许可协议: GPL
