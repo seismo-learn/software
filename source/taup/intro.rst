@@ -1,16 +1,25 @@
 简介
 ====
 
-TauP 是一款常用于计算地震波走时和路径的 Java 程序。
+:软件名称: TauP
+:主页: https://www.seis.sc.edu/taup/
+:源码地址: https://github.com/crotwell/TauP
+:作者: `Philip Crotwell <https://sc.edu/study/colleges_schools/artsandsciences/earth_ocean_and_environment/our_people/directory/crotwell_philip.php>`__
+:最新版本: v2.4.5 (2017-11-03)
+:适用平台: Linux、macOS、Windows
+:编程语言: Java
+:许可协议: GPL
 
-基本信息
---------
+:教程作者: `seismo-learn <https://seismo-learn.org>`__
+:教程更新日期: 2020-12-28
 
-- 主页： https://www.seis.sc.edu/taup/
-- 源码： https://github.com/crotwell/TauP
-- 语言： Java
-- 平台： 跨平台，Windows、Linux、Mac 等
-- 原理： 与 ttimes 一样，基于 `Buland & Chapman (1983) <https://pubs.geoscienceworld.org/ssa/bssa/article-abstract/73/5/1271/118430/The-computation-of-seismic-travel-times?redirectedFrom=fulltext>`_ 提出的方法
+.. note::
+
+   本教程仅在 Linux 平台下使用 v2.4.5 测试通过，其余版本或平台可能有所差异。
+
+--------------------------------------------------------------------------
+
+TauP 是一款常用于计算地震波走时和路径的 Java 程序。其原理与 ttimes 一样，基于 `Buland & Chapman (1983) <https://pubs.geoscienceworld.org/ssa/bssa/article-abstract/73/5/1271/118430/The-computation-of-seismic-travel-times?redirectedFrom=fulltext>`_ 提出的方法。
 
 功能与特色
 ----------
