@@ -38,7 +38,7 @@ TauP 最新版本为 2.4.5，该版本要求 Java 版本大于 1.8。若你的�
 
 4. 安装::
 
-    $ sudo mv TauP-2.4.5 /opt
+    $ sudo mv TauP-2.4.5 /opt/
 
 5. 修改环境变量::
 
