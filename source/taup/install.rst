@@ -19,7 +19,7 @@
     $ sudo apt update
     $ sudo apt install default-jre default-jdk
 
-    # 在 macOS 上
+    # macOS homebrew用户
     $ brew install openjdk
 
 TauP 最新版本为 2.4.5，该版本要求 Java 版本大于 1.8。若你的机器的 Java 版本小于 1.8，
