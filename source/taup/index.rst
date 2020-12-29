@@ -12,7 +12,7 @@ TauP
 
 ----
 
-:教程作者: `seismo-learn <https://seismo-learn.org>`__
+:教程作者: `田冬冬 <https://me.seisman.info/>`__ (作者)、`姚家园 <https://github.com/core-man>`__ (审稿)
 :教程更新日期: 2020-12-28
 
 ----
