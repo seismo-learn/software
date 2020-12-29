@@ -19,7 +19,7 @@
 
 --------------------------------------------------------------------------
 
-TauP 是一款常用于计算地震波走时和路径的 Java 程序。其原理与 ttimes 一样，基于 `Buland & Chapman (1983) <https://pubs.geoscienceworld.org/ssa/bssa/article-abstract/73/5/1271/118430/The-computation-of-seismic-travel-times?redirectedFrom=fulltext>`_ 提出的方法。
+TauP 用于计算一维球状地球速度模型下，地震震相的走时和路径。
 
 功能与特色
 ----------
