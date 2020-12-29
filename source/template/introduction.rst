@@ -33,7 +33,7 @@
 ----
 
 有引用文献的软件应列出其引用文献。
-建议访问 https://zbib.org 网站，通过标题、DOI或网址搜索相关文献，
+建议访问 https://zbib.org 网站，通过标题、DOI 或网址搜索相关文献，
 然后选择 **American Geophysics Union (AGU)** 风格，然后导出到剪贴板。
 例如：
 
