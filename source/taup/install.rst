@@ -18,9 +18,9 @@
     # Fedora
     $ sudo dnf install java-latest-openjdk
 
-    # 在 Ubuntu 上
+    # Ubuntu/Debian
     $ sudo apt update
-    $ sudo apt install default-jre default-jdk
+    $ sudo apt install default-jdk
 
     # macOS homebrew用户
     $ brew install openjdk
