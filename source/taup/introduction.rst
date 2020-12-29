@@ -29,3 +29,11 @@ TauP 提供了多个工具:
 - 图形界面： ``taup``
 - 交互式： ``taup_console``
 - 命令行工具： ``taup_time`` 、 ``taup_pierce`` 、 ``taup_setsac`` 、 ``taup_path`` 、 ``taup_curve`` 、 ``taup_create`` 、 ``taup_table`` 、 ``taup_wavefront``
+
+引用
+----
+
+- Crotwell, H. P., Owens, T. J., & Ritsema, J. (1999).
+  The TauP Toolkit: Flexible Seismic Travel-time and Ray-path Utilities.
+  *Seismological Research Letters*, 70(2), 154–160.
+  https://doi.org/10.1785/gssrl.70.2.154
