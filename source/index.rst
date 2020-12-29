@@ -17,3 +17,10 @@
 
    obspy
 
+.. toctree::
+   :maxdepth: 3
+   :caption: 附录
+   :hidden:
+
+   template/index
+
