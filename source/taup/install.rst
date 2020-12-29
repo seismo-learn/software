@@ -12,8 +12,11 @@
 
 否则需要先安装 Java 运行环境::
 
-    # 在 CentOS 7 上
+    # CentOS/RHEL
     $ sudo yum install java
+    
+    # Fedora
+    $ sudo dnf install java-latest-openjdk
 
     # 在 Ubuntu 上
     $ sudo apt update
