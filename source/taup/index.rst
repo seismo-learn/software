@@ -3,5 +3,5 @@ TauP
 
 .. toctree::
 
-   intro
+   introduction
    install
