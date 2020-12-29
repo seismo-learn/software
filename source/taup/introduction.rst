@@ -28,7 +28,16 @@ TauP 提供了多个工具:
 
 - 图形界面： ``taup``
 - 交互式： ``taup_console``
-- 命令行工具： ``taup_time`` 、 ``taup_pierce`` 、 ``taup_setsac`` 、 ``taup_path`` 、 ``taup_curve`` 、 ``taup_create`` 、 ``taup_table`` 、 ``taup_wavefront``
+- 命令行工具：
+
+  - ``taup_time`` ：计算震相的走时、射线参数、出射角、入射角等
+  - ``taup_pierce`` ：计算震相在波速不连续面和指定深度的反射点和穿透点
+  - ``taup_path`` ：计算射线路径
+  - ``taup_wavefront`` ：计算波前面
+  - ``taup_curve`` ：计算走时曲线
+  - ``taup_table`` ：计算走时表
+  - ``taup_setsac`` ：将震相走时写入 SAC 头段中
+  - ``taup_create`` ：预计算速度模型
 
 引用
 ----
