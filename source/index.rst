@@ -7,7 +7,7 @@
    :caption: 地震波
    :hidden:
 
-   taup
+   taup/index
 
 
 .. toctree::
