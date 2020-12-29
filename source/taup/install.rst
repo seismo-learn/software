@@ -45,6 +45,6 @@ TauP 最新版本为 2.4.5，该版本要求 Java 版本大于 1.8。若你的�
     $ echo 'export PATH=/opt/TauP-2.4.5/bin:${PATH}' >> ~/.bashrc
     $ source ~/.bashrc
 
-6. 执行测试
+6. 检查安装是否成功
 
-终端键入 ``taup`` 若出现 TauP 图形界面则表示安装成功。
+    终端键入 ``taup`` 若出现 TauP 图形界面则表示安装成功。
