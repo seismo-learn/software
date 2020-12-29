@@ -28,3 +28,16 @@
 
 若想要为一个软件写教程，可直接复制本模板文件夹的全部内容，重命名，并更新
 软件的基本信息。
+
+引用
+----
+
+有引用文献的软件应列出其引用文献。
+建议访问 https://zbib.org 网站，通过标题、DOI或网址搜索相关文献，
+然后选择 **American Geophysics Union (AGU)** 风格，然后导出到剪贴板。
+例如：
+
+- Crotwell, H. P., Owens, T. J., & Ritsema, J. (1999).
+  The TauP Toolkit: Flexible Seismic Travel-time and Ray-path Utilities.
+  *Seismological Research Letters*, 70(2), 154–160.
+  https://doi.org/10.1785/gssrl.70.2.154
