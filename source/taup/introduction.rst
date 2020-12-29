@@ -14,7 +14,7 @@ TauP 用于计算一维球状分层模型下地震震相的走时和路径。
 4. 自带多个地球地震波速度参考模型：iasp91、prem、ak135 等
 5. 支持自定义速度模型
 6. 直接在球坐标系下求解方程，不必做展平变换，与部分震相的解析解相比，TauP 的最大误差为 0.01 秒，而 ttimes 的最大误差为 0.05 秒
-7. ObsPy 提供了 `TauP 端口 <https://docs.obspy.org/packages/obspy.taup.html>`__
+7. ObsPy 提供了 `TauP 的 Python 接口 <https://docs.obspy.org/packages/obspy.taup.html>`__
 
 TauP 目前还存在一些缺点：
 
