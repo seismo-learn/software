@@ -4,6 +4,7 @@
 :软件名称: Template
 :主页: https://seismo-learn.org
 :源码地址: https://github.com/seismo-learn/software
+:官方文档: https://seismo-learn.org/software/template/
 :作者: `seismo-learn <https://seismo-learn.org>`__
 :最新版本: v1.2.3 (2020-01-01)
 :适用平台: Linux、macOS、Windows
