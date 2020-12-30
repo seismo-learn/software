@@ -39,6 +39,15 @@ TauP 提供了多个工具:
   - ``taup_setsac`` ：将震相走时写入 SAC 头段中
   - ``taup_create`` ：预计算速度模型
 
+参考文献
+--------
+
+TauP 的实现原理基于如下文献：
+
+- Buland, R., & Chapman, C. H. (1983).
+  The computation of seismic travel times.
+  *Bulletin of the Seismological Society of America*, 73(5), 1271–1302.
+
 引用
 ----
 
