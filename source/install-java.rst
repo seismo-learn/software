@@ -8,7 +8,7 @@
 
 在终端键入 ``java --version``，若显示版本信息，则表示 Java 运行环境已安装::
 
-    $ java --version
+    $ java -version
     openjdk 14.0.2 2020-07-14
     OpenJDK Runtime Environment (build 14.0.2+12-46)
     OpenJDK 64-Bit Server VM (build 14.0.2+12-46, mixed mode, sharing)
