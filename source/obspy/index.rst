@@ -26,3 +26,4 @@ ObsPy
    :hidden:
 
    introduction
+   install
