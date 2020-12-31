@@ -15,7 +15,7 @@
    :caption: 数据处理
    :hidden:
 
-   obspy
+   obspy/index
 
 .. toctree::
    :maxdepth: 3
