@@ -22,4 +22,7 @@ ObsPy
 
    本教程仅在 Linux 和 macOS 平台下使用 v1.2.2 测试通过，其余版本或平台可能有所差异。
 
+.. toctree::
+   :hidden:
 
+   introduction
