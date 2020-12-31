@@ -1,7 +1,7 @@
 Java 运行环境
 =============
 
-:教程作者: `田冬冬 <https://me.seisman.info/>`__ (作者)、`姚家园 <https://github.com/core-man>`__ (审稿)
+:教程贡献者: `田冬冬 <https://me.seisman.info/>`__ (作者)、`姚家园 <https://github.com/core-man>`__ (审稿)
 :最近更新时间: 2020-12-31
 
 运行 Java 语言写的程序时，需要安装 Java 运行环境。
