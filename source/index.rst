@@ -23,4 +23,4 @@
    :hidden:
 
    template/index
-
+   install-java
