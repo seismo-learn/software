@@ -10,12 +10,6 @@ numpy、scipy 和 matplotlib。要利用 Python
 专门在做这一类事情，将科学计算所需要的模块都编译好，然后打包以发行版的形式
 供用户使用，Anaconda 就是最常用的科学计算发行版。
 
-主页： https://www.anaconda.com/
-
-.. raw:: html
-
-   <!--more-->
-
 Anaconda 的特点：
 
 -  包含了众多流行的科学、数学、工程、数据分析的 `Python
@@ -131,11 +125,3 @@ Anaconda 可以方便地提供 python2 的运行环境
 
 -  https://mirror.tuna.tsinghua.edu.cn/help/anaconda/
 -  https://mirror.tuna.tsinghua.edu.cn/help/pypi/
-
-修订历史
---------
-
--  2014-05-14: 初稿
--  2018-02-10: 不再使用pyenv；增加国内镜像；
--  2018-04-01: anaconda似乎不再提供免费的学术License，删除；
--  2018-04-19: 使用更加稳定的清华镜像；
