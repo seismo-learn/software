@@ -1,32 +1,7 @@
 安装
 ====
 
-1.  确认 Java 运行环境已安装
-
-    在终端中键入 ``java -version``，若显示版本信息，则表示 Java 运行环境已安装::
-
-        $ java -version
-        openjdk version "1.8.0_161"
-        OpenJDK Runtime Environment (build 1.8.0_161-b14)
-        OpenJDK 64-Bit Server VM (build 25.161-b14, mixed mode)
-
-    否则需要先安装 Java 运行环境::
-
-        # CentOS/RHEL
-        $ sudo yum install java
-
-        # Fedora
-        $ sudo dnf install java-latest-openjdk
-
-        # Ubuntu/Debian
-        $ sudo apt update
-        $ sudo apt install default-jdk
-
-        # macOS homebrew 用户
-        $ brew install openjdk
-
-    TauP 最新版本为 2.4.5，该版本要求 Java 版本大于 1.8。若你的机器的 Java 版本小于 1.8，
-    可以考虑下载使用旧版本的 TauP。但要注意，旧版本 TauP 可能存在已知的 BUG。
+1.  :doc:`安装 Java 运行环境 </java/index>`
 
 2.  下载::
 
