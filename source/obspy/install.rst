@@ -22,11 +22,8 @@
 
 5.  检查安装是否成功::
 
-    终端键入 ``python`` 启动 Python 解释器，若能导入 obspy 模块则表示安装成功::
+    终端键入以下命令，若出现 obspy 版本号则表示安装成功::
 
-        $ python
-        Python 3.8.6 | packaged by conda-forge | (default, Oct  7 2020, 19:08:05) 
-        [GCC 7.5.0] on linux
-        Type "help", "copyright", "credits" or "license" for more information.
-        >>> import obspy
-        >>>
+        $ python -c "import obspy; print(obspy.__version__)"
+        1.2.2
+        
