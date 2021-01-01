@@ -1,7 +1,7 @@
 Anaconda
 =========
 
-Anaconda 是一个 用于科学计算的 Python 发行版，支持 Linux、macOS 和 Windows。
+Anaconda 是一个用于科学计算的 Python 发行版，支持 Linux、macOS 和 Windows。
 其提供了方便使用的包管理器和环境管理器。
 
 **建议所有 Python用户使用 Anaconda 而非 Linux 或 macOS 系统自带的 Python。**
