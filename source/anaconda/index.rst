@@ -58,42 +58,42 @@ Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚�
 
 更新 Anaconda 和 conda::
 
-   conda update anaconda
-   conda update conda
+   $ conda update anaconda
+   $ conda update conda
 
 添加第三方源 conda-forge::
 
-   conda config --add channels conda-forge
- 
+   $ conda config --add channels conda-forge
+
 创建虚拟环境::
 
    # 虚拟环境名为 seismo-learn，初始 Python 版本与 base 环境相同
-   conda create --name seismo-learn
+   $ conda create --name seismo-learn
 
 激活虚拟环境::
 
    # 激活名为 seismo-learn 的虚拟环境
-   conda activate seismo-learn
+   $ conda activate seismo-learn
 
 取消激活当前虚拟环境::
 
-   conda deactivate
+   $ conda deactivate
 
 搜索模块::
 
-   conda search numpy
+   $ conda search numpy
 
 安装模块::
 
-   conda install numpy
+   $ conda install numpy
 
 更新模块::
 
-   conda update numpy
-   
+   $ conda update numpy
+
 使用 pip 安装模块::
 
-   pip install numpy
+   $ pip install numpy
 
 加速下载
 ------------
