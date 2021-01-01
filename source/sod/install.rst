@@ -1,0 +1,28 @@
+安装
+====
+
+1.  :doc:`安装 Java 运行环境 </java/index>`
+
+2.  下载::
+
+        $ wget http://www.seis.sc.edu/downloads/sod/3.2.10/sod-3.2.10.tgz
+
+3.  解压::
+
+        $ tar -xvf sod-3.2.10.tgz
+
+4.  安装::
+
+        $ sudo mv sod-3.2.10 /opt/
+
+5.  修改环境变量，将 SOD 的 bin 路径添加到 PATH 中::
+
+        $ echo 'export PATH=/opt/sod-3.2.8/bin:${PATH}'>> ~/.bashrc
+        $ source ~/.bashrc
+
+6.  检查安装是否成功
+
+    终端键入 ``sod -v`` 若出现 SOD 版本号则表示安装成功::
+
+        $ sod -v
+        SOD 3.2.10
