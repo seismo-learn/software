@@ -1,29 +1,28 @@
 安装
 ====
 
-我们强烈推荐使用 Anaconda 来安装 ObsPy，这也是 ObsPy 的 `官方推荐 <https://github.com/obspy/obspy/wiki#installation>`__。
+我们强烈推荐使用 Anaconda 安装 ObsPy，这也是 ObsPy 的 `官方推荐 <https://github.com/obspy/obspy/wiki#installation>`__。
 
-1.  安装 Anaconda
+1.  :doc:`安装 Anaconda </anaconda/index>`
 
-2.  添加 conda-forge 源::
+2.  创建、激活虚拟环境::
 
-        $ conda config --add channels conda-forge
-
-3.  新建并激活 Anaconda 环境::
-
-        # 这里以 seismo-learn 为例
+        # 创建虚拟环境，这里命名为 seismo-learn
         $ conda create -n seismo-learn
+        # 激活此虚拟环境
         $ conda activate seismo-learn
 
-4.  安装预编译 ObsPy 包::
+3.  安装 ObsPy 预编译包::
 
-        $ conda install obspy
+        $ conda install obspy --channel conda-forge
 
-5.  安装绘制地图软件包::
+4.  安装地图绘制包 cartopy::
 
         $ conda install cartopy
 
-6.  检查安装是否成功::
+5.  检查安装是否成功::
+
+    终端键入 ``python`` 启动 Python 解释器，若能导入 obspy 模块则表示安装成功::
 
         $ python
         Python 3.8.6 | packaged by conda-forge | (default, Oct  7 2020, 19:08:05) 
