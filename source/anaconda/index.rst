@@ -62,6 +62,7 @@ Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚�
    conda update conda
 
 添加第三方源 conda-forge::
+
    conda config --add channels conda-forge
  
 创建虚拟环境::
