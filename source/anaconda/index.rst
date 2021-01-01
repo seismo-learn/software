@@ -82,7 +82,7 @@ Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚�
 
    conda update numpy
    
-也可以使用 Python 自带的工具 pip 安装模块::
+使用 pip 安装模块::
 
    pip install numpy
 
