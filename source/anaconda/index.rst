@@ -46,7 +46,7 @@ Anaconda 是一个用于科学计算的 Python 发行版，支持 Linux、macOS 
       Type "help", "copyright", "credits" or "license" for more information.
       >>>
 
-使用
+常用命令
 ----
 
 Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚拟环境，其详细用法见
