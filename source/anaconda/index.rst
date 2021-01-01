@@ -49,9 +49,12 @@ Anaconda 是一个用于科学计算的 Python 发行版，支持 Linux、macOS 
 使用
 ----
 
-Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包并管理虚拟环境，其详细用法见
+Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚拟环境，其详细用法见
 `conda 官方文档 <https://docs.conda.io/projects/conda/en/latest/index.html>`__。
-此处仅介绍常用的命令。
+此外，也可以使用 Python 自带的工具 ``pip`` 来安装 Python 包，其详细用法见
+`pip 官方文档 <https://pip.pypa.io/en/stable/>`。我们建议尽可能使用 ``conda`` 来安装 Python 包，
+仅在 Anaconda 没有提供需要的程序包时才使用 ``pip`` 来安装。
+以下仅介绍常用的命令。
 
 创建虚拟环境::
 
