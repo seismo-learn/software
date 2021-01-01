@@ -23,4 +23,5 @@
    :hidden:
 
    template/index
+   anaconda/index
    java/index

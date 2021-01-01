@@ -1,127 +1,95 @@
-安装 Anaconda
-=============
+Anaconda
+=========
 
-**推荐所有 Python 用户安装 Anaconda！**
+Anaconda 是一个 用于科学计算的 Python 发行版，支持 Linux、macOS 和 Windows。
+其提供了方便使用的包管理器和环境管理器。
 
-Python 是一种强大的编程语言，其提供了很多用于科学计算的模块，常见的包括
-numpy、scipy 和 matplotlib。要利用 Python
-进行科学计算，就需要一一安装所需的模块，
-而这些模块可能又依赖于其它的软件包或库，因而安装和使用起来相对麻烦。幸好有人
-专门在做这一类事情，将科学计算所需要的模块都编译好，然后打包以发行版的形式
-供用户使用，Anaconda 就是最常用的科学计算发行版。
-
-Anaconda 的特点：
-
--  包含了众多流行的科学、数学、工程、数据分析的 `Python
-   包 <https://docs.anaconda.com/anaconda/packages/pkg-docs/>`__
--  完全开源和免费
--  全平台支持：Linux、Windows、macOS
--  支持 Python 2.x 和 3.x，可自由切换
+**建议所有 Python用户使用 Anaconda 而非 Linux 或 macOS 系统自带的 Python。**
 
 安装
 ----
 
 1. 下载 Anaconda
 
-   进入清华 Anaconda 镜像:
-   https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/
+   进入 `Anaconda 官方下载页面 <https://www.anaconda.com/products/individual#Downloads>`__，
+   会看到类似下图的下载页面。根据自己的系统选择对应的安装包（通常选择下图中红框圈出的安装包）。
 
-   滚屏拉到最后，根据自己的系统从最后6个文件中下载自己需要的安装文件。
+   .. image:: anaconda-download.png
 
-   对于Linux 64位用户，即
-   `Anaconda3-5.3.0-Linux-x86_64.sh <https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.3.0-Linux-x86_64.sh>`__
+   若官方下载速度较慢，可以直接从清华大学 Anaconda 镜像下载。
+   访问 https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/，找到文件名类似
+   :file:`Anaconda3-2020.11-Linux-x86_64.sh` 或
+   :file:`Anaconda3-2020.11-MacOSX-x86_64.sh` 的文件。
+   其中 ``2020.11`` 为 Anaconda 版本的发行日期，选择最新版本即可。
 
 2. 安装 Anaconda
 
-   终端执行如下命令以安装Anaconda:
+   Windows 用户直接双击安装包即可安装。
 
-   ::
+   Linux 用户在终端执行如下命令以安装 Anaconda::
 
-      $ bash ./Anaconda3-5.3.0-Linux-x86_64.sh
+      $ bash Anaconda3-2020.11-Linux-x86_64.sh -b
 
-   默认安装路径为 ``${HOME}/anaconda3`` ，我个人喜欢安装到
-   ``${HOME}/.anaconda`` 。
+   macOS 用户再终端执行如下命令以安装 Anaconda::
+
+      $ bash Anaconda3-2020.11-MacOSX-x86_64.sh -b
+
+   Anaconda 默认会安装到 :file:`${HOME}/anaconda3` 下。
 
 3. 测试安装
 
-   终端输入 ``python`` ， 输出中看到 ``Anaconda, Inc.`` 即代表安装完成:
-
-   ::
+   终端输入 ``python``，输出中看到 **Anaconda, Inc.** 字样即代表安装完成::
 
       $ python
-      Python 3.6.3 |Anaconda, Inc.| (default, Oct 13 2017, 12:02:49)
-      [GCC 7.2.0] on linux
+      Python 3.8.5 (default, Sep  4 2020, 02:22:02)
+      [Clang 10.0.0 ] :: Anaconda, Inc. on darwin
       Type "help", "copyright", "credits" or "license" for more information.
       >>>
 
-设置国内镜像
-------------
-
-使用 ``conda`` 或 ``pip`` 安装 Python
-模块时默认会从官方镜像下载模块包，相对来说速度
-比较慢，可以设置使用国内镜像以加快下载速度。
-
-Anaconda 镜像
-~~~~~~~~~~~~~
-
-添加清华 Anaconda 镜像以加快 ``conda`` 下载模块的速度:
-
-::
-
-   $ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-   $ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
-   $ conda config --set show_channel_urls yes
-
-添加第三方源 ``conda-forge`` 并添加清华镜像:
-
-::
-
-   $ conda config --add channels conda-forge
-   $ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
-
-这几个命令会修改文件 ``~/.condarc`` 。
-
-添加 pip 镜像
-~~~~~~~~~~~~~
-
-添加清华 pip 源以加快 ``pip`` 下载模块的速度。
-
-编辑 ``~/.pip/pip.conf`` 文件（如果没有则创建之），将 ``index-url``
-开头的一行修改为下面一行：
-
-::
-
-   [global]
-   index-url = https://pypi.tuna.tsinghua.edu.cn/simple
-
-升级
+使用
 ----
 
-可以使用如下命令升级所有已安装的模块：
+Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包并管理虚拟环境，其详细用法见
+`conda 官方文档 <https://docs.conda.io/projects/conda/en/latest/index.html>`__。
+此处仅介绍常用的命令。
 
-::
+创建虚拟环境::
 
-   conda update --all
+   # 虚拟环境名为 seismo-learn，python版本为3.8
+   conda create --name seismo-learn python=3.8
 
-新版本 Anaconda 发布后，可以使用如下命令升级 Anaconda：
+激活虚拟环境::
 
-::
+   # 激活名为 seismo-learn 的虚拟环境
+   conda activate seismo-learn
 
-   conda update conda
-   conda update anaconda
+取消激活当前虚拟环境::
 
-Anaconda 可以方便地提供 python2 的运行环境
-------------------------------------------
+   conda deactivate
 
-::
+搜索模块::
 
-   conda create -n python2 python=2.7 anaconda # 设置一个 Python 2.7 的环境，其名称为 python2
-   conda activate python2 # 激活 Python 2.7 的环境
+   conda search numpy
 
-如果遇到一些报错，按报错中的提示修改环境变量即可。
+安装模块::
 
-参考
-----
+   conda install numpy
 
--  https://mirror.tuna.tsinghua.edu.cn/help/anaconda/
--  https://mirror.tuna.tsinghua.edu.cn/help/pypi/
+也可以使用 Python 自带的工具 pip 安装模块::
+
+   pip install numpy
+
+加速 conda
+----------
+
+使用 conda 或 pip 下载模块时，可能速度较慢，此时可考虑使用清华大学提供的 Anaconda 和 pypi
+镜像以实现加速。具体用法见:
+
+- https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
+- https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
+
+参考文档
+--------
+
+- https://docs.anaconda.com/anaconda/install/
+- https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html
