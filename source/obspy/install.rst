@@ -1,7 +1,7 @@
 安装
 ====
 
-我们强烈推荐使用 Anaconda 安装 ObsPy，这也是 ObsPy 的 `官方推荐 <https://github.com/obspy/obspy/wiki#installation>`__。
+我们强烈推荐使用 Anaconda 安装 ObsPy，这也是 ObsPy `官方推荐的安装方式 <https://github.com/obspy/obspy/wiki#installation>`__。
 
 1.  :doc:`安装 Anaconda </anaconda/index>`
 
