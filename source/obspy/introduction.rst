@@ -52,4 +52,4 @@ ObsPy 的优势如下：
 此外，也可引用实际使用的 ObsPy 版本：
 
 `已发布的 ObsPy 版本 <https://zenodo.org/search?ln=en&p=obspy&sort=mostrecent>`__
-(例如 ObsPy 1.2.0: `10.5281/zenodo.3674646 <http://dx.doi.org/10.5281/zenodo.3674646>`__)
+(例如 ObsPy 1.2.2: `10.5281/zenodo.3921997 <http://dx.doi.org/10.5281/zenodo.3921997>`__)
