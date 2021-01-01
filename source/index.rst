@@ -23,4 +23,4 @@
    :hidden:
 
    template/index
-
+   java/index

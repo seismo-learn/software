@@ -27,7 +27,6 @@ TauP 目前还存在一些缺点：
 TauP 提供了多个工具:
 
 - 图形界面： ``taup``
-- 交互式： ``taup_console``
 - 命令行工具：
 
   - ``taup_time`` ：计算震相的走时、射线参数、出射角、入射角等
@@ -38,6 +37,15 @@ TauP 提供了多个工具:
   - ``taup_table`` ：计算走时表
   - ``taup_setsac`` ：将震相走时写入 SAC 头段中
   - ``taup_create`` ：预计算速度模型
+
+参考文献
+--------
+
+TauP 的实现原理基于如下文献：
+
+- Buland, R., & Chapman, C. H. (1983).
+  The computation of seismic travel times.
+  *Bulletin of the Seismological Society of America*, 73(5), 1271–1302.
 
 引用
 ----

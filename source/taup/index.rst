@@ -4,7 +4,8 @@ TauP
 :软件名称: TauP
 :主页: https://www.seis.sc.edu/taup/
 :源码地址: https://github.com/crotwell/TauP
-:作者: `Philip Crotwell <https://sc.edu/study/colleges_schools/artsandsciences/earth_ocean_and_environment/our_people/directory/crotwell_philip.php>`__
+:官方文档: http://www.seis.sc.edu/downloads/TauP/taup.pdf
+:作者: `Philip Crotwell <https://sc.edu/study/colleges_schools/artsandsciences/earth_ocean_and_environment/our_people/directory/crotwell_philip.php>`__、 `Thomas J. Owens <https://sc.edu/study/colleges_schools/artsandsciences/earth_ocean_and_environment/our_people/directory/owens_thomas.php>`__
 :最新版本: v2.4.5 (2017-11-02)
 :适用平台: Linux、macOS、Windows
 :编程语言: Java
@@ -12,7 +13,7 @@ TauP
 
 ----
 
-:教程作者: `田冬冬 <https://me.seisman.info/>`__ (作者)、`姚家园 <https://github.com/core-man>`__ (审稿)
+:教程贡献者: `田冬冬 <https://me.seisman.info/>`__ (作者)、`姚家园 <https://github.com/core-man>`__ (审稿)
 :教程更新日期: 2020-12-29
 
 ----
