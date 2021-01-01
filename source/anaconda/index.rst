@@ -98,7 +98,7 @@ Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚�
 加速下载
 ------------
 
-使用 conda 或 pip 下载模块时，可能速度较慢，此时可考虑使用清华大学提供的 Anaconda 和 pypi
+在中国使用 conda 或 pip 下载模块时，可能速度较慢，此时可考虑使用清华大学提供的 Anaconda 和 pypi
 镜像以实现加速。具体用法见:
 
 - https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
