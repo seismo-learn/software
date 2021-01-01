@@ -30,7 +30,7 @@ Anaconda 是一个用于科学计算的 Python 发行版，支持 Linux、macOS 
 
       $ bash Anaconda3-2020.11-Linux-x86_64.sh -b
 
-   macOS 用户再终端执行如下命令以安装 Anaconda::
+   macOS 用户在终端执行如下命令以安装 Anaconda::
 
       $ bash Anaconda3-2020.11-MacOSX-x86_64.sh -b
 
