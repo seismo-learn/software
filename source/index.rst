@@ -16,6 +16,7 @@
    :hidden:
 
    obspy
+   sod/index
 
 .. toctree::
    :maxdepth: 3
