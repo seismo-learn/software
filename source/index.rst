@@ -15,7 +15,8 @@
    :caption: 数据处理
    :hidden:
 
-   obspy
+   obspy/index
+   sod/index
 
 .. toctree::
    :maxdepth: 3
@@ -23,4 +24,5 @@
    :hidden:
 
    template/index
+   anaconda/index
    java/index
