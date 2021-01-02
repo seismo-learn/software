@@ -25,10 +25,10 @@ TauP 默认台站位于地表，可使用 ``--stadepth`` 选项设置台站深�
 
    $ taup_time -h 300 -deg 60 --stadepth 0.5 -ph P,S,PcP,ScS,PKiKP
 
-若已知震源和台站位置，也可以使用 ``-sta`` 和 ``-evt`` 分别指定台站和震源的
-纬度和经度。例如，台站位于 (20°N,130°E)，震源位于 (40°N,150°E)，则::
+若已知震源和台站位置，也可以使用 ``-evt`` 和 ``-sta`` 选项分别指定震源和台站的
+纬度和经度。例如，震源位于 (80 °N，150 °E)，台站位于 (20 °N，130 °E)::
 
-   $ taup_time -mod prem -ph P,S,PcP,ScS,PKiKP -h 100 -sta 20 130 -evt 40 170
+   $ taup_time -mod prem -h 300 -evt 80 150 -sta 20 130 -ph P,S,PcP,ScS,PKiKP
 
 在震中距比较小的情况下，可以使用 ``-km`` 选项指定震中距（单位为 km）。
 比如计算一个浅源地震在 100 km 处常见 P 波震相的走时信息::
