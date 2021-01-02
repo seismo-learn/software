@@ -23,7 +23,7 @@
         cd software/
         pip install -r requirements.txt
 
-3.  编译生成HTML格式的文档。生成的文档位于 `build/html/` 目录下
+3.  编译生成 HTML 格式的文档。生成的文档位于 `build/html/` 目录下
 
         make html
 
