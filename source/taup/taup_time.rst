@@ -7,23 +7,23 @@ TauP 提供的 ``taup_time`` 命令可用于计算震相走时、射线参数、
 基本用法
 --------
 
-使用 ``taup_time -help`` 可查询该命令的完整用法和选项。此处仅介绍最常用用法。
+使用 ``taup_time -help`` 可查询该命令的完整用法和选项，此处仅介绍常用用法。
 
-计算震源深度为 300 km，震中距 60° 处，P、S、PcP 等震相的走时信息::
+计算震源深度为 300 km，震中距 60° 处，P、S、PcP、ScS、PKiKP 震相的走时信息::
 
-   $ taup_time -ph P,S,PcP,ScS,PKiKP -deg 60 -h 300
+   $ taup_time -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP
 
--  ``-ph`` 指定了一系列以逗号分隔的震相名
--  ``-h`` 指定震源深度（单位 km）
--  ``-deg`` 指定震中距（单位为°）
+-  ``-h``：震源深度（单位 km）
+-  ``-deg``：震中距（单位 °）
+-  ``-ph``：以逗号分隔的震相名
 
-TauP 默认使用 iasp91 模型，可以使用 ``-mod`` 选项设置要使用的速度模型::
+TauP 默认使用 iasp91 模型，可以使用 ``-mod`` 选项设置其他 TauP 预定义速度模型::
 
-   $ taup_time -ph P,S,PcP,ScS,PKiKP -deg 60 -h 300 -mod prem
+   $ taup_time -mod prem -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP
 
-TauP 中默认台站位于地表处，也可使用 ``--stadepth`` 指定台站深度（单位为 km）::
+TauP 默认台站位于地表，可使用 ``--stadepth`` 选项设置台站深度（单位为 km）::
 
-   $ taup_time -ph P,S,PcP,ScS,PKiKP -deg 60 -h 300 --stadepth 0.5
+   $ taup_time -h 300 -deg 60 --stadepth 0.5 -ph P,S,PcP,ScS,PKiKP
 
 若已知震源和台站位置，也可以使用 ``-sta`` 和 ``-evt`` 分别指定台站和震源的
 纬度和经度。例如，台站位于 (20°N,130°E)，震源位于 (40°N,150°E)，则::
