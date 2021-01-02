@@ -44,9 +44,15 @@ TauP 默认台站位于地表，可使用 ``--stadepth`` 选项设置台站深�
    函数计算得到），使用 62.585° 直接计算的 P 波初至到时为 592.64 秒，二者相差 1.63 秒。
 
 在震中距比较小的情况下，可以使用 ``-km`` 选项指定震中距（单位为 km）。
-比如计算震源深度为 5 km，震中距 100 km 处，P,S,PcP,ScS,PKiKP 震相的走时信息::
+比如计算震源深度为 5 km，震中距 100 km 处，P、S、PcP、ScS、PKiKP 震相的走时信息::
 
    $ taup_time -h 5 -km 100 -ph P,S,PcP,ScS,PKiKP
+
+.. warning::
+
+   使用 ``-km`` 选项，``taup_time`` 会在参数解析时假定地球半径为 6371 km，
+   将公里转换成度，并不以速度模型的实际半径为准。详情请参考 `TauP 源码 <https://github.com/crotwell/TauP/blob/ecccb870c87b73ca7150414487e9b4d693a63834/src/main/java/edu/sc/seis/TauP/TauP_Time.java#L613>`__
+   和 `TauP issue#12 <https://github.com/crotwell/TauP/issues/12>`__。
 
 输出格式
 --------
