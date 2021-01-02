@@ -38,7 +38,7 @@ TauP 默认台站位于地表，可使用 ``--stadepth`` 选项设置台站深�
    ``taup_time`` 计算得到的震中距约为 62.83°，P 波初至到时为 594.27 秒。 
    而 ObsPy 的
    `gps2dist_azimuth <https://docs.obspy.org/packages/autogen/obspy.geodetics.base.gps2dist_azimuth.html#obspy.geodetics.base.gps2dist_azimuth>`__
-   函数，计算得到的震中距约为 6959 km （采用 WGS84 椭球：赤道半径 6378.1370 km、
+   函数计算得到的震中距约为 6959 km （采用 WGS84 椭球：赤道半径 6378.1370 km、
    扁率约为 0.0033528106647474805），在半径为 6371 km 的完美球状地球上约为 62.585°
    （利用 `kilometers2degrees <https://docs.obspy.org/packages/autogen/obspy.geodetics.base.kilometers2degrees.html#obspy.geodetics.base.kilometers2degrees>`__
    函数计算得到），使用 62.585° 直接计算的 P 波初至到时为 592.64 秒，二者相差 1.63 秒。
