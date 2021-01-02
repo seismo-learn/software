@@ -13,7 +13,7 @@ TauP 提供的 ``taup_time`` 命令可用于计算震相走时、射线参数、
 
    $ taup_time -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP
 
--  ``-h``：震源深度（单位 km）
+-  ``-h``：震源深度（单位 km），默认深度为 0.0 km。
 -  ``-deg``：震中距（单位 °）
 -  ``-ph``：以逗号分隔的震相名
 
@@ -71,24 +71,24 @@ TauP 默认台站位于地表，可使用 ``--stadepth`` 选项设置台站深�
 
             1 s/deg = \frac{1}{\pi/180} s/radian = 57.29578 s/radian
 
-6.  出射角（度）：即射线从震源出射时与\ **垂直向下**\ 方向的夹角，取值范围为0到180°。
+6.  出射角（度）：即射线从震源出射时与\ **垂直向下**\ 方向的夹角，取值范围为 0 到 180°。
 
-    - 出射角 0° 到 90° 内表示射线向下出射（例如P震相）
-    - 出射角 90° 到 180° 内表示射线向上出射（例如pP震相)
+    - 0° 到 90° 表示射线向下出射（例如 P 震相）
+    - 90° 到 180° 表示射线向上出射（例如 pP 震相)
 
     .. note::
 
        不同文章对出射角的定义不同，使用时应格外注意。
 
-       老版本的TauP对出射角的定义不同，可视为BUG，应避免使用老版本TauP。
+       老版本的 TauP 对出射角的定义不同，可视为 BUG，应避免使用老版本 TauP。
 
-7.  入射角（度）：射线在台站处入射时与\ **垂直向上**\ 方向的夹角。
+7.  入射角（度）：射线入射到台站时与\ **垂直向上**\ 方向的夹角。
 8.  Purist 距离：地震波实际走过的圆弧距离。
 
     该值可能与震中距不同，例如 50° 震中距处记录到的 PKKKP 震相，实际走过的
     圆弧距离为 410°::
 
-        $ taup_time -ph PKKKP -deg 50
+        $ taup_time -deg 50 -ph PKKKP
 
         Model: iasp91
         Distance   Depth   Phase   Travel    Ray Param  Takeoff  Incident  Purist    Purist
@@ -102,7 +102,7 @@ TauP 默认台站位于地表，可使用 ``--stadepth`` 选项设置台站深�
     ``S^660S``。由于 PREM 模型中 660 km 不连续面的“真实”深度为670 km，此时
     TauP 实际返回的时从 670 km 处反射回的震相，此时 Purist 震相名会显示为 ``S^670S``::
 
-        $ taup_time -mod prem -ph S^660S -deg 120
+        $ taup_time -mod prem -deg 120 -ph S^660S
 
         Model: prem
         Distance   Depth   Phase    Travel    Ray Param  Takeoff  Incident  Purist    Purist
