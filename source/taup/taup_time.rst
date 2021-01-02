@@ -31,6 +31,18 @@ TauP 默认台站位于地表，可使用 ``--stadepth`` 选项设置台站深�
 
    $ taup_time -h 300 -evt 40 10 -sta -20 -10 -ph P,S,PcP,ScS,PKiKP
 
+.. note::
+
+   使用 ``-evt`` 和 ``-sta`` 选项时，taup_time 会假设地球是完美球体，
+   来计算震源和台站的震中距，这会产生一定的误差。例如，根据以上参数
+   taup_time 计算得到的震中距约为 62.83°，P 波初至到时为 594.27 秒。 
+   如果我们使用 ObsPy 的
+   `gps2dist_azimuth <https://docs.obspy.org/packages/autogen/obspy.geodetics.base.gps2dist_azimuth.html#obspy.geodetics.base.gps2dist_azimuth>`__
+   函数，计算得到的震中距约为 6959 km （采用 WGS84 椭球：赤道半径 6378.1370 km、
+   扁率约为 0.0033528106647474805），在半径为 6371 km 的完美球状地球上约为 62.585°
+   （利用 `kilometers2degrees <https://docs.obspy.org/packages/autogen/obspy.geodetics.base.kilometers2degrees.html#obspy.geodetics.base.kilometers2degrees>`__
+   函数计算得到），使用 62.585° 直接计算的 P 波初至到时为 592.64 秒，二者相差 1.63 秒。
+
 在震中距比较小的情况下，可以使用 ``-km`` 选项指定震中距（单位为 km）。
 比如计算震源深度为 5 km，震中距 100 km 处，P,S,PcP,ScS,PKiKP 震相的走时信息::
 
