@@ -4,19 +4,13 @@
 
 .. toctree::
    :maxdepth: 3
-   :caption: 地震波
+   :caption: 地震学软件
    :hidden:
 
-   taup/index
-
-
-.. toctree::
-   :maxdepth: 3
-   :caption: 数据处理
-   :hidden:
-
+   HinetPy <https://seisman.github.io/HinetPy/zh_CN/index.html>
    obspy/index
    sod/index
+   taup/index
 
 .. toctree::
    :maxdepth: 3
