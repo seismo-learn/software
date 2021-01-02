@@ -27,3 +27,4 @@ TauP
 
    introduction
    install
+   taup_setsac
