@@ -6,7 +6,7 @@
 
 Fixes #
 
-**PRs for new tutorials**
+**PRs for new software/tutorials**
 
 - [ ] Software metadata is complete
 - [ ] All links works
