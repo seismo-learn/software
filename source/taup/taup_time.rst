@@ -20,6 +20,7 @@ TauP 提供的 ``taup_time`` 命令可用于计算震相走时、射线参数、
 TauP 默认使用 iasp91 模型，可以使用 ``-mod`` 选项设置其他 TauP 预定义速度模型::
 
    $ taup_time -mod prem -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP
+   $ taup_time -mod ak135 -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP
 
 TauP 默认台站位于地表，可使用 ``--stadepth`` 选项设置台站深度（单位为 km）::
 
