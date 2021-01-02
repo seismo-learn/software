@@ -17,6 +17,7 @@
 
    obspy/index
    sod/index
+   HinetPy <https://seisman.github.io/HinetPy/zh_CN/index.html>
 
 .. toctree::
    :maxdepth: 3
