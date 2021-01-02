@@ -6,7 +6,7 @@ taup_setsac
 
 使用 ``taup_setsac --help`` 可查询该命令的完整用法和选项。
 
-其用法很简单，示例如下::
+其用法相对简单，示例如下::
 
    $ taup_setsac -mod prem -ph P-0,S-1,PcP-8,ScS-9 -evdpkm *.SAC
 
