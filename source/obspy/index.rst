@@ -5,7 +5,7 @@ ObsPy
 :主页: https://www.obspy.org/
 :源码地址: https://github.com/obspy/obspy
 :官方文档: https://docs.obspy.org/
-:作者: `Tobias Megies et al. <https://github.com/obspy/obspy/graphs/contributors>`__
+:作者: `The ObsPy Development Team <https://github.com/obspy/obspy/graphs/contributors>`__
 :最新版本: v1.2.2 (2020-06-30)
 :适用平台: Linux、macOS、Windows
 :编程语言: Python
@@ -14,7 +14,7 @@ ObsPy
 ----
 
 :教程贡献者: `姚家园 <https://github.com/core-man>`__ (作者)、`田冬冬 <https://me.seisman.info/>`__ (审稿)
-:教程更新日期: 2021-01-01
+:教程更新日期: 2021-01-02
 
 ----
 
