@@ -36,7 +36,7 @@ TauP 默认台站位于地表，可使用 ``--stadepth`` 选项设置台站深�
    使用 ``-evt`` 和 ``-sta`` 选项时，taup_time 会假设地球是完美球体，
    来计算震源和台站的震中距，这会产生一定的误差。例如，根据以上参数
    taup_time 计算得到的震中距约为 62.83°，P 波初至到时为 594.27 秒。 
-   如果我们使用 ObsPy 的
+   而 ObsPy 的
    `gps2dist_azimuth <https://docs.obspy.org/packages/autogen/obspy.geodetics.base.gps2dist_azimuth.html#obspy.geodetics.base.gps2dist_azimuth>`__
    函数，计算得到的震中距约为 6959 km （采用 WGS84 椭球：赤道半径 6378.1370 km、
    扁率约为 0.0033528106647474805），在半径为 6371 km 的完美球状地球上约为 62.585°
