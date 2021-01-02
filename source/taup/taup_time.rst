@@ -39,7 +39,7 @@ TauP 默认台站位于地表，可使用 ``--stadepth`` 选项设置台站深�
 .. warning::
 
    使用 ``-km`` 选项，``taup_time`` 会在参数解析时假定地球半径为 6371 km，
-   将公里转换成度，并不以参考模型的实际半径为准。详情请参考 `TauP 源码 <https://github.com/crotwell/TauP/blob/ecccb870c87b73ca7150414487e9b4d693a63834/src/main/java/edu/sc/seis/TauP/TauP_Time.java#L613>`__
+   将公里转换成度，并不以速度模型的实际半径为准。详情请参考 `TauP 源码 <https://github.com/crotwell/TauP/blob/ecccb870c87b73ca7150414487e9b4d693a63834/src/main/java/edu/sc/seis/TauP/TauP_Time.java#L613>`__
    和 `TauP issue#12 <https://github.com/crotwell/TauP/issues/12>`__。
 
 输出格式
