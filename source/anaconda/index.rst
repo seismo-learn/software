@@ -1,6 +1,9 @@
 Anaconda
 =========
 
+:教程贡献者: `田冬冬 <https://me.seisman.info/>`__ (作者)、`姚家园 <https://github.com/core-man>`__ (审稿)
+:最近更新时间: 2021-01-01
+
 Anaconda 是一个用于科学计算的 Python 发行版，支持 Linux、macOS 和 Windows。
 其提供了方便使用的包管理器和环境管理器。
 
