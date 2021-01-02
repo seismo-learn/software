@@ -31,7 +31,7 @@ TauP 默认台站位于地表，可使用 ``--stadepth`` 选项设置台站深�
 
    $ taup_time -h 300 -evt 40 10 -sta -20 -10 -ph P,S,PcP,ScS,PKiKP
 
-在震中距比较小的情况下，可以使用 ``-km`` 选项指定震中距（单位为 km）,
+在震中距比较小的情况下，可以使用 ``-km`` 选项指定震中距（单位为 km）。
 比如计算震源深度为 5 km，震中距 100 km 处，P、S、PcP、ScS、PKiKP 震相的走时信息::
 
    $ taup_time -h 5 -km 100 -ph P,S,PcP,ScS,PKiKP
