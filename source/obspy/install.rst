@@ -20,10 +20,10 @@
 
         $ conda install cartopy
 
-5.  检查安装是否成功::
+5.  检查安装是否成功
 
     终端键入以下命令，若出现 obspy 版本号则表示安装成功::
 
         $ python -c "import obspy; print(obspy.__version__)"
         1.2.2
-        
+
