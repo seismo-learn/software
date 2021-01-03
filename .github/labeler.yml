@@ -1,7 +1,6 @@
-# Add a labeler to any changes within software folder or any subfolders
-# Now, we use software name as the labeler
+# Add a labeler to any changes within folders or any subfolders
 
-# Seismological software
+# Seismological software: software name is used as the labeler
 cap:
   - any: ['source/cap/**/*']
 
