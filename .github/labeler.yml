@@ -31,5 +31,5 @@ java:
 
 # maintenance
 
-maintenace:
+maintenance:
   - any: ['.github/**/*']
