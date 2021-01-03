@@ -12,7 +12,7 @@
    sod/index
    taup/index
    fk/index
-   cps330/index
+   cps/index
 
 .. toctree::
    :maxdepth: 3
