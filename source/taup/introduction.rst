@@ -35,7 +35,7 @@ TauP 提供了多个工具:
   - ``taup_wavefront`` ：计算波前面
   - ``taup_curve`` ：计算走时曲线
   - ``taup_table`` ：计算走时表
-  - ``taup_setsac`` ：将震相走时写入 SAC 头段中
+  - :doc:`taup_setsac` ：将震相走时写入 SAC 头段变量中
   - ``taup_create`` ：预计算速度模型
 
 参考文献
