@@ -2,32 +2,17 @@
 
 # Seismological software: software name is used as the labeler
 cap: source/cap/**/*
-
-cps:
-  - any: ['source/cps/**/*']
-
-fk:
-  - any: ['source/fk/**/*']
-
+cps: source/cps/**/*
+fk: source/fk/**/*
 obspy: source/obspy/**/*
-
-sod:
-  - any: ['source/sod/**/*']
-
-taup:
-  - any: ['source/taup/**/*']
+sod: source/sod/**/*
+taup: source/taup/**/*
 
 # Appendix
-template:
-  - any: ['source/template/**/*']
-
-anaconda:
-  - any: ['source/anaconda/**/*']
-
-java:
-  - any: ['source/java/**/*']
+template: source/template/**/*
+anaconda: source/anaconda/**/*
+java: source/java/**/*
 
 # maintenance
-
 maintenance:
   - any: ['.github/**/*']
