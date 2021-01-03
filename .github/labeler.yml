@@ -1,0 +1,19 @@
+# Seismological software
+obspy:
+  - any: ['source/obspy/**/*']
+
+sod:
+  - any: ['source/sod/**/*']
+
+taup:
+  - any: ['source/taup/**/*']
+
+# Appendix
+template:
+  - any: ['source/template/**/*']
+
+anaconda:
+  - any: ['source/anaconda/**/*']
+
+java:
+  - any: ['source/java/**/*]
