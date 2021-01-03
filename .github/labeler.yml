@@ -1,8 +1,7 @@
 # Add a labeler to any changes within folders or any subfolders
 
 # Seismological software: software name is used as the labeler
-cap:
-  - any: ['source/cap/**/*']
+cap: source/cap/**/*
 
 cps:
   - any: ['source/cps/**/*']
@@ -10,8 +9,7 @@ cps:
 fk:
   - any: ['source/fk/**/*']
 
-obspy:
-  - any: ['source/obspy/**/*']
+obspy: source/obspy/**/*
 
 sod:
   - any: ['source/sod/**/*']
