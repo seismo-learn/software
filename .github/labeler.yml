@@ -1,0 +1,18 @@
+# Add a labeler to any changes within folders or any subfolders
+
+# Seismological software: software name is used as the labeler
+cap: source/cap/**/*
+cps: source/cps/**/*
+fk: source/fk/**/*
+obspy: source/obspy/**/*
+sod: source/sod/**/*
+taup: source/taup/**/*
+
+# Appendix
+template: source/template/**/*
+anaconda: source/anaconda/**/*
+java: source/java/**/*
+
+# maintenance
+maintenance:
+  - any: ['.github/**/*']
