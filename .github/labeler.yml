@@ -1,4 +1,13 @@
 # Seismological software
+cap:
+  - any: ['source/cap/**/*']
+
+cps:
+  - any: ['source/cps/**/*']
+
+fk:
+  - any: ['source/fk/**/*']
+
 obspy:
   - any: ['source/obspy/**/*']
 
