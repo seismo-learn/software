@@ -11,4 +11,5 @@ jobs:
       - name: Label Pull Request
       - uses: actions/labeler@main
         with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"       
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+  
