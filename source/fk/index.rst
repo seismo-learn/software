@@ -1,4 +1,7 @@
 fk
 ==
 
-test
+.. toctree::
+   :hidden:
+
+   introduction

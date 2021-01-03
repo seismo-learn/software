@@ -1,4 +1,7 @@
 CPS
 ====
 
-test
+.. toctree::
+   :hidden:
+
+   introduction
