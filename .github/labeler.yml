@@ -28,3 +28,8 @@ anaconda:
 
 java:
   - any: ['source/java/**/*']
+
+# maintenance
+
+maintenace:
+  - any: ['.github/**/*']
