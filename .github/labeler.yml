@@ -16,4 +16,4 @@ anaconda:
   - any: ['source/anaconda/**/*']
 
 java:
-  - any: ['source/java/**/*]
+  - any: ['source/java/**/*']
