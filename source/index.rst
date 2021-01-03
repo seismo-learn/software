@@ -11,6 +11,8 @@
    obspy/index
    sod/index
    taup/index
+   fk/index
+   cps330/index
 
 .. toctree::
    :maxdepth: 3

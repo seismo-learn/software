@@ -1,7 +1,4 @@
 fk
 ==
 
-.. toctree::
-   :hidden:
-
-   introduction
+fk

@@ -1,7 +1,4 @@
 CPS
 ====
 
-.. toctree::
-   :hidden:
-
-   introduction
+CPS330
