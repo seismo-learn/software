@@ -13,20 +13,21 @@ taup_path
 
     $ taup_path -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP
 
-该命令会将射线路径信息以 GMT **psxy** 或 **plot** 命令可识别的格式输出到文件
+该命令会将射线路径信息以 GMT **plot** 或 **psxy** 命令可识别的格式输出到文件
 :file:`taup_path.gmt` 中。
 
-可以使用 ``-o`` 选项指定输出的文件名。例如，下面的命令会将射线路径输出到文件
-:file:`raypath.gmt` 中::
+可以使用 ``-o`` 选项指定输出的文件名或输出到标准输出（屏幕）。例如，下面的第一行命令
+会将射线路径输出到文件:file:`raypath.gmt` 中，第二行会输出到屏幕上::
 
     $ taup_path -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP -o raypath
+    $ taup_path -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP -o stdout
 
-输出文件格式
-------------
+输出格式
+---------
 
-输出文件中的射线路径用两列数据表示，
+输出的射线路径用两列数据表示，
 
-- 第一列：震中距（单位为°）
+- 第一列：震中距（单位为 °）
 - 第二列：射线与地球中心的距离（单位为 km）
 
 多个震相的射线路径之间用 ``>`` 符号分隔，其后接着当前射线路径所对应的震相信息。
@@ -48,11 +49,11 @@ taup_path
 绘制射线路径
 ------------
 
-加上 ``-svg`` 选项可以直接绘制 SVG 格式的射线路径图::
+使用 ``-svg`` 选项可以直接绘制 SVG 格式的射线路径图::
 
     $ taup_path -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP -svg
 
-加上 ``-gmt`` 选项可以生成 GMT 绘图脚本。执行该脚本即可生成 PS 格式的射线路径图::
+使用 ``-gmt`` 选项可以生成 GMT 绘图脚本（:file:`taup_path.gmt`），执行该脚本即可生成 PS 格式的射线路径图::
 
     $ taup_path -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP -gmt
     $ sh taup_path.gmt
