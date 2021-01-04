@@ -33,6 +33,7 @@
    :columns: 1
 
    - :doc:`ObsPy </obspy/index>` 
+   - `SAC <https://seisman.github.io/SAC_Docs_zh/>`__
 
 .. toctree::
    :maxdepth: 3
@@ -41,6 +42,7 @@
 
    HinetPy <https://seisman.github.io/HinetPy/zh_CN/index.html>
    obspy/index
+   SAC <https://seisman.github.io/SAC_Docs_zh/>
    sod/index
    taup/index
 
