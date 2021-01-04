@@ -3,7 +3,6 @@ CPS
 
 :软件名称: CPS
 :主页: http://www.eas.slu.edu/eqc/eqccps.html
-:源码地址: http://www.eas.slu.edu/eqc/eqc_cps/CPS/cpslisc.html
 :官方文档: http://www.eas.slu.edu/eqc/eqc_cps/CPS/CPS330.html
 :作者: `Saint Louis University Earthquake Center <http://www.eas.slu.edu/eqc/eqc.html>`__
 :最新版本: v3.30 (2020-10-29)
