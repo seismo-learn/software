@@ -1,0 +1,29 @@
+CPS
+===
+
+:软件名称: CPS
+:主页: http://www.eas.slu.edu/eqc/eqccps.html
+:源码地址: http://www.eas.slu.edu/eqc/eqc_cps/CPS/cpslisc.html
+:官方文档: http://www.eas.slu.edu/eqc/eqc_cps/CPS/CPS330.html
+:作者: `Saint Louis University Earthquake Center <http://www.eas.slu.edu/eqc/eqc.html>`__
+:最新版本: v3.30 (2020-10-29)
+:适用平台: Linux、macOS、Windows
+:编程语言: Fortran、C
+:许可协议: 未知
+
+----
+
+:教程贡献者: `田冬冬 <https://me.seisman.info/>`__ (作者)、`姚家园 <https://github.com/core-man>`__ (审稿)
+:教程更新日期: 2021-01-04
+
+----
+
+.. note::
+
+   本教程仅在 Linux 和 macOS 平台下使用 v3.30 测试通过，其余版本或平台可能有所差异。
+
+.. toctree::
+   :hidden:
+
+   introduction
+   

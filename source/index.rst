@@ -13,10 +13,11 @@
 .. rubric:: 地震波：
 
 .. hlist::
-   :columns: 1
+   :columns: 3
 
-   - :doc:`ObsPy </obspy/index>` 
-   - :doc:`TauP </taup/index>` 
+   - :doc:`CPS </cps/index>`
+   - :doc:`ObsPy </obspy/index>`
+   - :doc:`TauP </taup/index>`
 
 .. rubric:: 数据下载：
 
@@ -24,21 +25,23 @@
    :columns: 3
 
    - `HinetPy <https://seisman.github.io/HinetPy/zh_CN/index.html>`__
-   - :doc:`ObsPy </obspy/index>` 
-   - :doc:`SOD </sod/index>` 
+   - :doc:`ObsPy </obspy/index>`
+   - :doc:`SOD </sod/index>`
 
 .. rubric:: 数据处理：
 
 .. hlist::
    :columns: 1
 
-   - :doc:`ObsPy </obspy/index>` 
+   - :doc:`CPS </cps/index>`
+   - :doc:`ObsPy </obspy/index>`
 
 .. toctree::
    :maxdepth: 3
    :caption: 地震学软件
    :hidden:
 
+   cps/index
    HinetPy <https://seisman.github.io/HinetPy/zh_CN/index.html>
    obspy/index
    sod/index
