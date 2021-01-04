@@ -34,7 +34,15 @@
    :columns: 1
 
    - :doc:`CPS </cps/index>`
-   - :doc:`ObsPy </obspy/index>`
+   - :doc:`ObsPy </obspy/index>` 
+   - `SAC <https://seisman.github.io/SAC_Docs_zh/>`__
+
+.. rubric:: 绘图：
+
+.. hlist::
+   :columns: 1
+
+   - `GMT <https://docs.gmt-china.org/latest/>`__
 
 .. toctree::
    :maxdepth: 3
@@ -43,7 +51,9 @@
 
    cps/index
    HinetPy <https://seisman.github.io/HinetPy/zh_CN/index.html>
+   GMT <https://docs.gmt-china.org/latest/>
    obspy/index
+   SAC <https://seisman.github.io/SAC_Docs_zh/>
    sod/index
    taup/index
 
