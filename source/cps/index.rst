@@ -4,7 +4,8 @@ CPS
 :软件名称: CPS
 :主页: http://www.eas.slu.edu/eqc/eqccps.html
 :官方文档: http://www.eas.slu.edu/eqc/eqc_cps/CPS/CPS330.html
-:作者: `Saint Louis University Earthquake Center <http://www.eas.slu.edu/eqc/eqc.html>`__
+:作者: `Robert B. Herrmann <https://www.slu.edu/arts-and-sciences/earth-atmospheric-sciences/faculty/herrmann-robert.php>`__、\
+      `Charles. J. Ammon <https://www.geosc.psu.edu/academic-faculty/ammon-charles>`__
 :最新版本: v3.30 (2020-10-29)
 :适用平台: Linux、macOS、Windows
 :编程语言: Fortran、C
