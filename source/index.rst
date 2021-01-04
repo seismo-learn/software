@@ -34,12 +34,20 @@
 
    - :doc:`ObsPy </obspy/index>` 
 
+.. rubric:: 绘图：
+
+.. hlist::
+   :columns: 1
+
+   - `GMT <https://docs.gmt-china.org/latest/>`__
+
 .. toctree::
    :maxdepth: 3
    :caption: 地震学软件
    :hidden:
 
    HinetPy <https://seisman.github.io/HinetPy/zh_CN/index.html>
+   GMT <https://docs.gmt-china.org/latest/>
    obspy/index
    sod/index
    taup/index
