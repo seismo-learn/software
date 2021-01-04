@@ -18,7 +18,6 @@ CPS，全称 Computer Programs in Seismology，
 特色功能
 --------
 
-
 1.  合成地震图
 
     - 广义射线法
