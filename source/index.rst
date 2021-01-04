@@ -44,12 +44,20 @@
 
    - `GMT <https://docs.gmt-china.org/latest/>`__
 
+.. rubric:: 合成地震图：
+
+.. hlist::
+   :columns: 1
+
+   - :doc:`fk/index`
+
 .. toctree::
    :maxdepth: 3
    :caption: 地震学软件
    :hidden:
 
    cps/index
+   fk/index
    HinetPy <https://seisman.github.io/HinetPy/zh_CN/index.html>
    GMT <https://docs.gmt-china.org/latest/>
    obspy/index
