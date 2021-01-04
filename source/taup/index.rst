@@ -28,4 +28,5 @@ TauP
    introduction
    install
    taup_time
+   taup_path
    taup_setsac
