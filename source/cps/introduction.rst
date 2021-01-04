@@ -18,7 +18,6 @@ CPS，全称 Computer Programs in Seismology（地震学计算机程序），
 特色功能
 --------
 
-该软件包包含了如下代码：
 
 1.  合成地震图
 
