@@ -17,7 +17,7 @@ taup_path
 :file:`taup_path.gmt` 中。
 
 可以使用 ``-o`` 选项指定输出的文件名或输出到标准输出（屏幕）。例如，下面的第一行命令
-会将射线路径输出到文件:file:`raypath.gmt` 中，第二行会输出到屏幕上::
+会将射线路径输出到文件 :file:`raypath.gmt` 中，第二行会输出到屏幕上::
 
     $ taup_path -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP -o raypath
     $ taup_path -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP -o stdout
