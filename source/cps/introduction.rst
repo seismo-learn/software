@@ -1,7 +1,7 @@
 简介
 ====
 
-CPS，全称 Computer Programs in Seismology（地震学计算机程序），
+CPS，全称 Computer Programs in Seismology，
 着重于理解和解释地震波在地球地壳和上地幔中的传播。
 其可以计算平层介质中的理论地震图、反演面波频散和远震 P 波接收函数、
 反演震源深度、震源机制和地震矩、处理地震波形数据以及绘图。
