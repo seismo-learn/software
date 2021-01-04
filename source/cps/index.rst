@@ -10,10 +10,6 @@ CPS
 :编程语言: Fortran、C
 :许可协议: 未知
 
-.. warning::
-
-   CPS 在十几年前就发布了 3.30 版本，之后不断修复程序错误和更新代码，但没有同时更新版本号。
-
 ----
 
 :教程贡献者: `田冬冬 <https://me.seisman.info/>`__ (作者)、`姚家园 <https://github.com/core-man>`__ (审稿)
