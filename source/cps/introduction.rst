@@ -10,7 +10,7 @@ CPS，全称 Computer Programs in Seismology，
 软件包中包含了完整的\ `说明文档 <http://www.eas.slu.edu/eqc/eqc_cps/CPS/CPS330.html>`__，
 官方主页上还给了不少\ `教程 <http://www.eas.slu.edu/eqc/eqc_cps/TUTORIAL/>`__，
 不仅仅教授如何使用软件，同时也介绍了很多地震学的基础知识。
-即使不使用该软件，文档和教程中的一些内容还是很有参考价值的。
+即使不使用该软件，文档和教程中的一些内容也是有参考价值的。
 
 此外，官方主页上还有一些\ `讲义 <http://www.eas.slu.edu/eqc/eqc_cps/workshop.html>`__\
 和\ `用户问题和开发者解答 <http://www.eas.slu.edu/eqc/eqc_cps/Questions>`__\值得一看。
