@@ -39,7 +39,7 @@ CPS，全称 Computer Programs in Seismology（地震学计算机程序），
 
 4.  GSAC
 
-    GSAC，全称 Generic Seismic Application Coding（通用地震应用编码），
+    GSAC，全称 Generic Seismic Application Coding，
     可以认为是 SAC 的重新实现，作者给了一些需要重写 SAC 的理由。
 
 5.  CALPLOT
