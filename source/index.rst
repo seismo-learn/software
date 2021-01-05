@@ -10,14 +10,22 @@
 软件列表
 --------
 
-.. rubric:: 地震波：
+.. rubric:: 理论走时：
 
 .. hlist::
-   :columns: 3
+   :columns: 1
 
-   - :doc:`/cps/index`
    - :doc:`/obspy/index`
    - :doc:`/taup/index`
+
+
+.. rubric:: 合成地震图：
+
+.. hlist::
+   :columns: 1
+
+   - :doc:`/cps/index`
+   - :doc:`/fk/index`
 
 .. rubric:: 数据下载：
 
@@ -43,13 +51,6 @@
    :columns: 1
 
    - `GMT <https://docs.gmt-china.org/latest/>`__
-
-.. rubric:: 合成地震图：
-
-.. hlist::
-   :columns: 1
-
-   - :doc:`fk/index`
 
 .. toctree::
    :maxdepth: 3
