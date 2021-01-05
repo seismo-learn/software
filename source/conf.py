@@ -20,7 +20,7 @@ from datetime import datetime
 
 project = '地震“学”软件'
 author = "seismo-learn"
-copyright = f"2020–{datetime.today().year}, {author}."
+copyright = f"2020–{datetime.today().year}, {author}"
 github_user = "seismo-learn"
 github_repo = "software"
 github_url = f"https://github.com/{github_user}/{github_repo}"
