@@ -22,13 +22,6 @@ taup_curve
     $ taup_curve -h 300 -ph P,S,PcP,ScS,PKiKP -o time_curve
     $ taup_curve -h 300 -ph P,S,PcP,ScS,PKiKP -o stdout
 
-``taup_curve`` 不仅可以输出震相走时，还支持输出折合走时（reduced traveltime）
-或相对走时：
-
-- 使用 ``-reddeg`` 选项设置折合速度（reducing velocity），其单位为 °/s
-- 使用 ``-redkm`` 选项设置折合速度（reducing velocity），其单位为 km/s
-- 使用 ``-rel`` 选定指定某个参考震相，输出相对该参考震相的走时
-
 输出格式
 ---------
 
@@ -53,6 +46,13 @@ taup_curve
     13.34    326.40
     14.34    348.66
     ...
+
+``taup_curve`` 不仅可以输出震相走时，还支持输出折合走时（reduced traveltime）
+或相对走时：
+
+- 使用 ``-reddeg`` 选项设置折合速度（reducing velocity），其单位为 °/s
+- 使用 ``-redkm`` 选项设置折合速度（reducing velocity），其单位为 km/s
+- 使用 ``-rel`` 选定指定某个参考震相，输出相对该参考震相的走时
 
 绘制走时曲线
 ------------
