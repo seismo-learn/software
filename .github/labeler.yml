@@ -4,7 +4,10 @@
 cap: source/cap/**/*
 cps: source/cps/**/*
 fk: source/fk/**/*
+gmt: source/gmt/**/*
+hinetpy: source/hinetpy/**/*
 obspy: source/obspy/**/*
+sac: source/sac/**/*
 sod: source/sod/**/*
 taup: source/taup/**/*
 

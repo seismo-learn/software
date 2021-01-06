@@ -32,7 +32,7 @@
 .. hlist::
    :columns: 3
 
-   - `HinetPy <https://seisman.github.io/HinetPy/zh_CN/index.html>`__
+   - :doc:`/hinetpy/index`
    - :doc:`/obspy/index`
    - :doc:`/sod/index`
 
@@ -43,14 +43,14 @@
 
    - :doc:`/cps/index`
    - :doc:`/obspy/index`
-   - `SAC <https://seisman.github.io/SAC_Docs_zh/>`__
+   - :doc:`/sac/index`
 
 .. rubric:: 绘图：
 
 .. hlist::
    :columns: 1
 
-   - `GMT <https://docs.gmt-china.org/latest/>`__
+   - :doc:`/gmt/index`
 
 .. rubric:: 实用工具:
 
@@ -66,10 +66,10 @@
 
    cps/index
    fk/index
-   HinetPy <https://seisman.github.io/HinetPy/zh_CN/index.html>
-   GMT <https://docs.gmt-china.org/latest/>
+   gmt/index
+   hinetpy/index
    obspy/index
-   SAC <https://seisman.github.io/SAC_Docs_zh/>
+   sac/index
    sod/index
    taup/index
 
