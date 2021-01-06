@@ -50,7 +50,7 @@
 .. hlist::
    :columns: 1
 
-   - `GMT <https://docs.gmt-china.org/latest/>`__
+   - :doc:`/gmt/index`
 
 .. toctree::
    :maxdepth: 3
@@ -60,7 +60,7 @@
    cps/index
    fk/index
    HinetPy <https://seisman.github.io/HinetPy/zh_CN/index.html>
-   GMT <https://docs.gmt-china.org/latest/>
+   gmt/index
    obspy/index
    SAC <https://seisman.github.io/SAC_Docs_zh/>
    sod/index
