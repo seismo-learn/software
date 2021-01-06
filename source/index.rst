@@ -32,7 +32,7 @@
 .. hlist::
    :columns: 3
 
-   - `HinetPy <https://seisman.github.io/HinetPy/zh_CN/index.html>`__
+   - :doc:`/hinetpy/index`
    - :doc:`/obspy/index`
    - :doc:`/sod/index`
 
@@ -59,7 +59,7 @@
 
    cps/index
    fk/index
-   HinetPy <https://seisman.github.io/HinetPy/zh_CN/index.html>
+   hinetpy/index
    GMT <https://docs.gmt-china.org/latest/>
    obspy/index
    sac/index
