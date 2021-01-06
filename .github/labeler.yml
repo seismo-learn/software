@@ -5,6 +5,7 @@ cap: source/cap/**/*
 cps: source/cps/**/*
 fk: source/fk/**/*
 obspy: source/obspy/**/*
+sac: source/sac/**/*
 sod: source/sod/**/*
 taup: source/taup/**/*
 

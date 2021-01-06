@@ -43,7 +43,7 @@
 
    - :doc:`/cps/index`
    - :doc:`/obspy/index`
-   - `SAC <https://seisman.github.io/SAC_Docs_zh/>`__
+   - :doc:`/sac/index`
 
 .. rubric:: 绘图：
 
@@ -62,7 +62,7 @@
    HinetPy <https://seisman.github.io/HinetPy/zh_CN/index.html>
    GMT <https://docs.gmt-china.org/latest/>
    obspy/index
-   SAC <https://seisman.github.io/SAC_Docs_zh/>
+   sac/index
    sod/index
    taup/index
 
