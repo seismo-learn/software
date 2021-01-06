@@ -13,6 +13,9 @@ template: source/template/**/*
 anaconda: source/anaconda/**/*
 java: source/java/**/*
 
+# utilities
+utility: source/utilities/**/*
+
 # maintenance
 maintenance:
   - any: ['.github/**/*']

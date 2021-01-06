@@ -52,6 +52,13 @@
 
    - `GMT <https://docs.gmt-china.org/latest/>`__
 
+.. rubric:: 实用工具:
+
+.. hlist::
+   :columns: 1
+
+   - :doc:`/utilities/distaz`
+
 .. toctree::
    :maxdepth: 3
    :caption: 地震学软件
@@ -65,6 +72,13 @@
    SAC <https://seisman.github.io/SAC_Docs_zh/>
    sod/index
    taup/index
+
+.. toctree::
+   :maxdepth: 3
+   :caption: 实用工具
+   :hidden:
+
+   utilities/distaz
 
 .. toctree::
    :maxdepth: 3
