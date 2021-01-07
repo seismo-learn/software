@@ -15,7 +15,7 @@ distaz
 
 ``distaz`` 代码很短，简单易懂，其采用的地球模型为椭球模型，精度上可以满足需求。
 
--  C、Fortran、Java、Python 以及 CGI 版本： `由 USC的一个小组整理 <http://www.seis.sc.edu/software/distaz/>`__
+-  C、Fortran、Java、Python 以及 CGI 版本： `由 USC 的一个小组整理 <http://www.seis.sc.edu/software/distaz/>`__
 -  Matlab 版本： `由 specfem3d_globe 提供 <https://github.com/geodynamics/specfem3d_globe/blob/master/utils/Visualization/VTK_ParaView/matlab/distaz.m>`__
 
 使用方法
