@@ -33,6 +33,6 @@ distaz
 
 .. note::
 
-   C 语言版的 ``distaz`` 默认输出小数点后3位。可以将源码 :file:`distaz.c` 中
+   C 语言版的 ``distaz`` 默认输出小数点后 3 位。可以将源码 :file:`distaz.c` 中
    ``printf("%6.3f %6.3f %6.3f\n", delta, baz, az);`` 的 ``%6.3f`` 修改为
    更高精度的输出格式（例如 ``%8.5f``\ ）以达到所需的精度。
