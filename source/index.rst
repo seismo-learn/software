@@ -58,6 +58,7 @@
    :columns: 1
 
    - :doc:`/utilities/distaz`
+   - :doc:`/utilities/saclst`
 
 .. toctree::
    :maxdepth: 3
@@ -79,6 +80,7 @@
    :hidden:
 
    utilities/distaz
+   utilities/saclst
 
 .. toctree::
    :maxdepth: 3
