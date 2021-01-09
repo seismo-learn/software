@@ -3,7 +3,8 @@ saclst
 
 ``saclst`` 是 SAC 软件自带的一个常用工具，用于列出头段变量的值。
 
-使用 ``saclst -help`` 可查询该命令的完整用法和选项，其语法很简单::
+使用 ``saclst help`` 可查询该命令的完整用法和选项。终端只键入 ``saclst``
+可查询简单用法，其语法很简单::
 
     $ saclst header_lists f file_lists
 
