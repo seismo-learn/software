@@ -52,6 +52,13 @@
 
    - :doc:`/gmt/index`
 
+.. rubric:: 实用工具:
+
+.. hlist::
+   :columns: 1
+
+   - :doc:`/utilities/saclst`
+
 .. toctree::
    :maxdepth: 3
    :caption: 地震学软件
@@ -65,6 +72,13 @@
    sac/index
    sod/index
    taup/index
+
+.. toctree::
+   :maxdepth: 3
+   :caption: 实用工具
+   :hidden:
+
+   utilities/saclst
 
 .. toctree::
    :maxdepth: 3
