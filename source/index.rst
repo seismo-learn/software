@@ -58,6 +58,7 @@
 .. hlist::
    :columns: 1
 
+   - :doc:`/utilities/distaz`
    - :doc:`/utilities/saclst`
 
 .. toctree::
@@ -79,6 +80,7 @@
    :caption: 实用工具
    :hidden:
 
+   utilities/distaz
    utilities/saclst
 
 .. toctree::
