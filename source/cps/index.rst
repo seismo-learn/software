@@ -28,4 +28,4 @@ CPS
    :hidden:
 
    introduction
-   
+   install
