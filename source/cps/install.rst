@@ -3,8 +3,8 @@
 
 1.  下载:
 
-    在 http://www.eas.slu.edu/eqc/eqc_cps/CPS/cpslisc.html 填写个人信息，
-    提交源码下载申请。
+    CPS 源码需要先填写申请表格才可以下载。
+    在 http://www.eas.slu.edu/eqc/eqc_cps/CPS/cpslisc.html 填写表格并提交。
 
     .. CPS 的源码也可以直接 http://www.eas.slu.edu/eqc/eqc_cps/
     .. 的 download 目录下载
@@ -13,17 +13,17 @@
 
         $ tar -xvf NP330.Oct-29-2020.tgz
 
-    将 ``CPS`` 移至 ``src`` 目录下（若尚未建立 ``src`` 目录，可在终端键入
+    将解压得到的 :file:`PROGRAMS.330` 文件夹移至 ``src`` 目录下（若尚未建立 ``src`` 目录，可在终端键入
     ``mkdir ~/src`` 新建此目录）::
 
         $ mv PROGRAMS.330 ~/src/CPS
 
-    读者也可以根据自己的习惯，将 ``CPS`` 放在相应目录下。
+    读者也可以根据自己的习惯，将 :file:`PROGRAMS.330` 放在其他目录下。
 
 3.  配置:
 
     若使用的是 Linux 系统，首先需要确认当前系统是 32 还是 64 位。
-    终端键入 ``uname -a`` ，若输出中包含 ``x86_64`` 则是 64 位，若输出包含类似
+    终端键入 ``uname -a``\ ，若输出中包含 ``x86_64`` 则是 64 位，若输出包含类似
     ``i686`` 则是 32 位。
 
     进入源码目录::
@@ -61,4 +61,3 @@
 6.  检查安装是否成功
 
     终端键入一些 CPS 的命令，比如 ``sdisp96 -h``，若出现该命令的使用选项则表示安装成功。
-
