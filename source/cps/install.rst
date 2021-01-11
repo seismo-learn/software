@@ -3,11 +3,8 @@
 
 1.  下载:
 
-    首次下载，可以在 http://www.eas.slu.edu/eqc/eqc_cps/CPS/cpslisc.html 填写个人信息，
+    在 http://www.eas.slu.edu/eqc/eqc_cps/CPS/cpslisc.html 填写个人信息，
     提交源码下载申请。
-
-    以后也可以直接在 http://www.eas.slu.edu/eqc/eqc_cps/Download/ 下载源码，文件名类似
-    ``NP330.DATE.tgz``，其中 DATE 代表最近的更新日期。
 
 2.  解压::
 
