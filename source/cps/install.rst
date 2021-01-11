@@ -6,6 +6,9 @@
     在 http://www.eas.slu.edu/eqc/eqc_cps/CPS/cpslisc.html 填写个人信息，
     提交源码下载申请。
 
+    .. CPS 的源码也可以直接 http://www.eas.slu.edu/eqc/eqc_cps/
+    .. 的 download 目录下载
+
 2.  解压::
 
         $ tar -xvf NP330.Oct-29-2020.tgz
