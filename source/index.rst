@@ -14,7 +14,7 @@
 .. rubric:: 理论走时：
 
 .. hlist::
-   :columns: 1
+   :columns: 3
 
    - :doc:`/obspy/index`
    - :doc:`/taup/index`
@@ -23,7 +23,7 @@
 .. rubric:: 合成地震图：
 
 .. hlist::
-   :columns: 1
+   :columns: 3
 
    - :doc:`/cps/index`
    - :doc:`/fk/index`
@@ -43,20 +43,22 @@
    :columns: 3
 
    - :doc:`/cps/index`
+   - :doc:`/gmt/index`
    - :doc:`/obspy/index`
    - :doc:`/sac/index`
 
 .. rubric:: 绘图：
 
 .. hlist::
-   :columns: 1
+   :columns: 3
 
    - :doc:`/gmt/index`
+   - :doc:`/sac/index`
 
 .. rubric:: 实用工具:
 
 .. hlist::
-   :columns: 1
+   :columns: 3
 
    - :doc:`/utilities/distaz`
    - :doc:`/utilities/saclst`

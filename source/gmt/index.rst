@@ -8,7 +8,7 @@ GMT
 :中文文档: https://docs.gmt-china.org/
 :作者: `The GMT Team <https://github.com/GenericMappingTools/gmt/blob/master/AUTHORS.md>`__
 :最新版本: v6.1.1 (2020-09-03)
-:适用平台: Linux、macOS、Windows
+:适用平台: Linux、macOS、Windows、FreeBSD、OpenBSD
 :编程语言: C
 :许可协议: LGPL
 
