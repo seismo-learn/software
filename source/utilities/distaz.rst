@@ -16,7 +16,12 @@ distaz
 
 仅以 C 语言版本的 ``distaz`` 为例，用如下命令即可编译::
 
-   cc distaz.c -o distaz -lm
+    $ cc distaz.c -o distaz -lm
+
+并将生成的可执行文件移动到 :file:`~/bin/` 目录下::
+
+    $ mkdir ~/bin/
+    $ mv distaz ~/bin/
 
 其输入为台站纬度、台站经度、事件纬度、事件经度::
 
