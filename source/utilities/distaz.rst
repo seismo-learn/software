@@ -20,7 +20,7 @@ distaz
 
 并将生成的可执行文件移动到 :file:`~/bin/` 目录下::
 
-    $ mkdir ~/bin/
+    $ mkdir -p ~/bin/
     $ mv distaz ~/bin/
 
 若 :file:`~/bin/` 路径尚未添加到 PATH 中，则执行如下命令::
