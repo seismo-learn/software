@@ -23,6 +23,11 @@ distaz
     $ mkdir ~/bin/
     $ mv distaz ~/bin/
 
+若 :file:`~/bin/` 路径尚未添加到 PATH 中，则执行如下命令::
+
+     $ echo 'export PATH=${HOME}/bin:${PATH}' >> ~/.bashrc
+     $ source ~/.bashrc
+
 其输入为台站纬度、台站经度、事件纬度、事件经度::
 
     sta_lat sta_lon evt_lat evt_lon
