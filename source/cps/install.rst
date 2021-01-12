@@ -54,7 +54,7 @@
 
 5.  修改环境变量，将 CPS 的 bin 路径添加到 PATH 中::
 
-        $ echo 'export PATH=${HOME}/src/PROGRAMS.330/bin:${PATH}' >> ~/.bashrc
+        $ echo 'export PATH=${HOME}/src/CPS/bin:${PATH}' >> ~/.bashrc
         $ source ~/.bashrc
 
 6.  检查安装是否成功
