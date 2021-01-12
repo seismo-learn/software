@@ -13,7 +13,7 @@
 
         $ tar -xvf NP330.Oct-29-2020.tgz
 
-    将解压得到的 :file:`PROGRAMS.330` 文件夹移至 :file:`~/src/` 目录下::
+    将解压得到的 :file:`PROGRAMS.330` 文件夹移至 :file:`~/src/` 目录下，并重命名为 :file:`CPS` ::
 
         $ mkdir -p ~/src/
         $ mv PROGRAMS.330 ~/src/CPS
