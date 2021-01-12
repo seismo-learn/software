@@ -18,7 +18,6 @@
         $ mkdir -p ~/src/
         $ mv PROGRAMS.330 ~/src/CPS
 
-    读者也可以根据自己的习惯，将 :file:`PROGRAMS.330` 放在其他目录下。
 
 3.  配置:
 
