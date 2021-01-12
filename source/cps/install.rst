@@ -13,12 +13,11 @@
 
         $ tar -xvf NP330.Oct-29-2020.tgz
 
-    将解压得到的 :file:`PROGRAMS.330` 文件夹移至 ``src`` 目录下
-    （若尚未建立 ``src`` 目录，可在终端键入 ``mkdir ~/src`` 新建此目录）::
+    将解压得到的 :file:`PROGRAMS.330` 文件夹移至 :file:`~/src/` 目录下，并重命名为 :file:`CPS` ::
 
+        $ mkdir -p ~/src/
         $ mv PROGRAMS.330 ~/src/CPS
 
-    读者也可以根据自己的习惯，将 :file:`PROGRAMS.330` 放在其他目录下。
 
 3.  配置:
 
@@ -55,7 +54,7 @@
 
 5.  修改环境变量，将 CPS 的 bin 路径添加到 PATH 中::
 
-        $ echo 'export PATH=${HOME}/src/PROGRAMS.330/bin:${PATH}' >> ~/.bashrc
+        $ echo 'export PATH=${HOME}/src/CPS/bin:${PATH}' >> ~/.bashrc
         $ source ~/.bashrc
 
 6.  检查安装是否成功

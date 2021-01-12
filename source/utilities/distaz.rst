@@ -16,7 +16,17 @@ distaz
 
 仅以 C 语言版本的 ``distaz`` 为例，用如下命令即可编译::
 
-   cc distaz.c -o distaz -lm
+    $ cc distaz.c -o distaz -lm
+
+并将生成的可执行文件移动到 :file:`~/bin/` 目录下::
+
+    $ mkdir -p ~/bin/
+    $ mv distaz ~/bin/
+
+若 :file:`~/bin/` 路径尚未添加到 PATH 中，则执行如下命令::
+
+     $ echo 'export PATH=${HOME}/bin:${PATH}' >> ~/.bashrc
+     $ source ~/.bashrc
 
 其输入为台站纬度、台站经度、事件纬度、事件经度::
 
@@ -28,7 +38,7 @@ distaz
 
 例如，台站位于（10°S，14°E），地震位于（40°N，50°W）::
 
-   $ ./distaz -10 14 40 -50
+   $ distaz -10 14 40 -50
    77.218 314.930 114.795
 
 .. note::
