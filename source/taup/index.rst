@@ -20,7 +20,7 @@ TauP
 
 .. note::
 
-   本教程仅在 Linux 和 macOS 平台下使用 v2.4.5 测试通过，其余版本或平台可能有所差异。
+   本教程仅在 Linux 和 macOS 系统下使用 v2.4.5 测试通过，其余版本或系统可能有所差异。
 
 .. toctree::
    :hidden:
