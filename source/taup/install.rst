@@ -14,7 +14,7 @@
 4.  将 TauP 安装到 :file:`~/opt` 目录下::
 
         $ mkdir -p ~/opt/
-        $ sudo mv TauP-2.4.5 ~/opt/
+        $ mv TauP-2.4.5 ~/opt/
 
 5.  修改环境变量，将 TauP 的 bin 路径添加到 PATH 中::
 

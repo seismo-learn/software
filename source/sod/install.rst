@@ -14,11 +14,11 @@
 4.  将 SOD 安装到 :file:`~/opt/` 目录下::
 
         $ mkdir -p ~/opt/
-        $ sudo mv sod-3.2.10 ~/opt/
+        $ mv sod-3.2.10 ~/opt/
 
 5.  修改环境变量，将 SOD 的 bin 路径添加到 PATH 中::
 
-        $ echo 'export PATH=${HOME}/opt/sod-3.2.8/bin:${PATH}'>> ~/.bashrc
+        $ echo 'export PATH=${HOME}/opt/sod-3.2.10/bin:${PATH}' >> ~/.bashrc
         $ source ~/.bashrc
 
 6.  检查安装是否成功
