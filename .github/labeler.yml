@@ -3,7 +3,7 @@
 # Seismological software: software name is used as the labeler
 cps: source/cps/**/*
 fk: source/fk/**/*
-gcap: source/gcap/**/*
+gcap3d: source/gcap3d/**/*
 gmt: source/gmt/**/*
 hinetpy: source/hinetpy/**/*
 obspy: source/obspy/**/*
