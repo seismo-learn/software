@@ -28,7 +28,7 @@
    - :doc:`/cps/index`
    - :doc:`/fk/index`
 
-.. rubric:: 震源反演：
+.. rubric:: 震源机制反演：
 
 .. hlist::
    :columns: 3
