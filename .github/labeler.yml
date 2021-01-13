@@ -1,7 +1,7 @@
 # Add a labeler to any changes within folders or any subfolders
 
 # Seismological software: software name is used as the labeler
-cap: source/cap/**/*
+gcap: source/gcap/**/*
 cps: source/cps/**/*
 fk: source/fk/**/*
 gmt: source/gmt/**/*
