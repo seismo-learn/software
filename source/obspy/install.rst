@@ -8,7 +8,7 @@
 2.  创建、激活虚拟环境::
 
         # 创建虚拟环境，这里命名为 seismo-learn
-        $ conda create -n seismo-learn
+        $ conda create --name seismo-learn
         # 激活此虚拟环境
         $ conda activate seismo-learn
 
