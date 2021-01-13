@@ -28,6 +28,14 @@
    - :doc:`/cps/index`
    - :doc:`/fk/index`
 
+.. rubric:: 震源反演：
+
+.. hlist::
+   :columns: 3
+
+   - :doc:`/cps/index`
+   - :doc:`/gcap/index`
+
 .. rubric:: 数据下载：
 
 .. hlist::
@@ -70,6 +78,7 @@
 
    cps/index
    fk/index
+   gcap/index
    gmt/index
    hinetpy/index
    obspy/index
