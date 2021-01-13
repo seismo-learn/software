@@ -34,7 +34,7 @@
    :columns: 3
 
    - :doc:`/cps/index`
-   - :doc:`/gcap/index`
+   - :doc:`/gcap3d/index`
 
 .. rubric:: 数据下载：
 
