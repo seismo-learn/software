@@ -25,6 +25,12 @@ github_user = "seismo-learn"
 github_repo = "software"
 github_url = f"https://github.com/{github_user}/{github_repo}"
 
+# -- Contributor information -------------------------------------------------
+
+rst_prolog = """
+.. |田冬冬| replace:: `田冬冬 <https://me.seisman.info/>`__
+"""
+
 
 # -- General configuration ---------------------------------------------------
 
