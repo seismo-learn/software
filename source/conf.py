@@ -29,6 +29,7 @@ github_url = f"https://github.com/{github_user}/{github_repo}"
 
 rst_prolog = """
 .. |田冬冬| replace:: `田冬冬 <https://me.seisman.info/>`__
+.. |姚家园| replace:: `姚家园 <https://github.com/core-man>`__
 """
 
 

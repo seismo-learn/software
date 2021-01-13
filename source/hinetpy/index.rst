@@ -4,7 +4,7 @@ HinetPy
 :软件名称: HinetPy
 :源码地址: https://github.com/seisman/HinetPy
 :官方文档: https://seisman.github.io/HinetPy/zh_CN/index.html
-:作者: `田冬冬 <https://me.seisman.info/>`__
+:作者: |田冬冬|
 :最新版本: v0.6.7 (2020-06-08)
 :适用平台: Linux、macOS、Windows
 :编程语言: Python
