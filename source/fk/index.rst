@@ -5,7 +5,7 @@ fk
 :主页: http://www.eas.slu.edu/People/LZhu/home.html
 :源码地址: http://www.eas.slu.edu/People/LZhu/home.html
 :作者: `Lupei Zhu <http://www.eas.slu.edu/People/LZhu/home.html>`__
-:最新版本: v3.3 (2015-02-03)
+:最新版本: v3.3
 :适用平台: Linux、macOS
 :编程语言: Fortran、C、Perl
 :许可协议: MIT
