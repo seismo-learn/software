@@ -1,7 +1,8 @@
 Anaconda
 =========
 
-:教程贡献者: `田冬冬 <https://me.seisman.info/>`__ (作者)、`姚家园 <https://github.com/core-man>`__ (审稿)
+:教程贡献者: `田冬冬 <https://me.seisman.info/>`__\ （作者）、
+           `姚家园 <https://github.com/core-man>`__\ (审稿)
 :最近更新时间: 2021-01-01
 
 ----
@@ -104,7 +105,7 @@ Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚�
 --------
 
 在中国使用 conda 或 pip 下载模块时，可能速度较慢，此时可考虑使用清华大学提供的 Anaconda 和 pypi
-镜像以实现加速 (pypi 是 pip 默认的软件包下载源)。具体用法见:
+镜像以实现加速（pypi 是 pip 默认的软件包下载源）。具体用法见:
 
 - https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
 - https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
