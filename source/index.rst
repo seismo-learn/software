@@ -78,7 +78,7 @@
 
    cps/index
    fk/index
-   gcap/index
+   gcap3d/index
    gmt/index
    hinetpy/index
    obspy/index
