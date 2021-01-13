@@ -1,6 +1,11 @@
 saclst
 ======
 
+:教程贡献者: `田冬冬 <https://me.seisman.info/>`__ (作者)、`姚家园 <https://github.com/core-man>`__ (审稿)
+:最近更新时间: 2021-01-09
+
+----
+
 ``saclst`` 是 SAC 软件自带的一个常用工具，用于列出头段变量的值。
 
 使用 ``saclst help`` 可查询该命令的完整用法和选项。终端只键入 ``saclst``
