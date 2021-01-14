@@ -21,7 +21,7 @@
 
     -   :file:`Makefile` 中需要添加 ``FC=gfortran`` 指定使用 gfortran 编译器
     -   :file:`Makefile` 中需要给 ``FFLAGS`` 加上中 ``-ffixed-line-length-none``
-        使得 Fortran 一行可以超过72字符
+        使得 Fortran 一行可以超过 72 字符
     -   :file:`Makefile` 中第 6—7 行被注释了，所以 ``fk`` 无法使用 SAC 提供的
         滤波功能。若 SAC 已安装，则可以注释将第 6—7 行行首的注释符号 ``#`` 去掉
     -   :file:`Makefile` 中未指定如何编译生成 ``fk2mt`` 文件。需要将 ``fk2mt``
