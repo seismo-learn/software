@@ -39,6 +39,8 @@ Anaconda 是一个用于科学计算的 Python 发行版，支持 Linux、macOS 
    macOS 用户在终端执行如下命令以安装 Anaconda::
 
       $ bash Anaconda3-2020.11-MacOSX-x86_64.sh -b
+      $ source ~/anaconda3/bin/activate  # 激活 base 环境
+      $ conda init zsh  # 初始化 Anaconda3
 
    Anaconda 默认会安装到 :file:`${HOME}/anaconda3` 下。
 
