@@ -3,7 +3,7 @@ Java 运行环境
 
 :教程贡献者: |田冬冬|\（作者）、
              |姚家园|\（审稿）
-:最近更新时间: 2020-12-31
+:最近更新时间: 2021-01-14
 
 ----
 
@@ -35,3 +35,4 @@ Ubuntu/Debian 用户::
 macOS Homebrew 用户::
 
     $ brew install openjdk
+    $ sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
