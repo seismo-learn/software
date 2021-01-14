@@ -31,6 +31,7 @@
 
             fk2mt: fk2mt.o sacio.o radiats.o
                 $(LINK.f) -o $@ $^ -lm
+
     -   :file:`syn.c` 第 142 行需改写为 ``mt[0][1]=mt[0][2]=mt[1][2] = 0.;``
     -   :file:`sac.h` 中 319 行 ``sac_head_inex`` 应改为 ``sac_head_index``
 
