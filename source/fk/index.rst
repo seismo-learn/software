@@ -30,3 +30,4 @@ fk
    :hidden:
 
    introduction
+   install
