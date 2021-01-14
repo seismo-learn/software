@@ -62,10 +62,10 @@ Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚�
 仅在 Anaconda 没有提供需要的程序包时才使用 ``pip`` 来安装。
 以下仅介绍常用的命令。
 
-更新 Anaconda 和 conda::
+更新 conda 和 Anaconda::
 
-   $ conda update anaconda
    $ conda update conda
+   $ conda update anaconda
 
 添加 conda 的第三方软件包源 conda-forge::
 
