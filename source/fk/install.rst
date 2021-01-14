@@ -51,6 +51,7 @@
 
         $ cd fk/
         $ make
+        $ make clean
 
 5.  修改环境变量，将 fk 路径添加到 **PATH** 中::
 
