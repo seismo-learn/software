@@ -21,5 +21,5 @@ SAC，全称 Seismic Analysis Code，是天然地震学领域使用最广泛的�
 
 .. note::
 
-   我们建议将 SAC 安装到 :file:`~/opt/` 目录下，详情见
-   `《软件安装实践经验》 <https://seismo-learn.org/seismology101/best-practices/software-installation/>`__。
+   我们建议将 SAC 安装到 :file:`~/opt/` 目录下，
+   详情见\ :doc:`《软件安装实践经验》<seis101:best-practices/software-installation>`。
