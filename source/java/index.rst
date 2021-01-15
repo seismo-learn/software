@@ -35,4 +35,4 @@ Ubuntu/Debian 用户::
 macOS Homebrew 用户::
 
     $ brew install openjdk
-    $ sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+    $ sudo ln -sfn $(brew --prefix)/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
