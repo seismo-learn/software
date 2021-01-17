@@ -16,3 +16,8 @@ GMT
 
 GMT，全称 Generic Mapping Tools，中文一般译为“通用制图工具”，
 是地球科学最广泛使用的制图软件之一，其具有强大的绘图功能和数据处理功能。
+
+.. note::
+
+   若选择编译源码安装 GMT，我们建议将 GMT 安装到 :file:`~/opt/` 目录下，
+   详情见\ :doc:`《软件安装实践经验》<seis101:best-practices/software-installation>`。

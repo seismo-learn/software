@@ -25,6 +25,13 @@ github_user = "seismo-learn"
 github_repo = "software"
 github_url = f"https://github.com/{github_user}/{github_repo}"
 
+# -- Contributor information -------------------------------------------------
+
+rst_prolog = """
+.. |田冬冬| replace:: `田冬冬 <https://me.seisman.info/>`__
+.. |姚家园| replace:: `姚家园 <https://github.com/core-man>`__
+"""
+
 
 # -- General configuration ---------------------------------------------------
 
@@ -33,6 +40,7 @@ github_url = f"https://github.com/{github_user}/{github_repo}"
 # ones.
 extensions = [
     "sphinx.ext.githubpages",
+    "sphinx.ext.intersphinx",
     "sphinx_cjkspace.cjkspace",
 ]
 
@@ -51,6 +59,14 @@ language = "zh_CN"
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
+# Cross-refering other projects
+# https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html
+intersphinx_mapping = {
+    "seis": ("https://seismo-learn.org/seismology/", None),
+    "seis101": ("https://seismo-learn.org/seismology101/", None),
+    "software": ("https://seismo-learn.org/software/", None),
+}
+
 
 # -- Options for HTML output -------------------------------------------------
 import sphinx_rtd_theme
@@ -60,6 +76,7 @@ html_static_path = ["_static"]
 html_extra_path = []
 html_last_updated_fmt = "%Y年%m月%d日"
 html_title = project
+html_css_files = ["custom.css"]
 
 html_context = {
     "favicon": "favicon.ico",
@@ -70,6 +87,9 @@ html_context = {
     "conf_py_path": "/source/",
     "theme_vcs_pageview_mode": "blob",
     "menu_links": [
+        (   '<i class="fa fa-home"></i> 地震“学”主站',
+            "https://seismo-learn.org/",
+        ),
         (
             '<i class="fa fa-github fa-fw"></i> 网站源码',
             github_url,

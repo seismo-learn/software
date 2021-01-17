@@ -1,8 +1,9 @@
 Java 运行环境
 =============
 
-:教程贡献者: `田冬冬 <https://me.seisman.info/>`__ (作者)、`姚家园 <https://github.com/core-man>`__ (审稿)
-:最近更新时间: 2020-12-31
+:教程贡献者: |田冬冬|\（作者）、
+             |姚家园|\（审稿）
+:最近更新时间: 2021-01-14
 
 ----
 
@@ -34,3 +35,4 @@ Ubuntu/Debian 用户::
 macOS Homebrew 用户::
 
     $ brew install openjdk
+    $ sudo ln -sfn $(brew --prefix)/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk

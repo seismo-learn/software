@@ -1,8 +1,9 @@
 Anaconda
 =========
 
-:教程贡献者: `田冬冬 <https://me.seisman.info/>`__ (作者)、`姚家园 <https://github.com/core-man>`__ (审稿)
-:最近更新时间: 2021-01-01
+:教程贡献者: |田冬冬|\（作者）、
+             |姚家园|\（审稿）
+:最近更新时间: 2021-01-14
 
 ----
 
@@ -33,17 +34,27 @@ Anaconda 是一个用于科学计算的 Python 发行版，支持 Linux、macOS 
 
    Linux 用户在终端执行如下命令以安装 Anaconda::
 
-      $ bash Anaconda3-2020.11-Linux-x86_64.sh -b
+      $ bash Anaconda3-2020.11-Linux-x86_64.sh
 
    macOS 用户在终端执行如下命令以安装 Anaconda::
 
-      $ bash Anaconda3-2020.11-MacOSX-x86_64.sh -b
+      $ bash Anaconda3-2020.11-MacOSX-x86_64.sh
 
-   Anaconda 默认会安装到 :file:`${HOME}/anaconda3` 下。
+   Anaconda 默认会安装到 :file:`${HOME}/anaconda3` 下，在安装过程中可以
+   设置为其他路径。
+
+   安装通常需要几分钟时间，在安装的最后会出现::
+
+    Do you wish the installer to initialize Anaconda3 by running conda init? [yes|no]
+    [yes] >>>
+
+   建议输入 ``yes``，此时安装包会向当前 SHELL 的配置文件（如 :file:`~/.bashrc`
+   或 :file:`~/.zshrc`）中写入 ``conda`` 初始化语句。
 
 3. 测试安装
 
-   终端输入 ``python``，输出中看到 **Anaconda, Inc.** 字样即代表安装完成::
+   打开一个新的终端，在终端中输入 ``python``，输出中看到 **Anaconda, Inc.**
+   字样即代表安装完成::
 
       $ python
       Python 3.8.5 (default, Sep  4 2020, 02:22:02)
@@ -61,10 +72,10 @@ Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚�
 仅在 Anaconda 没有提供需要的程序包时才使用 ``pip`` 来安装。
 以下仅介绍常用的命令。
 
-更新 Anaconda 和 conda::
+更新 conda 和 Anaconda::
 
-   $ conda update anaconda
    $ conda update conda
+   $ conda update anaconda
 
 添加 conda 的第三方软件包源 conda-forge::
 
@@ -104,7 +115,7 @@ Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚�
 --------
 
 在中国使用 conda 或 pip 下载模块时，可能速度较慢，此时可考虑使用清华大学提供的 Anaconda 和 pypi
-镜像以实现加速 (pypi 是 pip 默认的软件包下载源)。具体用法见:
+镜像以实现加速（pypi 是 pip 默认的软件包下载源）。具体用法见:
 
 - https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
 - https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
