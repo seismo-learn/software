@@ -44,3 +44,6 @@ jobs:
       #########################################################################
       - name: Test ObsPy
         run: bash tests/test-obspy.sh
+
+      - name: Test distaz
+        run: bash tests/test-distaz.sh
