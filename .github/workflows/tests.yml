@@ -1,0 +1,46 @@
+name: Tests
+
+on:
+  # Enable pull_request for testing purpose only
+  # pull_request:
+  # Runs at 00:00 on Sunday.
+  schedule:
+    - cron:  '0 0 * * 0'
+
+jobs:
+  tests:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-20.04, macos-11.0]
+
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.7.0
+        with:
+          access_token: ${{ github.token }}
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      #########################################################################
+      # Setup environment
+      #########################################################################
+      # Setup Python environment
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v2.0.0
+        with:
+          python-version: 3.8
+          miniconda-version: "latest"
+
+      #########################################################################
+      # Testing
+      #########################################################################
+      - name: Test ObsPy
+        run: bash tests/test-obspy.sh
