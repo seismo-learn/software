@@ -22,3 +22,5 @@ utility: source/utilities/**/*
 # maintenance
 maintenance:
   - any: ['.github/**/*']
+  - any: ['tests/**/*']
+
