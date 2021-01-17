@@ -50,3 +50,6 @@ jobs:
 
       - name: Test SOD
         run: bash tests/test-sod.sh
+
+      - name: Test TauP
+        run: bash tests/test-taup.sh
