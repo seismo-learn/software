@@ -2,7 +2,7 @@
 ############
 
 欢迎阅读由\ `地震“学”小组 <https://github.com/orgs/seismo-learn/people>`__\
-整理和维护的地震学常用软件教程。教程主要介绍一些地震学常用软件的用途、安装、用法等，
+整理和维护的《地震“学”软件》。教程主要介绍一些地震学常用软件的用途、安装、用法等，
 并提供一些实用示例。
 
 教程源码在 `GitHub <https://github.com/seismo-learn/software>`__ 上开源，
