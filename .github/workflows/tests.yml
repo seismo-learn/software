@@ -47,3 +47,6 @@ jobs:
 
       - name: Test distaz
         run: bash tests/test-distaz.sh
+
+      - name: Test SOD
+        run: bash tests/test-sod.sh
