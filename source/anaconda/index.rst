@@ -99,7 +99,7 @@ Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚�
 
    安装 Anaconda 后，打开终端默认会激活 base 环境，可以通过如下命令取消此设置::
    
-      conda config --set auto_activate_base False or True
+      conda config --set auto_activate_base False
 
 搜索模块::
 
