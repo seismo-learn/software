@@ -103,6 +103,7 @@ Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚�
       $ conda config --set auto_activate_base False
       
    取消后，可以临时激活 base 环境::
+
       $ conda activate base
       
    重新激活此默认设置::
