@@ -95,6 +95,21 @@ Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚�
 
    $ conda deactivate
 
+.. note::
+
+   安装 Anaconda 后，打开终端默认会激活 base 环境。不经常使用
+   Python 的读者可以通过如下命令取消此默认设置::
+   
+      $ conda config --set auto_activate_base False
+      
+   取消后，可以临时激活 base 环境::
+
+      $ conda activate base
+      
+   重新激活此默认设置::
+   
+      $ conda config --set auto_activate_base True
+
 搜索模块::
 
    $ conda search numpy
