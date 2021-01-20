@@ -1,8 +1,10 @@
 name: Tests
 
 on:
-  # Enable pull_request for testing purpose only
-  pull_request:
+  # If you want to debug the tests, you can push it to the "ci-tests" branch
+  push:
+    branches:
+      - ci-tests
   # Runs at 00:00 on Sunday.
   schedule:
     - cron:  '0 0 * * 0'
