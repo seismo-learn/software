@@ -1,6 +1,8 @@
 安装
 ====
 
+.. include:: /snippets/install_notes.rst_
+
 1.  下载:
 
     CPS 源码需要先填写申请表格才可以下载。

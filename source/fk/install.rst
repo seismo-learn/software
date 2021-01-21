@@ -1,6 +1,8 @@
 安装
 ====
 
+.. include:: /snippets/install_notes.rst_
+
 1.  下载::
 
         $ wget http://www.eas.slu.edu/People/LZhu/downloads/fk3.3.tar
