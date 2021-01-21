@@ -1,0 +1,10 @@
+.. note::
+
+   阅读此安装说明前请注意：
+
+   1. 我们假定用户已经根据《:doc:`seis101:computer/setup`\ 》中的内容安装了
+      C 和 Fortran 编译器 ``gcc``、``g++`` 和 ``gfortran``
+      以及常用命令行工具 ``make`` 和 ``git``
+
+   2. 修改环境变量时，我们假定用户当前使用的 Shell 是 Bash，且 Bash 配置文件 为 ``~/.bashrc``。
+      Z Shell （zsh）用户应修改 ``~/.zshrc``\ 。
