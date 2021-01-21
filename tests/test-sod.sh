@@ -3,16 +3,17 @@
 set -e -x
 
 # install
-wget http://www.seis.sc.edu/downloads/sod/3.2.10/sod-3.2.10.tgz
-tar -xf sod-3.2.10.tgz
+version="3.2.10"
+wget http://www.seis.sc.edu/downloads/sod/${version}/sod-${version}.tgz
+tar -xf sod-${version}.tgz
 mkdir -p ${HOME}/opt/
-mv sod-3.2.10 ${HOME}/opt/
-export PATH="${HOME}/opt/sod-3.2.10/bin":$PATH
+mv sod-${version} ${HOME}/opt/
+export PATH="${HOME}/opt/sod-${version}/bin":$PATH
 
 # test
-[ "$(sod -v)" == "SOD 3.2.10" ]
+[ "$(sod -v)" == "SOD ${version}" ]
 
 # cleanup
-rm -r sod-3.2.10.tgz
+rm -r sod-${version}.tgz
 
 set +e +x
