@@ -1,6 +1,4 @@
-.. note::
-
-   阅读此安装说明前请注意：
+.. admonition:: 阅读须知
 
    1. 我们假定用户已经根据《:doc:`seis101:computer/setup`\ 》中的内容安装了
       C/C++ 和 Fortran 编译器 ``gcc``、``g++`` 和 ``gfortran``
