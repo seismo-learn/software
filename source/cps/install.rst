@@ -20,8 +20,24 @@
         $ mkdir -p ~/src/
         $ mv PROGRAMS.330 ~/src/CPS
 
+3.  安装依赖
 
-3.  配置:
+    编译 CPS 源码需要安装 X11 库文件::
+
+        # Fedora 用户
+        $ sudo dnf install libX11-devel
+
+        # CentOS 用户
+        $ sudo yum install libX11-devel
+
+        # Ubuntu/Debian 用户
+        $ sudo apt install libx11-dev
+
+        # macOS Homebrew 用户
+        # macOS 安装 XQuartz 后需要重启方可生效
+        $ brew install --cask xquartz
+
+4.  配置:
 
     若使用的是 Linux 系统，首先需要确认当前系统是 32 还是 64 位。
     终端键入 ``uname -a``\ ，若输出中包含 ``x86_64`` 则是 64 位，若输出包含类似
@@ -47,18 +63,18 @@
 
        终端键入 ``./Setup`` 可查询全部选项。
 
-4.  编译::
+5.  编译::
 
         $ ./C
 
     接下来会编译一段时间，最终在 bin 目录下应该生成 153 个可执行文件。当然，
     不同版本生成的可执行文件的数目可能有差异。
 
-5.  修改环境变量，将 CPS 的 bin 路径添加到 PATH 中::
+6.  修改环境变量，将 CPS 的 bin 路径添加到 PATH 中::
 
         $ echo 'export PATH=${HOME}/src/CPS/bin:${PATH}' >> ~/.bashrc
         $ source ~/.bashrc
 
-6.  检查安装是否成功
+7.  检查安装是否成功
 
     终端键入一些 CPS 的命令，比如 ``sdisp96 -h``，若出现该命令的使用选项则表示安装成功。
