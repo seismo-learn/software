@@ -41,6 +41,11 @@ jobs:
           python-version: 3.8
           miniconda-version: "latest"
 
+      - name: Install dependencies
+        run: |
+          brew install gfortran
+        if: matrix.os == "macos-11.0"
+
       #########################################################################
       # Testing
       #########################################################################

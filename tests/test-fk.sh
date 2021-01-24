@@ -20,6 +20,8 @@ make clean
 export PATH=${HOME}/src/fk:${PATH}
 
 # test
-fk.pl
+command -v fk
+command -v fk.pl
+command -v syn
 
 set +e +x
