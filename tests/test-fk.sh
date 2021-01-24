@@ -13,7 +13,7 @@ cd ~/src/fk
 patch < ${GITHUB_WORKSPACE}/source/fk/fk3.3-v20190618.patch
 # SAC is not available
 # so have to comment out SACLIBs (lines 6-7)
-sed -i "" '6,7 s/^/#/' Makefile
+sed -i.bak '6,7 s/^/#/' Makefile
 # compile
 make
 make clean
