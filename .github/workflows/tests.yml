@@ -41,6 +41,11 @@ jobs:
           python-version: 3.8
           miniconda-version: "latest"
 
+      - name: Install dependencies
+        run: |
+          brew install gfortran
+        if: matrix.os == 'macos-11.0'
+
       #########################################################################
       # Testing
       #########################################################################
@@ -49,6 +54,9 @@ jobs:
 
       - name: Test distaz
         run: bash tests/test-distaz.sh
+
+      - name: Test fk
+        run: bash tests/test-fk.sh
 
       - name: Test SOD
         run: bash tests/test-sod.sh
