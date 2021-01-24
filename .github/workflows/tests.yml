@@ -50,6 +50,9 @@ jobs:
       - name: Test distaz
         run: bash tests/test-distaz.sh
 
+      - name: Test fk
+        run: bash tests/test-fk.sh
+
       - name: Test SOD
         run: bash tests/test-sod.sh
 
