@@ -3,7 +3,7 @@ Anaconda
 
 :教程贡献者: |田冬冬|\（作者）、
              |姚家园|\（审稿）
-:最近更新时间: 2021-01-14
+:最近更新时间: 2021-01-26
 
 ----
 
@@ -30,15 +30,19 @@ Anaconda 是一个用于科学计算的 Python 发行版，支持 Linux、macOS 
 
 2. 安装 Anaconda
 
-   Windows 用户直接双击安装包即可安装。
+   .. tabs::
 
-   Linux 用户在终端执行如下命令以安装 Anaconda::
+      .. tab:: Windows
+      
+         直接双击安装包即可安装。
 
-      $ bash Anaconda3-2020.11-Linux-x86_64.sh
+      .. code-tab:: bash Linux
+   
+         $ bash Anaconda3-2020.11-Linux-x86_64.sh
 
-   macOS 用户在终端执行如下命令以安装 Anaconda::
+      .. code-tab:: bash macOS
 
-      $ bash Anaconda3-2020.11-MacOSX-x86_64.sh
+         $ bash Anaconda3-2020.11-MacOSX-x86_64.sh
 
    Anaconda 默认会安装到 :file:`${HOME}/anaconda3` 下，在安装过程中可以
    设置为其他路径。
