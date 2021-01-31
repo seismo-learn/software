@@ -42,6 +42,7 @@ jobs:
       - name: Install dependencies
         run: |
           brew update
+          brew upgrade gcc
           brew install gfortran
         if: matrix.os == 'macos-11.0'
 
