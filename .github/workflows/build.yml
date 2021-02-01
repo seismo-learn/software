@@ -2,7 +2,7 @@ name: CI
 
 # Run for PRs and the main branch
 on:
-  pull_request_target:
+  pull_request:
   push:
     branches:
       - main
