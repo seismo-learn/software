@@ -11,65 +11,67 @@
 软件列表
 --------
 
-.. rubric:: 理论走时：
+.. panels::
+    :container: container-lg pb-3
+    :column: col-lg-3 col-md-3 col-sm-4 col-xs-6 p-2
 
-.. hlist::
-   :columns: 3
+    理论走时
+    ^^^^^^^^
 
-   - :doc:`/obspy/index`
-   - :doc:`/taup/index`
+    - :doc:`/obspy/index`
+    - :doc:`/taup/index`
 
+    ---
 
-.. rubric:: 合成地震图：
+    合成地震图
+    ^^^^^^^^^^
 
-.. hlist::
-   :columns: 3
+    - :doc:`/cps/index`
+    - :doc:`/fk/index`
 
-   - :doc:`/cps/index`
-   - :doc:`/fk/index`
+    ---
 
-.. rubric:: 震源机制反演：
+    震源机制反演
+    ^^^^^^^^^^^^
 
-.. hlist::
-   :columns: 3
+    - :doc:`/cps/index`
+    - :doc:`/gcap3d/index`
 
-   - :doc:`/cps/index`
-   - :doc:`/gcap3d/index`
+    ---
 
-.. rubric:: 数据下载：
+    数据下载
+    ^^^^^^^^
 
-.. hlist::
-   :columns: 3
+    - :doc:`/hinetpy/index`
+    - :doc:`/obspy/index`
+    - :doc:`/sod/index`
 
-   - :doc:`/hinetpy/index`
-   - :doc:`/obspy/index`
-   - :doc:`/sod/index`
+    ---
 
-.. rubric:: 数据处理：
+    数据处理
+    ^^^^^^^^
 
-.. hlist::
-   :columns: 3
+    - :doc:`/cps/index`
+    - :doc:`/gmt/index`
+    - :doc:`/obspy/index`
+    - :doc:`/sac/index`
 
-   - :doc:`/cps/index`
-   - :doc:`/gmt/index`
-   - :doc:`/obspy/index`
-   - :doc:`/sac/index`
+    ---
 
-.. rubric:: 绘图：
+    绘图
+    ^^^^
 
-.. hlist::
-   :columns: 3
+    - :doc:`/gmt/index`
+    - :doc:`/sac/index`
 
-   - :doc:`/gmt/index`
-   - :doc:`/sac/index`
+    ---
 
-.. rubric:: 实用工具:
+    实用工具
+    ^^^^^^^^
 
-.. hlist::
-   :columns: 3
+    - :doc:`/utilities/distaz`
+    - :doc:`/utilities/saclst`
 
-   - :doc:`/utilities/distaz`
-   - :doc:`/utilities/saclst`
 
 .. toctree::
    :maxdepth: 3
