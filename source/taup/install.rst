@@ -1,6 +1,12 @@
 安装
 ====
 
+:本节贡献者: |田冬冬|\（作者）、
+             |姚家园|\（审稿）
+:最近更新日期: 2021-01-04
+
+----
+
 .. include:: /snippets/install_notes.rst_
 
 1.  :doc:`安装 Java 运行环境 </java/index>`

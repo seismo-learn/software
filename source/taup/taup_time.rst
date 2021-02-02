@@ -1,6 +1,12 @@
 taup_time
 =========
 
+:本节贡献者: |田冬冬|\（作者）、
+             |姚家园|\（审稿）
+:最近更新日期: 2021-01-04
+
+----
+
 TauP 提供的 ``taup_time`` 命令可用于计算震相走时、射线参数、出射角、
 入射角等信息。
 
@@ -35,7 +41,7 @@ TauP 默认台站位于地表，可使用 ``--stadepth`` 选项设置台站深�
 
    使用 ``-evt`` 和 ``-sta`` 选项时，``taup_time`` 会假设地球是完美球体，
    来计算震源和台站的震中距，这会产生一定的误差。例如，根据以上参数
-   ``taup_time`` 计算得到的震中距约为 62.83°，P 波初至到时为 594.27 秒。 
+   ``taup_time`` 计算得到的震中距约为 62.83°，P 波初至到时为 594.27 秒。
    而 ObsPy 的
    `gps2dist_azimuth <https://docs.obspy.org/packages/autogen/obspy.geodetics.base.gps2dist_azimuth.html#obspy.geodetics.base.gps2dist_azimuth>`__
    函数计算得到的震中距约为 6959 km （采用 WGS84 椭球：赤道半径 6378.1370 km、
