@@ -1,6 +1,6 @@
 # 地震“学”软件
 
-[![build](https://github.com/seismo-learn/software/workflows/CI/badge.svg)](https://github.com/seismo-learn/software/actions?query=workflow%3ACI)
+[![Deploy](https://github.com/seismo-learn/software/workflows/Deploy/badge.svg)](https://github.com/seismo-learn/software/actions?query=workflow%3ADeploy)
 [![Tests](https://github.com/seismo-learn/software/workflows/Tests/badge.svg)](https://github.com/seismo-learn/software/actions?query=workflow%3ATests)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh)
 
