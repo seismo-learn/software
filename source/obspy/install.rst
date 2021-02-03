@@ -1,6 +1,12 @@
 安装
 ====
 
+:本节贡献者: |姚家园|\（作者）、
+             |田冬冬|\（审稿）
+:最近更新日期: 2021-01-02
+
+----
+
 我们强烈推荐使用 Anaconda 安装 ObsPy，这也是 ObsPy `官方推荐的安装方式 <https://github.com/obspy/obspy/wiki#installation>`__\ 。
 
 1.  :doc:`安装 Anaconda </anaconda/index>`

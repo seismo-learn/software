@@ -1,6 +1,12 @@
 安装
 ====
 
+:本节贡献者: |田冬冬|\（作者）、
+             |姚家园|\（审稿）
+:最近更新日期: 2021-01-26
+
+----
+
 .. include:: /snippets/install_notes.rst_
 
 1.  下载:
@@ -31,15 +37,15 @@
           $ sudo dnf install libX11-devel
 
        .. code-tab:: bash CentOS
-        
+
           $ sudo yum install libX11-devel
 
        .. code-tab:: bash Ubuntu/Debian
-        
+
           $ sudo apt install libx11-dev
 
        .. code-tab:: bash macOS Homebrew
-        
+
           # macOS 安装 XQuartz 后需要重启方可生效
           $ brew install --cask xquartz
 
