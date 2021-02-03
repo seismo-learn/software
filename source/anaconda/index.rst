@@ -30,19 +30,22 @@ Anaconda 是一个用于科学计算的 Python 发行版，支持 Linux、macOS 
 
 2. 安装 Anaconda
 
-   .. tabs::
 
-      .. tab:: Windows
-      
-         直接双击安装包即可安装。
+    .. tabbed:: Windows
 
-      .. code-tab:: bash Linux
-   
-         $ bash Anaconda3-2020.11-Linux-x86_64.sh
+        直接双击安装包即可安装。
 
-      .. code-tab:: bash macOS
+    .. tabbed:: Linux
 
-         $ bash Anaconda3-2020.11-MacOSX-x86_64.sh
+        ::
+
+            $ bash Anaconda3-2020.11-Linux-x86_64.sh
+
+    .. tabbed:: macOS
+
+        ::
+
+            $ bash Anaconda3-2020.11-MacOSX-x86_64.sh
 
    Anaconda 默认会安装到 :file:`${HOME}/anaconda3` 下，在安装过程中可以
    设置为其他路径。
@@ -103,15 +106,15 @@ Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚�
 
    安装 Anaconda 后，打开终端默认会激活 base 环境。不经常使用
    Python 的读者可以通过如下命令取消此默认设置::
-   
+
       $ conda config --set auto_activate_base False
-      
+
    取消后，可以临时激活 base 环境::
 
       $ conda activate base
-      
+
    重新激活此默认设置::
-   
+
       $ conda config --set auto_activate_base True
 
 搜索模块::

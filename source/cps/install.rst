@@ -30,24 +30,30 @@
 
     编译 CPS 源码需要安装 X11 库文件:
 
-    .. tabs::
+    .. tabbed:: Fedora
 
-       .. code-tab:: bash Fedora
+        ::
 
-          $ sudo dnf install libX11-devel
+            $ sudo dnf install libX11-devel
 
-       .. code-tab:: bash CentOS
+    .. tabbed:: CentOS
 
-          $ sudo yum install libX11-devel
+        ::
 
-       .. code-tab:: bash Ubuntu/Debian
+            $ sudo yum install libX11-devel
 
-          $ sudo apt install libx11-dev
+    .. tabbed:: Ubuntu/Debian
 
-       .. code-tab:: bash macOS Homebrew
+        ::
 
-          # macOS 安装 XQuartz 后需要重启方可生效
-          $ brew install --cask xquartz
+            $ sudo apt install libx11-dev
+
+    .. tabbed:: macOS Homebrew
+
+        ::
+
+            # macOS 安装 XQuartz 后需要重启方可生效
+            $ brew install --cask xquartz
 
 4.  配置:
 
@@ -59,19 +65,23 @@
 
         $ cd ~/src/CPS
 
-    .. tabs::
+    .. tabbed:: 64 位 Linux 系统
 
-       .. code-tab:: bash 64 位 Linux 系统
+        ::
 
-          $ ./Setup LINUX6440
+            $ ./Setup LINUX6440
 
-       .. code-tab:: bash 32 位 Linux 系统
+    .. tabbed:: 32 位 Linux 系统
 
-          $ ./Setup LINUX40
+        ::
 
-       .. code-tab:: bash macOS 系统
+            $ ./Setup LINUX40
 
-           $ ./Setup OSX40
+    .. tabbed:: macOS 系统
+
+        ::
+
+            $ ./Setup OSX40
 
     .. note::
 
