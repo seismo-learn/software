@@ -28,7 +28,7 @@
     存在一些问题，因而需要做一些小修改方可使用。主要修改如下：
 
     -   :file:`Makefile` 中需要添加 ``FC=gfortran`` 指定使用 gfortran 编译器
-    -   :file:`Makefile` 中需要给 ``FFLAGS`` 加上中 ``-ffixed-line-length-none``
+    -   :file:`Makefile` 中需要给 ``FFLAGS`` 加上 ``-ffixed-line-length-none``
         使得 Fortran 一行可以超过 72 字符
     -   :file:`Makefile` 中第 6—7 行被注释了，所以 ``fk`` 无法使用 SAC 提供的
         滤波功能。若 SAC 已安装，则可以将第 6—7 行的行首注释符号 ``#`` 去掉
