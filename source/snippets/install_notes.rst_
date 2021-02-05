@@ -1,10 +1,15 @@
-.. admonition:: 阅读须知
+.. dropdown:: :fa:`exclamation-circle,mr-1` 阅读须知
+    :container: +shadow
+    :title: bg-info text-white font-weight-bold
 
-   1. 我们假定用户已经根据《:doc:`seis101:computer/setup`\ 》中的内容安装了
-      C/C++ 和 Fortran 编译器 ``gcc``、``g++`` 和 ``gfortran``
-      以及常用命令行工具 ``make`` 和 ``git`` 等。
+    1.  我们假定用户已经根据《:doc:`seis101:computer/setup`\ 》中的内容安装了
+        C/C++ 和 Fortran 编译器 ``gcc``、``g++`` 和 ``gfortran``
+        以及常用命令行工具 ``make`` 和 ``git`` 等。
 
-   2. 修改环境变量时，我们假定用户当前使用的 Shell 是 Bash，且 Bash 配置文件 为 ``~/.bashrc``。
-      Z Shell （zsh）用户应修改 ``~/.zshrc``\ 。
-      不确定自己当前使用的是何种 Shell 的用户，可检查 ``echo $SHELL`` 命令的输出。
+    2.  修改环境变量时，我们假定用户当前使用的 Shell 是 Bash，且 Bash 配置文件 为 ``~/.bashrc``。
+        Z Shell （zsh）用户应修改 ``~/.zshrc``\ 。
+        不确定自己当前使用的是何种 Shell 的用户，可检查 ``echo $SHELL`` 命令的输出。
 
+    3.  所有软件的安装方式及安装路径，均遵循\
+        :doc:`《文件管理实践经验》<seis101:best-practices/file-organization>`\ 和\
+        :doc:`《软件安装实践经验》<seis101:best-practices/software-installation>`\ 。
