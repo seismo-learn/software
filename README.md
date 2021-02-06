@@ -10,28 +10,10 @@
 - 项目主页：https://github.com/seismo-learn/software
 - 网页版：https://seismo-learn.org/software/
 
-## 构建文档
-
-本文档使用 [Sphinx](http://www.sphinx-doc.org/) 构建得到。Sphinx 是基于 Python 的
-文档生成工具。
-
-1.  下载文档源码
-
-        git clone --depth=50 https://github.com/seismo-learn/software.git
-
-2.  安装文档所需依赖
-
-        cd software/
-        pip install -r requirements.txt
-
-3.  编译生成 HTML 格式的文档。生成的文档位于 `build/html/` 目录下
-
-        make html
-
 ## 文档维护
 
-本文档尚有很多不完善之处，欢迎使用这些软件的用户参与到教程的维护与更新中。
-详情见 [维护指南](CONTRIBUTING.md)。
+本文档尚有很多不完善之处，欢迎读者参与到文档的维护与更新中。
+详情见[维护指南](https://seismo-learn.org/contributing/)。
 
 ## 许可协议
 
@@ -40,4 +22,3 @@
 
 - 署名：必须提到原作者，提供指向此许可协议的链接，表明是否有做修改
 - 非商业性使用：不能对本作品进行任何形式的商业性使用
-
