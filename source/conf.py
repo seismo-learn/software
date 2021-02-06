@@ -67,7 +67,6 @@ intersphinx_mapping = {
     "seis": ("https://seismo-learn.org/seismology/", None),
     "seis101": ("https://seismo-learn.org/seismology101/", None),
     "software": ("https://seismo-learn.org/software/", None),
-    "contributing": ("https://seismo-learn.org/contributing/", None),
 }
 
 # options for sphinx-copybutton
