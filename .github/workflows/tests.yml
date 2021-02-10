@@ -41,7 +41,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          brew install gfortran
+          brew reinstall gcc
         if: matrix.os == 'macos-11.0'
 
       #########################################################################
