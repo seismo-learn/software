@@ -7,7 +7,7 @@
 
 ----
 
-.. include:: /snippets/install_notes.rst_
+.. include:: /snippets/install-notes.rst_
 
 这一节将介绍如何在 Linux 和 macOS 上安装 XXX 软件。
 
