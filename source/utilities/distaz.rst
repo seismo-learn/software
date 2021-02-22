@@ -5,7 +5,7 @@ distaz
                     `姚家园 <https://github.com/core-man>`__\ （审稿）
 :最近更新时间: 2021-01-12
 
-.. include:: /snippets/install_notes.rst_
+.. include:: /snippets/install-notes.rst_
 
 ----
 

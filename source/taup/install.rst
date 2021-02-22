@@ -7,7 +7,7 @@
 
 ----
 
-.. include:: /snippets/install_notes.rst_
+.. include:: /snippets/install-notes.rst_
 
 1.  :doc:`安装 Java 运行环境 </java/index>`
 

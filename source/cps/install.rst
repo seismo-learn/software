@@ -7,7 +7,7 @@
 
 ----
 
-.. include:: /snippets/install_notes.rst_
+.. include:: /snippets/install-notes.rst_
 
 1.  下载:
 
