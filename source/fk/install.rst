@@ -3,7 +3,7 @@
 
 :本节贡献者: |田冬冬|\（作者）、
              |姚家园|\（审稿）
-:最近更新日期: 2021-01-13
+:最近更新日期: 2021-03-14
 
 ----
 
@@ -30,8 +30,11 @@
     -   :file:`Makefile` 中需要添加 ``FC=gfortran`` 指定使用 gfortran 编译器
     -   :file:`Makefile` 中需要给 ``FFLAGS`` 加上 ``-ffixed-line-length-none``
         使得 Fortran 一行可以超过 72 字符
+    -   :file:`Makefile` 中 ``FFLAGS`` 里的 ``-ffpe-trap=overflow,invalid,denormal``
+        参数需要删除
     -   :file:`Makefile` 中第 6—7 行被注释了，所以 ``fk`` 无法使用 SAC 提供的
-        滤波功能。若 SAC 已安装，则可以将第 6—7 行的行首注释符号 ``#`` 去掉
+        滤波功能。若 SAC 已安装，则可以将第 6—7 行的行首注释符号 ``#`` 去掉。同时给
+        ``SACLIB`` 加上 ``-no-pie`` 参数（若操作系统无法使用该参数，手动删除即可）。
     -   :file:`Makefile` 中未指定如何编译生成 ``fk2mt`` 文件。需要将 ``fk2mt``
         加到变量 ``TARGETS`` 中，并向 :file:`Makefile` 尾部加入如下语句：
 
@@ -49,6 +52,7 @@
         下载 patch 文件 :download:`fk3.3-v20190618.patch`，将其放在 fk 源码目录下，
         然后执行如下命令即可修改源码::
 
+            $ cd ~/src/fk/
             $ patch < fk3.3-v20190618.patch
 
     .. note::
@@ -57,7 +61,7 @@
 
 4.  进入源码目录并编译::
 
-        $ cd fk/
+        $ cd ~/src/fk/
         $ make
         $ make clean
 

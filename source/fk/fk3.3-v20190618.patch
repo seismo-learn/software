@@ -6,13 +6,13 @@ index 1915244..62a8f67 100644
 +FC=gfortran
  optimize=-O
 -FFLAGS=$(optimize) -ffpe-trap=overflow,invalid,denormal
-+FFLAGS=$(optimize) -ffpe-trap=overflow,invalid,denormal -ffixed-line-length-none
++FFLAGS=$(optimize) -ffixed-line-length-none
  CFLAGS=$(optimize)
  #if SAC library has been installed, uncomment the next two lines
 -#CFLAGS=$(optimize) -DSAC_LIB
 -#SACLIB=-L$(SACHOME)/lib -lsac -lsacio
 +CFLAGS=$(optimize) -DSAC_LIB
-+SACLIB=-L$(SACHOME)/lib -lsac -lsacio
++SACLIB=-L$(SACHOME)/lib -lsac -lsacio -no-pie
  #
 
  SUBS = fft.o Complex.o sacio.o
