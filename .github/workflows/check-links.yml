@@ -33,7 +33,7 @@ jobs:
           --accept 429
           --exclude ".*/n$"
           --exclude ".*/n#$"
-          --exlude "https://www.hinet.bosai.go.jp/"
+          --exclude "https://www.hinet.bosai.go.jp/"
           --verbose
           "repository/README.md"
           "website/**/*.html"
