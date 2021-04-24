@@ -31,8 +31,6 @@ jobs:
         # 429: Too many requests
         args: >
           --accept 429
-          --exclude ".*/n$"
-          --exclude ".*/n#$"
           --exclude "https://www.hinet.bosai.go.jp/"
           --verbose
           "repository/README.md"
