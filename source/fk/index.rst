@@ -25,3 +25,4 @@ fk
 
    introduction
    install
+   usage
