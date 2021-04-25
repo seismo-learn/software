@@ -5,7 +5,7 @@ SOD
 :主页: http://www.seis.sc.edu/sod/
 :源码地址: https://github.com/crotwell/sod
 :官方文档: http://www.seis.sc.edu/sod/
-:作者: `Philip Crotwell <https://sc.edu/study/colleges_schools/artsandsciences/earth_ocean_and_environment/our_people/directory/crotwell_philip.php>`__
+:作者: `Philip Crotwell <https://github.com/crotwell>`__
 :最新版本: v3.2.10 (2020-04-01)
 :适用平台: Linux、macOS、Windows
 :编程语言: Java
