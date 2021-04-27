@@ -1,0 +1,446 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>taup_time &mdash; 地震“学”软件</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex/" />
+    <link rel="search" title="搜索" href="../../search/" />
+    <link rel="next" title="taup_curve" href="../taup_curve/" />
+    <link rel="prev" title="安装" href="../install/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../" class="icon icon-home"> 地震“学”软件
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">地震学软件</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cps/">CPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fk/">fk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gcap3d/">gCAP3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gmt/">GMT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hinetpy/">HinetPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../obspy/">ObsPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sac/">SAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sod/">SOD</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">TauP</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction/">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/">安装</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">taup_time</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">基本用法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">输出格式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">信息提取</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">走时</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">射线参数</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../taup_curve/">taup_curve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../taup_path/">taup_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../taup_setsac/">taup_setsac</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">实用工具</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/distaz/">distaz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/saclst/">saclst</a></li>
+</ul>
+<p class="caption"><span class="caption-text">附录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../template/">教程模板</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../anaconda/">Anaconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/">Java 运行环境</a></li>
+</ul>
+
+            
+          
+
+    
+        <p class="caption">
+            <span class="caption-text">外部链接</span>
+        </p>
+        <ul>
+            
+                <li class="toctree-l1"><a href="https://seismo-learn.org/"><i class="fa fa-home"></i> 地震“学”主站</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/seismo-learn/software"><i class="fa fa-github fa-fw"></i> 网站源码</a></li>
+            
+                <li class="toctree-l1"><a href="https://seismo-learn.org/contributing/"><i class="fa fa-edit fa-fw"></i> 贡献指南</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/seismo-learn/software/discussions"><i class="fa fa-comments fa-fw"></i> 参与讨论</a></li>
+            
+        </ul>
+    
+
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">地震“学”软件</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../">TauP</a> &raquo;</li>
+        
+      <li>taup_time</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/seismo-learn/software/blob/main/source/taup/taup_time.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="taup-time">
+<h1>taup_time<a class="headerlink" href="#taup-time" title="永久链接至标题">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">本节贡献者</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://me.seisman.info/">田冬冬</a>（作者）、
+<a class="reference external" href="https://github.com/core-man">姚家园</a>（审稿）</p>
+</dd>
+<dt class="field-even">最近更新日期</dt>
+<dd class="field-even"><p>2021-01-04</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>TauP 提供的 <code class="docutils literal notranslate"><span class="pre">taup_time</span></code> 命令可用于计算震相走时、射线参数、出射角、入射角等信息。</p>
+<div class="section" id="id1">
+<h2>基本用法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>使用 <code class="docutils literal notranslate"><span class="pre">taup_time</span> <span class="pre">-help</span></code> 可查询该命令的完整用法和选项，此处仅介绍常用用法。</p>
+<p>计算震源深度为 300 km，震中距 60° 处，P、S、PcP、ScS、PKiKP 震相的走时信息:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup_time -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-h</span></code>：震源深度（单位 km），默认深度为 0.0 km。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-deg</span></code>：震中距（单位 °）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-ph</span></code>：以逗号分隔的震相名</p></li>
+</ul>
+<p>TauP 默认使用 iasp91 模型，可以使用 <code class="docutils literal notranslate"><span class="pre">-mod</span></code> 选项设置其他 TauP 预定义速度模型:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup_time -mod prem -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP
+$ taup_time -mod ak135 -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP
+</pre></div>
+</div>
+<p>TauP 默认台站位于地表，可使用 <code class="docutils literal notranslate"><span class="pre">--stadepth</span></code> 选项设置台站深度（单位为 km）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup_time -h 300 -deg 60 --stadepth 0.5 -ph P,S,PcP,ScS,PKiKP
+</pre></div>
+</div>
+<p>若已知震源和台站位置，也可以使用 <code class="docutils literal notranslate"><span class="pre">-evt</span></code> 和 <code class="docutils literal notranslate"><span class="pre">-sta</span></code> 选项分别指定震源和台站的纬度和经度。例如，震源位于 (40 °N，10 °E)，台站位于 (20 °S，10 °W):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup_time -h 300 -evt 40 10 -sta -20 -10 -ph P,S,PcP,ScS,PKiKP
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>使用 <code class="docutils literal notranslate"><span class="pre">-evt</span></code> 和 <code class="docutils literal notranslate"><span class="pre">-sta</span></code> 选项时，<code class="docutils literal notranslate"><span class="pre">taup_time</span></code> 会假设地球是完美球体，来计算震源和台站的震中距，这会产生一定的误差。例如，根据以上参数
+<code class="docutils literal notranslate"><span class="pre">taup_time</span></code> 计算得到的震中距约为 62.83°，P 波初至到时为 594.27 秒。而 ObsPy 的
+<a class="reference external" href="https://docs.obspy.org/packages/autogen/obspy.geodetics.base.gps2dist_azimuth.html#obspy.geodetics.base.gps2dist_azimuth">gps2dist_azimuth</a>
+函数计算得到的震中距约为 6959 km （采用 WGS84 椭球：赤道半径 6378.1370 km、扁率约为 0.0033528106647474805），在半径为 6371 km 的完美球状地球上约为 62.585°（利用 <a class="reference external" href="https://docs.obspy.org/packages/autogen/obspy.geodetics.base.kilometers2degrees.html#obspy.geodetics.base.kilometers2degrees">kilometers2degrees</a>
+函数计算得到），使用 62.585° 直接计算的 P 波初至到时为 592.64 秒，二者相差 1.63 秒。</p>
+</div>
+<p>在震中距比较小的情况下，可以使用 <code class="docutils literal notranslate"><span class="pre">-km</span></code> 选项指定震中距（单位为 km）。比如计算震源深度为 5 km，震中距 100 km 处，P、S、PcP、ScS、PKiKP 震相的走时信息:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup_time -h 5 -km 100 -ph P,S,PcP,ScS,PKiKP
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>使用 <code class="docutils literal notranslate"><span class="pre">-km</span></code> 选项，<code class="docutils literal notranslate"><span class="pre">taup_time</span></code> 会在参数解析时假定地球半径为 6371 km，将公里转换成度，并不以速度模型的实际半径为准。详情请参考 <a class="reference external" href="https://github.com/crotwell/TauP/blob/ecccb870c87b73ca7150414487e9b4d693a63834/src/main/java/edu/sc/seis/TauP/TauP_Time.java#L613">TauP 源码</a>
+和 <a class="reference external" href="https://github.com/crotwell/TauP/issues/12">TauP issue#12</a>。</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>输出格式<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>下面的命令计算了 PREM 模型下，震源深度 100 km，震中距 60° 处，P 和 pP 震相的走时信息。其输出为:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup_time -mod prem -h 100 -deg 60 -ph P,pP
+
+Model: prem
+Distance   Depth   Phase   Travel    Ray Param  Takeoff  Incident  Purist    Purist
+  (deg)     (km)   Name    Time (s)  p (s/deg)   (deg)    (deg)   Distance   Name
+-----------------------------------------------------------------------------------
+   60.00   100.0   P        595.40     6.815     30.14    20.82    60.00   = P
+   60.00   100.0   pP       618.89     6.890    149.49    21.06    60.00   = pP
+</pre></div>
+</div>
+<p>输出共 9 列，从左到右分别为：</p>
+<ol class="arabic">
+<li><p>震中距（度）：地震震中与台站的大圆弧路径长度</p></li>
+<li><p>震源深度（km）</p></li>
+<li><p>震相名</p></li>
+<li><p>震相走时（秒）</p></li>
+<li><p>射线参数（秒/度）</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>射线参数有三种常用单位：秒/度（s/deg ）、秒/弧度（s/radian）、秒/千米（s/km）。三者之间的关系为（<span class="math notranslate nohighlight">\(R_0\)</span> 为地球半径，假设为 6371 km）：</p>
+<div class="math notranslate nohighlight">
+\[1 s/deg = \frac{1}{\pi*R_0/180} s/km = 1/111.19492 s/km\]</div>
+<div class="math notranslate nohighlight">
+\[1 s/deg = \frac{1}{\pi/180} s/radian = 57.29578 s/radian\]</div>
+</div>
+</li>
+<li><p>出射角（度）：即射线从震源出射时与<strong>垂直向下</strong>方向的夹角，取值范围为 0 到 180°。</p>
+<ul class="simple">
+<li><p>0° 到 90° 表示射线向下出射（例如 P 震相）</p></li>
+<li><p>90° 到 180° 表示射线向上出射（例如 pP 震相)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>不同文章对出射角的定义不同，使用时应格外注意。</p>
+<p>老版本的 TauP 对出射角的定义不同，可视为 BUG，应避免使用老版本 TauP。</p>
+</div>
+</li>
+<li><p>入射角（度）：射线入射到台站时与<strong>垂直向上</strong>方向的夹角。</p></li>
+<li><p>Purist 距离：地震波实际走过的圆弧距离。</p>
+<p>该值可能与震中距不同，例如 50° 震中距处记录到的 PKKKP 震相，实际走过的圆弧距离为 410°:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup_time -deg 50 -ph PKKKP
+
+Model: iasp91
+Distance   Depth   Phase   Travel    Ray Param  Takeoff  Incident  Purist    Purist
+  (deg)     (km)   Name    Time (s)  p (s/deg)   (deg)    (deg)   Distance   Name
+-----------------------------------------------------------------------------------
+  50.00     0.0   PKKKP   2519.56     2.242      6.72     6.72   410.00   = PKKKP
+</pre></div>
+</div>
+</li>
+<li><p>Purist 震相名：地震波的“真实”震相名。</p>
+<p>例如，若想要计算 SS 震相在 660 km 不连续面的下表面的反射波走时，可指定其震相名为
+<code class="docutils literal notranslate"><span class="pre">S^660S</span></code>。由于 PREM 模型中 660 km 不连续面的“真实”深度为 670 km，此时
+TauP 实际返回的时从 670 km 处反射回的震相，此时 Purist 震相名会显示为 <code class="docutils literal notranslate"><span class="pre">S^670S</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup_time -mod prem -deg 120 -ph S^660S
+
+Model: prem
+Distance   Depth   Phase    Travel    Ray Param  Takeoff  Incident  Purist    Purist
+  (deg)     (km)   Name     Time (s)  p (s/deg)   (deg)    (deg)   Distance   Name
+------------------------------------------------------------------------------------
+  120.00     0.0   S^660S   1975.75    12.336     20.79    20.79   120.00   * S^670S
+</pre></div>
+</div>
+</li>
+</ol>
+<p>可以使用 <code class="docutils literal notranslate"><span class="pre">--rel</span></code> 选项输出相对于某个指定震相的走时差。例如，下面的命令中，最后一列输出了所有震相相对于 PcP 震相的走时差:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup_time -mod prem -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP --rel PcP
+
+Model: prem
+Distance   Depth   Phase   Travel    Ray Param  Takeoff  Incident  Purist    Purist Relative to
+  (deg)     (km)   Name    Time (s)  p (s/deg)   (deg)    (deg)   Distance   Name       PcP
+-----------------------------------------------------------------------------------------------
+   60.00   300.0   P        574.72     6.739     33.65    20.58    60.00   = P      -42.32
+   60.00   300.0   PcP      617.05     4.016     19.28    12.09    60.00   = PcP      0.00
+   60.00   300.0   PKiKP    993.45     1.245      5.88     3.72    60.00   = PKiKP  376.41
+   60.00   300.0   S       1043.98    12.659     34.16    21.37    60.00   = S      426.93
+   60.00   300.0   ScS     1134.89     7.480     19.38    12.43    60.00   = ScS    517.85
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>信息提取<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>上面介绍的输出中包含了很多信息，想要在脚本中提取出想要的信息有些麻烦。所以
+<code class="docutils literal notranslate"><span class="pre">taup_time</span></code> 提供了一些选项，使得在脚本中计算走时、射线参数更加方便。</p>
+<div class="section" id="id4">
+<h3>走时<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">--time</span></code> 选项使得输出中只包含走时信息，并且小数点的位数更多:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup_time -mod prem -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP --time
+574.7245 617.047 993.4524 1043.9805 1134.8923
+</pre></div>
+</div>
+<p>需要注意的是，输出的走时不是按照 <code class="docutils literal notranslate"><span class="pre">-ph</span></code> 选项中震相的顺序进行排序的，而是按照走时递增的顺序排序。比如这里，S 震相放在震相列表的第二位，而 S 震相的走时 1043.9805 却放在第四位。</p>
+</div>
+<div class="section" id="id5">
+<h3>射线参数<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">--rayp</span></code> 选项使得输出中只包含射线参数信息，并且小数点的位数更多:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup_time taup_time -mod prem -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP --rayp
+6.739042 4.0158706 1.2450149 12.65922 7.480467
+</pre></div>
+</div>
+<p>此时，输出的射线参数是按照 <code class="docutils literal notranslate"><span class="pre">-ph</span></code> 选项中震相的顺序进行排序的。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p><code class="docutils literal notranslate"><span class="pre">--rayp</span></code> 和 <code class="docutils literal notranslate"><span class="pre">--time</span></code> 选项不能一起使用。当两个选项同时使用时，会以后出现的选项为准。</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../taup_curve/" class="btn btn-neutral float-right" title="taup_curve" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../install/" class="btn btn-neutral float-left" title="安装" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2020–2021, seismo-learn.
+      <span class="lastupdated">
+        最后更新于 2021 年 04 月 27 日.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

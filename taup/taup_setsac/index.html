@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>taup_setsac &mdash; 地震“学”软件</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex/" />
+    <link rel="search" title="搜索" href="../../search/" />
+    <link rel="next" title="distaz" href="../../utilities/distaz/" />
+    <link rel="prev" title="taup_path" href="../taup_path/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../" class="icon icon-home"> 地震“学”软件
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">地震学软件</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cps/">CPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fk/">fk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gcap3d/">gCAP3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gmt/">GMT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hinetpy/">HinetPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../obspy/">ObsPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sac/">SAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sod/">SOD</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">TauP</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction/">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/">安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../taup_time/">taup_time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../taup_curve/">taup_curve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../taup_path/">taup_path</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">taup_setsac</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">实用工具</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/distaz/">distaz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/saclst/">saclst</a></li>
+</ul>
+<p class="caption"><span class="caption-text">附录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../template/">教程模板</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../anaconda/">Anaconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/">Java 运行环境</a></li>
+</ul>
+
+            
+          
+
+    
+        <p class="caption">
+            <span class="caption-text">外部链接</span>
+        </p>
+        <ul>
+            
+                <li class="toctree-l1"><a href="https://seismo-learn.org/"><i class="fa fa-home"></i> 地震“学”主站</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/seismo-learn/software"><i class="fa fa-github fa-fw"></i> 网站源码</a></li>
+            
+                <li class="toctree-l1"><a href="https://seismo-learn.org/contributing/"><i class="fa fa-edit fa-fw"></i> 贡献指南</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/seismo-learn/software/discussions"><i class="fa fa-comments fa-fw"></i> 参与讨论</a></li>
+            
+        </ul>
+    
+
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">地震“学”软件</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../">TauP</a> &raquo;</li>
+        
+      <li>taup_setsac</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/seismo-learn/software/blob/main/source/taup/taup_setsac.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="taup-setsac">
+<h1>taup_setsac<a class="headerlink" href="#taup-setsac" title="永久链接至标题">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">本节贡献者</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://me.seisman.info/">田冬冬</a>（作者）、
+<a class="reference external" href="https://github.com/core-man">姚家园</a>（审稿）</p>
+</dd>
+<dt class="field-even">最近更新日期</dt>
+<dd class="field-even"><p>2021-01-04</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p><a class="reference internal" href="../taup_time/"><span class="doc">taup_time</span></a> 命令可以计算各震相的理论走时，
+<a class="reference internal" href="#"><span class="doc">taup_setsac</span></a> 命令则用于计算理论走时并将走时信息写入到 SAC 文件头段变量中。</p>
+<p>使用 <code class="docutils literal notranslate"><span class="pre">taup_setsac</span> <span class="pre">-help</span></code> 可查询该命令的完整用法和选项，其用法相对简单，示例如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup_setsac -mod prem -evdpkm -ph P-0,S-1,PcP-8,ScS-9 *.SAC
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-mod</span></code>：指定使用 PREM 模型，默认使用 iasp91 模型。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-evdpkm</span></code>：由于历史原因，该命令默认 SAC 文件中的震源深度单位为米，而现在的 SAC 文件中的震源深度单位为千米。该选项设置深度的单位为 km。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-ph</span> <span class="pre">P-0,S-1,PcP-8,ScS-9</span></code>：将 P 波到时标记到 SAC 头段变量 <code class="docutils literal notranslate"><span class="pre">T0</span></code> 中，S 波到时标记到 <code class="docutils literal notranslate"><span class="pre">T1</span></code> 中，PcP 到时标记到 <code class="docutils literal notranslate"><span class="pre">T8</span></code>，ScS 到时标记到 <code class="docutils literal notranslate"><span class="pre">T9</span></code>。</p></li>
+</ul>
+<p>说明：</p>
+<ul class="simple">
+<li><p>SAC 中共有十个可用于存储时间的头段变量，即 <code class="docutils literal notranslate"><span class="pre">T0</span></code> 至 <code class="docutils literal notranslate"><span class="pre">T9</span></code> 。</p></li>
+<li><p>该命令在将震相走时标记到头段变量 <code class="docutils literal notranslate"><span class="pre">Tn</span></code> （n 取 0–9）的同时，还会修改对应的头段变量 <code class="docutils literal notranslate"><span class="pre">KTn</span></code> 和 <code class="docutils literal notranslate"><span class="pre">USERn</span></code>，其中 <code class="docutils literal notranslate"><span class="pre">KTn</span></code> 中保存震相名，
+<code class="docutils literal notranslate"><span class="pre">USERn</span></code> 中保存震相的射线参数（单位为 s/radian）。</p></li>
+<li><p>该命令计算的是震相的理论走时，还须知道发震时刻才能确定震相的理论到时，即震相的到时等于发震时刻加上震相的走时。 因而要求 SAC 头段变量 <code class="docutils literal notranslate"><span class="pre">O</span></code> （发震时刻）必须已赋值。</p></li>
+<li><p>该命令从 SAC 头段中读取地震深度和震中距信息，以计算震相理论到时。因而要求 SAC 头段变量 <code class="docutils literal notranslate"><span class="pre">EVDP</span></code> （震源深度）必须已赋值。若头段变量 <code class="docutils literal notranslate"><span class="pre">GCARC</span></code> （震中距，单位为 °）或 <code class="docutils literal notranslate"><span class="pre">DIST</span></code> （震中距，单位为 km）未赋值，而震源和台站位置的头段变量（<code class="docutils literal notranslate"><span class="pre">EVLA</span></code>、<code class="docutils literal notranslate"><span class="pre">EVLO</span></code>、<code class="docutils literal notranslate"><span class="pre">STLA</span></code>、<code class="docutils literal notranslate"><span class="pre">STLO</span></code>）已赋值，该命令可以自动计算震中距，但此时计算的震中距未考虑椭球校正，因而有一定的误差。建议将 SAC 头段变量 <code class="docutils literal notranslate"><span class="pre">LCALDA</span></code> 设置为 <code class="docutils literal notranslate"><span class="pre">TURE</span></code>，则当事件和台站的坐标被写入或被修改时，头段变量 <code class="docutils literal notranslate"><span class="pre">GCARC</span></code>、<code class="docutils literal notranslate"><span class="pre">DIST</span></code> 会自动计算，而 SAC 计算震中距时考虑了地球的扁率（赤道半径 6378.160 km，扁率为 0.00335293）。</p></li>
+<li><p>在某些震中距，单个震相会有多个到时。比如在震中距 20° 附近，S 波会出现三分支现象（Triplication），TauP 会得到七个 S 波到时，但只有最早的到时会被写入到 SAC 头段中。</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>若在执行该命令前，SAC 头段变量 <code class="docutils literal notranslate"><span class="pre">Tn</span></code> 中已有值，该命令会覆盖其原始值！</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>若执行命令时忘记了指定 <code class="docutils literal notranslate"><span class="pre">-evdpkm</span></code> 选项，此时若震源深度小于 1 km （1000 m），该命令会给出警告。</p>
+<p>需要注意，一定不要按 <kbd class="kbd docutils literal notranslate">Ctrl+C</kbd> 终止执行命令。因为 <code class="docutils literal notranslate"><span class="pre">taup_setsac</span></code>
+需要将 SAC 文件读入内存，进行修改，再将内存中的数据写回磁盘覆盖原文件。使用 <kbd class="kbd docutils literal notranslate">Ctrl+C</kbd> 终止命令会导致文件写回磁盘失败，进而导致部分 SAC 文件损坏。</p>
+<p>正确的做法是不理会这些警告，待程序执行完毕之后再加上 <code class="docutils literal notranslate"><span class="pre">-evdpkm</span></code> 选项重新执行。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../../utilities/distaz/" class="btn btn-neutral float-right" title="distaz" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../taup_path/" class="btn btn-neutral float-left" title="taup_path" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2020–2021, seismo-learn.
+      <span class="lastupdated">
+        最后更新于 2021 年 04 月 27 日.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
