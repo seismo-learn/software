@@ -3,7 +3,7 @@
 
 :本节贡献者: |田冬冬|\（作者）、
              |姚家园|\（审稿）
-:最近更新日期: 2021-01-04
+:最近更新日期: 2021-05-29
 
 ----
 
@@ -13,20 +13,20 @@
 
 2.  下载::
 
-        $ wget http://www.seis.sc.edu/downloads/TauP/TauP-2.4.5.tgz
+        $ wget http://www.seis.sc.edu/downloads/TauP/TauP-2.5.0.tgz
 
 3.  解压::
 
-        $ tar -xvf TauP-2.4.5.tgz
+        $ tar -xvf TauP-2.5.0.tgz
 
 4.  将 TauP 安装到 :file:`~/opt` 目录下::
 
         $ mkdir -p ~/opt/
-        $ mv TauP-2.4.5 ~/opt/
+        $ mv TauP-2.5.0 ~/opt/
 
 5.  修改环境变量，将 TauP 的 bin 路径添加到 PATH 中::
 
-        $ echo 'export PATH=${HOME}/opt/TauP-2.4.5/bin:${PATH}' >> ~/.bashrc
+        $ echo 'export PATH=${HOME}/opt/TauP-2.5.0/bin:${PATH}' >> ~/.bashrc
         $ source ~/.bashrc
 
 6.  检查安装是否成功
