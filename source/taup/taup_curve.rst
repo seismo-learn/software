@@ -1,23 +1,23 @@
-taup_curve
+taup curve
 ==========
 
 :本节贡献者: |田冬冬|\（作者）、
              |姚家园|\（审稿）
-:最近更新日期: 2021-01-04
+:最近更新日期: 2021-05-31
 
 ----
 
-``taup_curve`` 用于计算并绘制震相的走时曲线（走时—震中距关系曲线）。
+``taup curve`` 用于计算并绘制震相的走时曲线（走时—震中距关系曲线）。
 
 基本用法
 --------
 
-使用 ``taup_curve -help`` 可查询该命令的完整用法和选项。大多数选项的含义与
+使用 ``taup curve --help`` 可查询该命令的完整用法和选项。大多数选项的含义与
 :doc:`taup_time` 相同，不再赘述。此处仅介绍常用用法。
 
 计算震源深度为 300 km，P、S、PcP、ScS、PKiKP 震相的走时曲线::
 
-    $ taup_curve -h 300 -ph P,S,PcP,ScS,PKiKP
+    $ taup curve -h 300 -ph P,S,PcP,ScS,PKiKP
 
 该命令会将走时曲线信息以 GMT **plot** 或 **psxy** 命令可识别的格式输出到文件
 :file:`taup_curve.gmt` 中。
@@ -29,7 +29,7 @@ taup_curve
     $ taup_curve -h 300 -ph P,S,PcP,ScS,PKiKP -o stdout
 
 输出格式
----------
+--------
 
 输出的走时曲线用两列数据表示，
 
@@ -53,7 +53,7 @@ taup_curve
     14.34    348.66
     ...
 
-``taup_curve`` 不仅可以输出震相走时，还支持输出折合走时（reduced traveltime）
+``taup curve`` 不仅可以输出震相走时，还支持输出折合走时（reduced traveltime）
 或相对走时：
 
 - 使用 ``-reddeg`` 选项设置折合速度（reducing velocity），其单位为 °/s
@@ -64,16 +64,15 @@ taup_curve
 ------------
 
 使用 ``-gmt`` 选项可以生成 GMT 绘图脚本（:file:`taup_curve.gmt`\ ），执行该脚本
-即可生成 PS 格式的射线路径图::
+即可生成 PDF 格式的射线路径图::
 
     $ taup_curve -h 300 -ph P,S,PcP,ScS,PKiKP -gmt
     $ sh taup_curve.gmt
 
 .. note::
 
-   ``taup_curve`` 命令生成的 GMT 脚本采用的是 GMT 4 语法。对于 GMT 5 或 GMT 6 用户，
-   可直接将脚本中的 ``pstext`` 和 ``psxy`` 改成 ``gmt pstext`` 和 ``gmt psxy``
-   即可。
+   ``taup curve`` 命令生成的 GMT 脚本采用的是 GMT 5 语法。GMT 5 和 GMT 6 用户可以
+   直接运行使用，而 GMT 4 用户则无法正确运行。
 
 绘制出来的图件效果如下：
 

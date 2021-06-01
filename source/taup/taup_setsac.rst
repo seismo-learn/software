@@ -1,19 +1,19 @@
-taup_setsac
+taup setsac
 ===========
 
 :本节贡献者: |田冬冬|\（作者）、
              |姚家园|\（审稿）
-:最近更新日期: 2021-01-04
+:最近更新日期: 2021-05-31
 
 ----
 
 :doc:`taup_time` 命令可以计算各震相的理论走时，
-:doc:`taup_setsac` 命令则用于计算理论走时并将走时信息写入到 SAC 文件头段变量中。
+``taup setsac`` 命令则用于计算理论走时并将走时信息写入到 SAC 文件头段变量中。
 
-使用 ``taup_setsac -help`` 可查询该命令的完整用法和选项，
+使用 ``taup setsac --help`` 可查询该命令的完整用法和选项，
 其用法相对简单，示例如下::
 
-   $ taup_setsac -mod prem -evdpkm -ph P-0,S-1,PcP-8,ScS-9 *.SAC
+   $ taup setsac -mod prem -evdpkm -ph P-0,S-1,PcP-8,ScS-9 *.SAC
 
 -  ``-mod``\ ：指定使用 PREM 模型，默认使用 iasp91 模型。
 -  ``-evdpkm``\ ：由于历史原因，该命令默认 SAC 文件中的震源深度单位为米，
@@ -50,9 +50,8 @@ taup_setsac
     若执行命令时忘记了指定 ``-evdpkm`` 选项，此时若震源深度小于 1 km （1000 m），
     该命令会给出警告。
 
-    需要注意，一定不要按 :kbd:`Ctrl+C` 终止执行命令。因为 ``taup_setsac``
+    需要注意，一定不要按 :kbd:`Ctrl+C` 终止执行命令。因为 ``taup setsac``
     需要将 SAC 文件读入内存，进行修改，再将内存中的数据写回磁盘覆盖原文件。
     使用 :kbd:`Ctrl+C` 终止命令会导致文件写回磁盘失败，进而导致部分 SAC 文件损坏。
 
     正确的做法是不理会这些警告，待程序执行完毕之后再加上 ``-evdpkm`` 选项重新执行。
-
