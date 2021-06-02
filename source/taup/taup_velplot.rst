@@ -20,7 +20,7 @@ taup velplot
 
     $ sh iasp91_vel.gmt
 
-绘制出来的图件效果如下。其中蓝线为 P 波速度，红线为 S 波速度。
+绘制出来的图件效果如下（蓝线为 P 波速度，红线为 S 波速度）：
 
 .. image:: taup_velplot.jpg
    :width: 400 px
