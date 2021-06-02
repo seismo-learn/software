@@ -3,7 +3,7 @@ taup velplot
 
 :本节贡献者: |田冬冬|\（作者）、
              |姚家园|\（审稿）
-:最近更新日期: 2021-06-01
+:最近更新日期: 2021-06-02
 
 ----
 
@@ -15,8 +15,7 @@ taup velplot
 
     $ taup velplot -mod iasp91
 
-执行以上命令生成的脚本 :file:`iasp91_vel.gmt`\ ，生成 PDF 格式的
-速度-深度剖面::
+执行以上命令生成的脚本 :file:`iasp91_vel.gmt`\ ，生成 PDF 格式的速度-深度剖面::
 
     $ sh iasp91_vel.gmt
 
