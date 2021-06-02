@@ -11,7 +11,7 @@ taup velplot
 
 使用 ``taup velplot --help`` 可查询该命令的完整用法和选项。此处仅介绍其常用用法。
 
-绘制 iasp91 参考模型的速度-深度剖面::
+生成 iasp91 参考模型的速度-深度剖面绘图脚本::
 
     $ taup velplot -mod iasp91
 
