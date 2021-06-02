@@ -9,10 +9,16 @@ taup slowplot
 
 ``taup slowplot`` 可以很方便地生成用于绘制慢度-深度剖面的 GMT 脚本。
 
+慢度定义
+---------
 此处的慢度是指 :math:`s = \frac{r}{v}`\ ，单位为 s/rad。对于任意射线而言，其
 射线参数（即水平慢度）为 :math:`p = \frac{r \sin\theta}{v}`\ ，其中
 :math:`\theta` 是射线相对于地面垂线的角度。由于 :math:`\sin\theta \leq 1`\，
 因而慢度-深度模型展示了某个射线参数对应的射线所能采样的最大深度。
+
+
+基本用法
+---------
 
 使用 ``taup slowplot --help`` 可查询该命令的完整用法和选项。此处仅介绍其常用用法。
 
