@@ -7,11 +7,11 @@ taup velplot
 
 ----
 
-``taup velplot`` 可以很方便地生成一个可用于绘制速度-深度剖面的 GMT 脚本。
+``taup velplot`` 可以很方便地生成用于绘制速度-深度剖面的 GMT 脚本。
 
 使用 ``taup velplot --help`` 可查询该命令的完整用法和选项。此处仅介绍其常用用法。
 
-绘制 IASP91 参考模型的速度-深度剖面::
+绘制 iasp91 参考模型的速度-深度剖面::
 
     $ taup velplot -mod iasp91
 
