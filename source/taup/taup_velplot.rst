@@ -15,7 +15,7 @@ taup velplot
 
     $ taup velplot -mod iasp91
 
-执行该命令会生成脚本 :file:`iasp91_vel.gmt`\ 。执行该脚本即可生成 PDF 格式的
+执行以上命令生成的脚本 :file:`iasp91_vel.gmt`\ ，生成 PDF 格式的
 速度-深度剖面::
 
     $ sh iasp91_vel.gmt
