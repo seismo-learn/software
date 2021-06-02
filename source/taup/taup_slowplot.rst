@@ -7,16 +7,16 @@ taup slowplot
 
 ----
 
-``taup slowplot`` 可以很方便地生成一个可用于绘制慢度-深度剖面的 GMT 脚本。
+``taup slowplot`` 可以很方便地生成用于绘制慢度-深度剖面的 GMT 脚本。
 
-此处的慢度是指 :math:`p = \frac{r}{v}`\ ，单位为 s/rad。对于任意射线而言，其
-射线参数（或水平慢度）为 :math:`p = \frac{r \sin\theta}{v}`\ ，其中
+此处的慢度是指 :math:`s = \frac{r}{v}`\ ，单位为 s/rad。对于任意射线而言，其
+射线参数（即水平慢度）为 :math:`p = \frac{r \sin\theta}{v}`\ ，其中
 :math:`\theta` 是射线相对于地面垂线的角度。由于 :math:`\sin\theta \leq 1`\，
 因而慢度-深度模型展示了某个射线参数对应的射线所能采样的最大深度。
 
 使用 ``taup slowplot --help`` 可查询该命令的完整用法和选项。此处仅介绍其常用用法。
 
-绘制 IASP91 参考模型的慢度模型::
+绘制 iasp91 参考模型的慢度模型::
 
     $ taup slowplot -mod iasp91
 
@@ -24,7 +24,7 @@ taup slowplot
 
     $ sh iasp91_slow.gmt
 
-绘制出来的图件效果如下。图中蓝线为 P 波慢度，红线为 S 波慢度：
+绘制出来的图件效果如下（图中蓝线为 P 波慢度，红线为 S 波慢度）：
 
 .. image:: taup_slowplot.jpg
    :width: 400 px
