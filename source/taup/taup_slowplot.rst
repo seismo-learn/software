@@ -11,6 +11,7 @@ taup slowplot
 
 慢度定义
 ---------
+
 此处的慢度是指 :math:`s = \frac{r}{v}`\ ，单位为 s/rad。对于任意射线而言，其
 射线参数（即水平慢度）为 :math:`p = \frac{r \sin\theta}{v}`\ ，其中
 :math:`\theta` 是射线相对于地面垂线的角度。由于 :math:`\sin\theta \leq 1`\，
