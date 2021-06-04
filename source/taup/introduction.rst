@@ -3,7 +3,7 @@
 
 :本节贡献者: |田冬冬|\（作者）、
              |姚家园|\（审稿）
-:最近更新日期: 2021-05-31
+:最近更新日期: 2021-06-04
 
 ----
 
@@ -32,23 +32,20 @@ TauP 目前还存在一些缺点：
 工具
 ----
 
-TauP 既提供了图形界面，也提供了命令行工具。
+TauP 既提供了图形界面 ``taup``，也提供了以下命令行工具：
 
-- 图形界面： ``taup``
-- 命令行工具：
-
-  - :doc:`taup_time`\ ：计算震相的走时、射线参数、出射角、入射角等
-  - :doc:`taup_curve`\ ：计算走时曲线
-  - :doc:`taup_path`\ ：计算射线路径
-  - ``taup pierce``\ ：计算震相在波速不连续面和指定深度的反射点和穿透点
-  - ``taup wavefront``\ ：计算波前面
-  - ``taup table``\ ：计算走时表
-  - :doc:`taup_setsac` ：将震相走时写入 SAC 头段变量中
-  - ``taup create``\ ：预计算速度模型
-  - ``taup phase``\ ：通过语言描述震相的射线路径
-  - :doc:`taup_slowplot`\ ：绘制速度模型的慢度-深度剖面
-  - :doc:`taup_velplot`\ ：绘制速度模型的速度-深度剖面
-  - ``taup velmerge``\ ：将部分速度模型与一个标准模型合并以构成一个新的速度模型
+- :doc:`taup_time`\ ：计算震相的走时、射线参数、出射角、入射角等
+- :doc:`taup_curve`\ ：计算走时曲线
+- :doc:`taup_path`\ ：计算射线路径
+- ``taup pierce``\ ：计算震相在波速不连续面和指定深度的反射点和穿透点
+- ``taup wavefront``\ ：计算波前面
+- ``taup table``\ ：计算走时表
+- :doc:`taup_setsac` ：将震相走时写入 SAC 头段变量中
+- ``taup create``\ ：预计算速度模型
+- ``taup phase``\ ：通过语言描述震相的射线路径
+- :doc:`taup_slowplot`\ ：绘制速度模型的慢度-深度剖面
+- :doc:`taup_velplot`\ ：绘制速度模型的速度-深度剖面
+- ``taup velmerge``\ ：将部分速度模型与一个标准模型合并以构成一个新的速度模型
 
 参考文献
 --------
