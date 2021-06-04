@@ -46,7 +46,7 @@ TauP 既提供了图形界面，也提供了命令行工具。
   - :doc:`taup_setsac` ：将震相走时写入 SAC 头段变量中
   - ``taup create``\ ：预计算速度模型
   - ``taup phase``\ ：通过语言描述震相的射线路径
-  - ``taup slowplot``\ ：绘制速度模型的慢度-深度剖面
+  - :doc:`taup_slowplot`\ ：绘制速度模型的慢度-深度剖面
   - :doc:`taup_velplot`\ ：绘制速度模型的速度-深度剖面
   - ``taup velmerge``\ ：将部分速度模型与一个标准模型合并以构成一个新的速度模型
 

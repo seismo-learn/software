@@ -26,4 +26,5 @@ TauP
    taup_curve
    taup_path
    taup_setsac
+   taup_slowplot
    taup_velplot
