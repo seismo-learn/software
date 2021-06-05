@@ -92,7 +92,8 @@ P 波的波前面信息，内容如下::
 
     $ for i in $(ls taup_wavefront_*.gmt); do bash $i; done
 
-使用 `GraphicsMagick 的 gm 命令 <http://www.graphicsmagick.org/convert.html>`_
+使用 `GraphicsMagick <http://www.graphicsmagick.org/>`_ 的 
+`gm convert <http://www.graphicsmagick.org/convert.html>`_ 命令
 可以将多个 PDF 文件转换为 GIF 动画::
 
     $ gm convert -delay 10 -density 150x150 taup_wavefront_*.pdf taup_wavefront.gif
