@@ -97,7 +97,7 @@ P 波的波前面信息，内容如下::
 
     $ gm convert -delay 10 -density 150x150 taup_wavefront_*.pdf taup_wavefront.gif
 
-其中 ``-delay 10`` 表示每两张图的间隔是 10/100 秒，\ ``-density 150x150`` 设置动画的水平和
+其中，\ ``-delay 10`` 表示每两张图的间隔是 10/100 秒，\ ``-density 150x150`` 设置动画的水平和
 垂直方向的像素点数。
 
 生成的动画如下图所示：
