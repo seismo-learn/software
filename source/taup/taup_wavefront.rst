@@ -19,7 +19,8 @@ taup wavefront
 
     $ taup wavefront -ph P -deg 60 -h 300
 
-该命令会生成文件 :file:`taup_wavefront.gmt`\ ，其内容如下::
+该命令会生成文件 :file:`taup_wavefront.gmt`\ ，其包含了不同时刻（t=100, 200, 300, ...）
+P 波的波前面信息，内容如下::
 
     > P at 100.0 seconds
     5.31    5151.8   100.00  254.331
@@ -34,19 +35,11 @@ taup wavefront
     16.23    4296.4   200.00  267.326
     ...(省略若干行)
 
-该文件中包含了不同时刻（t=100, 200, 300, ...）P 波的波前面信息。输出包含四列，
-分别是：
+输出包含四列，分别是：震中距（度）、深度（km）、走时（秒）、射线参数（秒/度）。可以直接使用文件的前两列进行绘图。
 
-- 震中距（度）
-- 深度（km）
-- 走时（秒）
-- 射线参数（秒/度）
+加上 ``--gmt`` 选项，则会生成一个可用于绘制波前面传播的 GMT 脚本 :file:`taup_wavefront.gmt`::
 
-可以直接使用文件的前两列进行绘图。
-
-加上 ``-gmt`` 选项，则会生成一个可用于绘制波前面传播的 GMT 脚本 :file:`taup_wavefront.gmt`::
-
-    $ taup wavefront -ph P -deg 60 -h 300 -gmt
+    $ taup wavefront -ph P -deg 60 -h 300 --gmt
 
 使用如下命令执行该绘图脚本，即可得到 PDF 格式的波前面传播图::
 
@@ -61,11 +54,11 @@ taup wavefront
 进阶用法
 --------
 
-``taup wavefront`` 提供了 ``--rays`` 和 ``--timestep`` 选项进一步控制生成的波前面时
-所使用的射线数目（即每个波前面时用多少个点约束）和时间步长（即间隔多长时间产生一个
-波前面）。
+``taup wavefront`` 提供的 ``--rays`` 选项可以进一步控制生成波前面时所使用的射线数目
+（即每个波前面用多少个点约束），而 ``--timestep`` 选项可以时间步长
+（即间隔多长时间产生一个波前面）。
 
-下面的示例设置了每个波前面用20条射线计算，且每25秒计算一个波前面::
+以下示例中，每个波前面用 20 条射线计算，且每 25 秒计算一个波前面::
 
     $ taup wavefront -ph P -deg 60 -h 300 --rays 20 --timestep 25 --gmt
     $ bash taup_wavefront.gmt
@@ -81,19 +74,21 @@ taup wavefront
 
 有了每个时刻的波场信息，就可以制作波场动画了。
 
-``taup wavefront`` 提供了 ``--timefiles`` 选项，可以将每个时刻的波前面信息输出到
-不同的文件中。例如::
+``taup wavefront`` 提供的 ``--timefiles`` 选项可以将每个时刻的波前面信息输出到
+不同的文件中。
+
+以下命令会生成几十个文件，每个文件包含一个波前面信息::
 
     $ taup wavefront -ph P -deg 60 -h 300 --timestep 10 --timefiles
 
-以上命令会生成几十个文件，每个文件包含一个波前面信息。例如 :file:`taup_wavefront_025.gmt`
-包含了第 25 秒时的波前面信息。这些文件即可用于制图并进一步生成动画。
+例如，\ :file:`taup_wavefront_025.gmt` 包含了第 25 秒时的波前面信息。
+这些文件即可用于制图并进一步生成动画。
 
-将 ``--timefiles`` 选项与 ``-gmt`` 选项连用，则会对每个波前面生成一个单独的 GMT 绘图脚本。
+将 ``--timefiles`` 选项与 ``--gmt`` 选项连用，则会对每个波前面生成一个单独的 GMT 绘图脚本::
 
     $ taup wavefront -ph P -deg 60 -h 300 --timestep 10 --timefiles --gmt
 
-以上命令生成了几十个 GMT 脚本。可以使用如下命令批量执行所有 GMT 脚本并生成多个 PDF 文件::
+以上命令会生成几十个 GMT 脚本。使用如下命令可以批量执行所有 GMT 脚本，生成多个 PDF 文件::
 
     $ for i in $(ls taup_wavefront_*.gmt); do bash $i; done
 
