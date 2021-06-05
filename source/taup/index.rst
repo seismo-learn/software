@@ -28,3 +28,4 @@ TauP
    taup_setsac
    taup_slowplot
    taup_velplot
+   taup_wavefront
