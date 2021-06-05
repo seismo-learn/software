@@ -19,7 +19,7 @@ taup wavefront
 
     $ taup wavefront -ph P -deg 60 -h 300
 
-该命令会生成文件 :file:`taup_wavefront.gmt`\ ，其包含了不同时刻（t=100, 200, 300, ...）
+该命令会生成文件 :file:`taup_wavefront.gmt`\ ，其包含了不同时刻（t=100, 200, 300, ...）的
 P 波的波前面信息，内容如下::
 
     > P at 100.0 seconds
