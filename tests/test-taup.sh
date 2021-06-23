@@ -11,7 +11,7 @@ mv TauP-${version} ~/opt/
 export PATH=${HOME}/opt/TauP-${version}/bin:${PATH}
 
 # test
-[ "$(taup --version)" ] == "edu.sc.seis:TauP:${version} 2021-03-17T19:52:47Z (665 6b41bfa)"
+[ "$(taup --version)" == "edu.sc.seis:TauP:${version} 2021-03-17T19:52:47Z (665 6b41bfa)" ]
 
 # cleanup
 rm -r TauP-${version}.tgz
