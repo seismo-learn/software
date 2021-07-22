@@ -38,7 +38,8 @@
     -   添加 ``FC=gfortran`` 指定使用 gfortran 编译器
     -   给 ``FFLAGS`` 加上 ``-ffixed-line-length-none`` 使得 Fortran 一行可以超过 72 字符
     -   添加 ``CC = gcc`` 指定使用 gcc 编译器
-    -   添加 ``SACHOME = /opt/sac`` 指定 SAC 软件的安装路径。用户需根据自身实际情况设置 ``SACHOME`` 变量的值
+    -   添加 ``SACHOME = /opt/sac`` 指定 SAC 软件的安装路径，用户需根据自身实际
+        情况设置变量 ``SACHOME`` 的值
 
     -   变量 ``SUBS`` 未指定 Numerical Recipes 相关的一些目标文件名，需在变量 ``SUBS`` 的赋值语句最后加上：
 
@@ -48,16 +49,16 @@
                    nrutil.o jacobi.o eigsrt.o
 
     -   ``cap3D`` 规则中 ``-lsac -lsacio`` 后加上 ``-lm``
-    -   ``cap3D`` 规则中增加 ``cap_dir`` 规则，将 ``cap_dir`` 加到变量 ``CAP`` 中，
-        并在 ``cap3D`` 规则后增加 ``cap_dir.o`` 规则::
+    -   ``cap3D`` 规则中增加 ``cap_dir`` 规则，并将 ``cap_dir`` 加到变量 ``CAP`` 中，
+        在 ``cap3D`` 规则后增加 ``cap_dir.o`` 规则：
 
         .. code-block:: makefile
 
             cap_dir.o: cap3D.c
                 $(COMPILE.c) -DDIRECTIVITY -o $@ $<
-        
+
     -   ``clean`` 规则修改为 ``clean`` 和 ``distclean`` 规则，这样可以只删除目标文件，
-        同时保留编译好的二进制命令文件::
+        同时保留编译好的二进制命令文件：
 
         .. code-block:: makefile
 
@@ -65,7 +66,7 @@
                 rm -f *.o
 
             distclean:
-	            rm -f $(CAP)
+                rm -f $(CAP)
 
     .. note::
 
@@ -94,17 +95,22 @@
 6.  检查安装是否成功
 
     .. note::
-    
+
         运行脚本 :file:`cap3D.pl` 中包含了两个绝对路径，需要根据自身实际情况进行修改后
         才能成功运行：
 
         -   第 17 行 ``require "$home/Src/cap/cap_plt.pl";`` 中 :file:`cap_plt.pl`
-            的绝对路径需修改 :file:`require "${HOME}/src/gCAP3D/cap_plt.pl";`
+            的绝对路径需修改为：
+
+            .. code-block:: perl
+
+               require "${HOME}/src/gCAP3D/cap_plt.pl";
+
         -   第 21 行 ``$green = "$home/data/models/Glib";`` 中的变量 ``$green``
             是计算的格林函数库的绝对路径。如果不知道如何修改的话，就直接用默认值，
             并使用如下命令新建这个目录::
 
-                $ mkdir ~/data/models/Glib 
+                $ mkdir -p ~/data/models/Glib
 
     终端键入 ``cap3D.pl`` 若出现帮助信息则表示安装成功。
 
