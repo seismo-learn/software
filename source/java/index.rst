@@ -23,13 +23,13 @@ Java 运行环境
     ::
 
         $ sudo yum install epel-release
-        $ sudo yum install java-latest-openjdk
+        $ sudo yum install java-11-openjdk
 
 .. tabbed:: Fedora
 
     ::
 
-        $ sudo dnf install java-latest-openjdk
+        $ sudo dnf install java-11-openjdk
 
 .. tabbed:: Ubuntu/Debian
 
