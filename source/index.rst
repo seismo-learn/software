@@ -104,3 +104,4 @@
    template/index
    anaconda/index
    java/index
+   intel-oneapi/index
