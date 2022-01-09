@@ -31,21 +31,23 @@ Anaconda 是一个用于科学计算的 Python 发行版，支持 Linux、macOS 
 2. 安装 Anaconda
 
 
-    .. tabbed:: Windows
+    .. tab-set::
 
-        直接双击安装包即可安装。
+        .. tab-item:: Windows
 
-    .. tabbed:: Linux
+            直接双击安装包即可安装。
 
-        ::
+        .. tab-item:: Linux
 
-            $ bash Anaconda3-2020.11-Linux-x86_64.sh
+            ::
 
-    .. tabbed:: macOS
+                $ bash Anaconda3-2020.11-Linux-x86_64.sh
 
-        ::
+        .. tab-item:: macOS
 
-            $ bash Anaconda3-2020.11-MacOSX-x86_64.sh
+            ::
+
+                $ bash Anaconda3-2020.11-MacOSX-x86_64.sh
 
    Anaconda 默认会安装到 :file:`${HOME}/anaconda3` 下，在安装过程中可以
    设置为其他路径。
