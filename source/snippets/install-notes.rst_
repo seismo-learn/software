@@ -1,6 +1,6 @@
-.. dropdown:: :fa:`exclamation-circle,mr-1` 阅读须知
-    :container: +shadow
-    :title: bg-info text-white font-weight-bold
+.. dropdown:: 阅读须知
+    :color: info
+    :icon: info
 
     1.  我们假定用户已经根据《:doc:`seis101:computer/setup`\ 》中的内容安装了
         C/C++ 和 Fortran 编译器 ``gcc``、``g++`` 和 ``gfortran``
