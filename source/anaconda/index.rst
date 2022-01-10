@@ -1,5 +1,5 @@
 Anaconda
-=========
+========
 
 :本节贡献者: |田冬冬|\（作者）、
              |姚家园|\（审稿）
@@ -7,29 +7,39 @@ Anaconda
 
 ----
 
-Anaconda 是一个用于科学计算的 Python 发行版，支持 Linux、macOS 和 Windows。
-其提供了方便使用的包管理器和环境管理器。
+`Anaconda <https://www.anaconda.com/products/individual>`__ 是一个跨平台的、
+用于科学计算的 Python 发行版，其提供了 Python、包管理器 ``conda`` 并内置了几百个
+科学计算相关的软件包。
 
-**建议所有 Python 用户使用 Anaconda 而非 Linux 或 macOS 系统自带的 Python。**
+Miniconda 可以看做是 Anaconda 的精简版，其只提供了 Python、包管理器 ``conda``
+以及相关的必须依赖包。
+
+与 Anaconda 相比，Miniconda 安装包更小，安装速度更快，且安装后占用的硬盘空间更小。
+Anaconda 内置的数百个软件包也都可以很容易通过 ``conda`` 安装。因而，
+**建议所有 Python 用户使用 Miniconda 而非 Linux 或 macOS 系统自带的 Python。**
 
 安装
 ----
 
-1. 下载 Anaconda
+1. 下载 Miniconda
 
-   进入 `Anaconda 官方下载页面 <https://www.anaconda.com/products/individual#Downloads>`__，
-   会看到类似下图的下载页面。根据自己的系统选择对应的安装包（通常选择下图中红框圈出的安装包）。
+   根据自己使用的系统，从 `Miniconda 官方下载页面 <https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links>`__
+   或 `清华大学 Miniconda 镜像 <https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/>`__ 下载对应的安装包。
 
-   .. image:: anaconda-download.png
+   - Linux 64 位系统：
+     `官方链接 <https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh>`__ |
+     `清华镜像 <https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh>`__
+   - Windows 64 位系统：
+     `官方链接 <https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe>`__ |
+     `清华镜像 <https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Windows-x86_64.exe>`__
+   - macOS (Intel 芯片):
+     `官方链接 <https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh>`__ |
+     `清华镜像 <https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-MacOSX-x86_64.sh>`__
+   - macOS (M1 芯片):
+     `官方链接 <https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh>`__
+     `清华镜像 <https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-MacOSX-arm64.sh>`__
 
-   若官方下载速度较慢，可以直接从清华大学 Anaconda 镜像下载。
-   访问 https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/，找到文件名类似
-   :file:`Anaconda3-2020.11-Linux-x86_64.sh` 或
-   :file:`Anaconda3-2020.11-MacOSX-x86_64.sh` 的文件。
-   其中 ``2020.11`` 为 Anaconda 版本的发行日期，选择最新版本即可。
-
-2. 安装 Anaconda
-
+2. 安装 Miniconda
 
     .. tab-set::
 
@@ -41,20 +51,24 @@ Anaconda 是一个用于科学计算的 Python 发行版，支持 Linux、macOS 
 
             ::
 
-                $ bash Anaconda3-2020.11-Linux-x86_64.sh
+                $ bash Miniconda3-latest-Linux-x86_64.sh
 
         .. tab-item:: macOS
 
             ::
 
-                $ bash Anaconda3-2020.11-MacOSX-x86_64.sh
+                # Intel 芯片
+                $ bash Miniconda3-latest-MacOSX-x86_64.sh
 
-   Anaconda 默认会安装到 :file:`${HOME}/anaconda3` 下，在安装过程中可以
+                # M1 芯片
+                $ bash Miniconda3-latest-MacOSX-arm64.sh
+
+   Miniconda 默认会安装到 :file:`${HOME}/miniconda3` 下，在安装过程中可以
    设置为其他路径。
 
    安装通常需要几分钟时间，在安装的最后会出现::
 
-    Do you wish the installer to initialize Anaconda3 by running conda init? [yes|no]
+    Do you wish the installer to initialize Miniconda3 by running conda init? [yes|no]
     [yes] >>>
 
    建议输入 ``yes``，此时安装包会向当前 SHELL 的配置文件（如 :file:`~/.bashrc`
@@ -74,17 +88,16 @@ Anaconda 是一个用于科学计算的 Python 发行版，支持 Linux、macOS 
 常用命令
 --------
 
-Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚拟环境，其详细用法见
+Anaconda/Miniconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚拟环境，其详细用法见
 `conda 官方文档 <https://docs.conda.io/projects/conda/en/latest/index.html>`__。
 此外，也可以使用 Python 自带的工具 ``pip`` 来安装 Python 包，其详细用法见
 `pip 官方文档 <https://pip.pypa.io/en/stable/>`__。我们建议尽可能使用 ``conda`` 来安装 Python 包，
-仅在 Anaconda 没有提供需要的程序包时才使用 ``pip`` 来安装。
+仅在 conda 没有提供需要的程序包时才使用 ``pip`` 来安装。
 以下仅介绍常用的命令。
 
-更新 conda 和 Anaconda::
+更新 conda::
 
    $ conda update conda
-   $ conda update anaconda
 
 添加 conda 的第三方软件包源 conda-forge::
 
@@ -106,7 +119,7 @@ Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚�
 
 .. note::
 
-   安装 Anaconda 后，打开终端默认会激活 base 环境。不经常使用
+   安装 Anaconda/Miniconda 后，打开终端默认会激活 base 环境。不经常使用
    Python 的读者可以通过如下命令取消此默认设置::
 
       $ conda config --set auto_activate_base False
@@ -148,4 +161,5 @@ Anaconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚�
 --------
 
 - https://docs.anaconda.com/anaconda/install/
+- https://conda.io/projects/conda/en/latest/user-guide/install/index.html
 - https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html
