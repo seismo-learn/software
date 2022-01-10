@@ -10,9 +10,8 @@ Anaconda
 `Anaconda <https://www.anaconda.com/products/individual>`__ 是一个跨平台的、
 用于科学计算的 Python 发行版，其提供了 Python、包管理器 ``conda`` 并内置了几百个
 科学计算相关的软件包。
-
-Miniconda 可以看做是 Anaconda 的精简版，其只提供了 Python、包管理器 ``conda``
-以及相关的必须依赖包。
+`Miniconda <https://docs.conda.io/en/latest/miniconda.html>`__ 可以看做是
+Anaconda 的精简版，其只提供了 Python、包管理器 ``conda`` 以及相关的必须依赖包。
 
 与 Anaconda 相比，Miniconda 安装包更小，安装速度更快，且安装后占用的硬盘空间更小。
 Anaconda 内置的数百个软件包也都可以很容易通过 ``conda`` 安装。因而，
