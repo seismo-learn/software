@@ -65,7 +65,7 @@ Anaconda 内置的数百个软件包也都可以很容易通过 ``conda`` 安装
    Miniconda 默认会安装到 :file:`${HOME}/miniconda3` 下，在安装过程中可以
    设置为其他路径。
 
-   安装通常需要几分钟时间，在安装的最后会出现::
+   安装通常只需要十几秒，在安装的最后会出现::
 
     Do you wish the installer to initialize Miniconda3 by running conda init? [yes|no]
     [yes] >>>
