@@ -15,7 +15,7 @@ Anaconda 的精简版，其只提供了 Python、包管理器 ``conda`` 以及�
 
 与 Anaconda 相比，Miniconda 安装包更小，安装速度更快，且安装后占用的硬盘空间更小。
 Anaconda 内置的数百个软件包也都可以很容易通过 ``conda`` 安装。因而，
-**建议所有 Python 用户使用 Miniconda 而非 Linux 或 macOS 系统自带的 Python。**
+**建议所有 Python 用户使用 Miniconda，而非 Linux 或 macOS 系统自带的 Python。**
 
 安装
 ----
