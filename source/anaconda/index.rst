@@ -3,7 +3,7 @@ Anaconda
 
 :本节贡献者: |田冬冬|\（作者）、
              |姚家园|\（审稿）
-:最近更新时间: 2021-01-26
+:最近更新时间: 2022-01-12
 
 ----
 
@@ -84,8 +84,8 @@ Anaconda 内置的数百个软件包也都可以很容易通过 ``conda`` 安装
       Type "help", "copyright", "credits" or "license" for more information.
       >>>
 
-常用命令
---------
+使用 conda
+----------
 
 Anaconda/Miniconda 中提供的 ``conda`` 命令可以用于安装 Python 包、管理虚拟环境，其详细用法见
 `conda 官方文档 <https://docs.conda.io/projects/conda/en/latest/index.html>`__。
@@ -93,10 +93,6 @@ Anaconda/Miniconda 中提供的 ``conda`` 命令可以用于安装 Python 包、
 `pip 官方文档 <https://pip.pypa.io/en/stable/>`__。我们建议尽可能使用 ``conda`` 来安装 Python 包，
 仅在 conda 没有提供需要的程序包时才使用 ``pip`` 来安装。
 以下仅介绍常用的命令。
-
-更新 conda::
-
-   $ conda update conda
 
 添加 conda 的第三方软件包源 conda-forge::
 
@@ -146,6 +142,24 @@ Anaconda/Miniconda 中提供的 ``conda`` 命令可以用于安装 Python 包、
 使用 pip 安装模块::
 
    $ pip install numpy
+
+使用 mamba
+----------
+
+conda 在解析依赖以及下载软件包时经常速度很慢。
+`mamba <https://github.com/mamba-org/mamba>`__ 可以看做是 conda 的替代品，
+其实现了更高效的依赖解析并可以多线程并行下载软件包，因而比 conda 快很多。
+
+**推荐所有用户使用 mamba 而非 conda！**
+
+安装 mamba::
+
+    conda install -c conda-forge 'mamba>=0.16'
+
+mamba 几乎完全兼容 conda，因而将 conda 替换为 mamba 即可执行大部分 conda 命令。
+例如，使用 mamba 安装模块::
+
+    $ mamba install numpy
 
 加速下载
 --------
