@@ -11,96 +11,96 @@ Intel OneAPI 软件开发工具包
 是 Intel 公司提供的免费软件开发工具包。该工具包中包含了 C/C++ 编译器（``icc`` 命令）
 和 Fortran 编译器（``ifort`` 命令），以及 MKL 数学库、MPI 并行库等众多软件开发工具。
 
-Fedora
-------
 
-在 Fedora 系统下，官方手册提供了\
-`多种安装方式 <https://software.intel.com/content/www/us/en/develop/documentation/installation-guide-for-intel-oneapi-toolkits-linux/>`__。
-这里，我们推荐使用 ``dnf`` 安装。
+.. tab-set::
 
-下载 :file:`.repo` 文件 :download:`oneapi.repo`，并将其放在 :file:`/etc/yum.repos.d` 目录下::
+    .. tab-item:: Fedora
 
-    $ sudo mv oneapi.repo /etc/yum.repos.d/
+        在 Fedora 系统下，官方手册提供了\
+        `多种安装方式 <https://software.intel.com/content/www/us/en/develop/documentation/installation-guide-for-intel-oneapi-toolkits-linux/>`__。
+        这里，我们推荐使用 ``dnf`` 安装。
 
-根据自己的需要安装 C/C++ 或 Fortran 编译器，默认安装目录是 :file:`/opt/intel/oneapi`::
+        下载 :file:`.repo` 文件 :download:`oneapi.repo`，并将其放在 :file:`/etc/yum.repos.d` 目录下::
 
-    # 安装 C/C++ 编译器
-    $ sudo dnf install intel-oneapi-compiler-dpcpp-cpp-and-cpp-classic
+            $ sudo mv oneapi.repo /etc/yum.repos.d/
 
-    # 安装 Fortran 编译器
-    $ sudo dnf install intel-oneapi-compiler-fortran
+        根据自己的需要安装 C/C++ 或 Fortran 编译器，默认安装目录是 :file:`/opt/intel/oneapi`::
 
-安装完成后还需要配置环境变量::
+            # 安装 C/C++ 编译器
+            $ sudo dnf install intel-oneapi-compiler-dpcpp-cpp-and-cpp-classic
 
-    $ echo "source /opt/intel/oneapi/setvars.sh >/dev/null 2>&1" >> ~/.bashrc
+            # 安装 Fortran 编译器
+            $ sudo dnf install intel-oneapi-compiler-fortran
 
-.. dropdown:: 查看 Intel 软件仓库提供的软件列表
-    :color: info
-    :icon: info
+        安装完成后还需要配置环境变量::
 
-    使用如下命令可以列出 Intel 软件仓库提供的所有软件包::
+            $ echo "source /opt/intel/oneapi/setvars.sh >/dev/null 2>&1" >> ~/.bashrc
 
-        $ sudo -E dnf --disablerepo="*" --enablerepo="oneAPI" list available
+        .. dropdown:: Intel 软件开发工具列表
+            :color: info
+            :icon: info
 
-Ubuntu
-------
+            使用如下命令可以列出 Intel 软件仓库提供的所有软件包::
 
-在 Ubuntu 系统下，官方手册提供了\
-`多种安装方式 <https://software.intel.com/content/www/us/en/develop/documentation/installation-guide-for-intel-oneapi-toolkits-linux/>`__。
-这里，我们推荐使用 ``apt`` 安装。
+                $ sudo -E dnf --disablerepo="*" --enablerepo="oneAPI" list available
 
-添加 Intel 软件仓库::
+    .. tab-item:: Ubuntu
 
-    # 下载 Intel 仓库公钥并添加到 apt 源密钥环中
-    $ wget https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
-    $ sudo apt-key add GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
-    # 删除公钥文件
-    $ rm GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
+        在 Ubuntu 系统下，官方手册提供了\
+        `多种安装方式 <https://software.intel.com/content/www/us/en/develop/documentation/installation-guide-for-intel-oneapi-toolkits-linux/>`__。
+        这里，我们推荐使用 ``apt`` 安装。
 
-    # 添加软件仓库
-    $ sudo add-apt-repository "deb https://apt.repos.intel.com/oneapi all main"
-    $ sudo apt update
+        添加 Intel 软件仓库::
 
-根据自己的需要安装 C/C++ 或 Fortran 编译器，默认安装目录是 :file:`/opt/intel/oneapi`::
+            # 下载 Intel 仓库公钥并添加到 apt 源密钥环中
+            $ wget https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
+            $ sudo apt-key add GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
+            # 删除公钥文件
+            $ rm GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
 
-    # 安装 C/C++ 编译器
-    $ sudo apt install intel-oneapi-compiler-dpcpp-cpp-and-cpp-classic
+            # 添加软件仓库
+            $ sudo add-apt-repository "deb https://apt.repos.intel.com/oneapi all main"
+            $ sudo apt update
 
-    # 安装 Fortran 编译器
-    $ sudo apt install intel-oneapi-compiler-fortran
+        根据自己的需要安装 C/C++ 或 Fortran 编译器，默认安装目录是 :file:`/opt/intel/oneapi`::
 
-安装完成后还需要配置环境变量::
+            # 安装 C/C++ 编译器
+            $ sudo apt install intel-oneapi-compiler-dpcpp-cpp-and-cpp-classic
 
-    $ echo "source /opt/intel/oneapi/setvars.sh >/dev/null 2>&1" >> ~/.bashrc
+            # 安装 Fortran 编译器
+            $ sudo apt install intel-oneapi-compiler-fortran
 
-.. dropdown:: 查看 Intel 软件仓库提供的软件列表
-    :color: info
-    :icon: info
+        安装完成后还需要配置环境变量::
 
-    使用如下命令可以列出 Intel 软件仓库提供的所有软件包::
+            $ echo "source /opt/intel/oneapi/setvars.sh >/dev/null 2>&1" >> ~/.bashrc
 
-        $ sudo -E apt-cache pkgnames intel
+        .. dropdown:: Intel 软件开发工具列表
+            :color: info
+            :icon: info
 
-macOS
------
+            使用如下命令可以列出 Intel 软件仓库提供的所有软件包::
 
-在 macOS 下，官方手册提供了\
-`多种安装方式 <https://software.intel.com/content/www/us/en/develop/documentation/installation-guide-for-intel-oneapi-toolkits-macos/>`__。
-这里，我们下载离线安装包进行安装。
+                $ sudo -E apt-cache pkgnames intel
 
-根据自己的需要，从官网下载
-`C/C++ 编辑器 <https://software.intel.com/content/www/us/en/develop/articles/oneapi-standalone-components.html#compilerclassic>`__
-或 `Fortran 编译器 <https://software.intel.com/content/www/us/en/develop/articles/oneapi-standalone-components.html#fortran>`__
-的离线安装包（Offline），然后直接双击安装。默认安装目录是 :file:`/opt/intel/oneapi`。
+    .. tab-item:: macOS
 
-安装完成后还需要配置环境变量::
+        在 macOS 下，官方手册提供了\
+        `多种安装方式 <https://software.intel.com/content/www/us/en/develop/documentation/installation-guide-for-intel-oneapi-toolkits-macos/>`__。
+        这里，我们下载离线安装包进行安装。
 
-    $ echo "source /opt/intel/oneapi/setvars.sh >/dev/null 2>&1" >> ~/.zshrc
+        根据自己的需要，从官网下载
+        `C/C++ 编辑器 <https://software.intel.com/content/www/us/en/develop/articles/oneapi-standalone-components.html#compilerclassic>`__
+        或 `Fortran 编译器 <https://software.intel.com/content/www/us/en/develop/articles/oneapi-standalone-components.html#fortran>`__
+        的离线安装包（Offline），然后直接双击安装。默认安装目录是 :file:`/opt/intel/oneapi`。
 
-.. dropdown:: Intel 软件开发工具列表
-   :color: info
-   :icon: info
+        安装完成后还需要配置环境变量::
 
-   Intel oneAPI 提供了众多软件开发工具，用户可以根据需要到
-   `Intel 官网 <https://software.intel.com/content/www/us/en/develop/articles/oneapi-standalone-components.html>`__
-   下载其他 macOS 离线安装包并安装。
+            $ echo "source /opt/intel/oneapi/setvars.sh >/dev/null 2>&1" >> ~/.zshrc
+
+        .. dropdown:: Intel 软件开发工具列表
+            :color: info
+            :icon: info
+
+            Intel oneAPI 提供了众多软件开发工具，用户可以根据需要到
+            `Intel 官网 <https://software.intel.com/content/www/us/en/develop/articles/oneapi-standalone-components.html>`__
+            下载其他 macOS 离线安装包并安装。
