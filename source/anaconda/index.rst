@@ -148,7 +148,7 @@ Anaconda/Miniconda 中提供的 ``conda`` 命令可以用于安装 Python 包、
 
 conda 在解析依赖以及下载软件包时经常速度很慢。
 `mamba <https://github.com/mamba-org/mamba>`__ 可以看做是 conda 的替代品，
-其实现了更高效的依赖解析并可以多线程并行下载软件包，因而比 conda 快很多。
+其解析依赖更高效，且可以多线程并行下载软件包，因而比 conda 快很多。
 
 **推荐所有用户使用 mamba 而非 conda！**
 
