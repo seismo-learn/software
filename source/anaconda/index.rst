@@ -154,7 +154,7 @@ conda 在解析依赖以及下载软件包时经常速度很慢。
 
 安装 mamba::
 
-    conda install -c conda-forge 'mamba>=0.16'
+    $ conda install -c conda-forge 'mamba>=0.16'
 
 mamba 几乎完全兼容 conda，因而将 conda 替换为 mamba 即可执行大部分 conda 命令。
 例如，使用 mamba 安装模块::
