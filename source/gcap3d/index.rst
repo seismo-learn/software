@@ -25,3 +25,4 @@ gCAP3D
    :hidden:
 
    introduction
+   install
