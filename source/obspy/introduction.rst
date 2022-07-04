@@ -56,5 +56,5 @@ ObsPy 是地震学数据处理的 Python 软件包，极大促进了地震学应
   https://doi.org/10.1088/1749-4699/8/1/014003
 
 此外，也可引用实际使用的 ObsPy 版本，
-如 ObsPy 1.2.2（`10.5281/zenodo.3921997 <http://dx.doi.org/10.5281/zenodo.3921997>`__）。
+如 ObsPy 1.3.0（`10.5281/zenodo.6327346 <http://dx.doi.org/10.5281/zenodo.6327346>`__）。
 其他版本可查看\ `已发布的 ObsPy 版本 <https://zenodo.org/search?ln=en&p=obspy&sort=mostrecent>`__\ 。
