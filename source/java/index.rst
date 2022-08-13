@@ -18,29 +18,31 @@ Java 运行环境
 
 否则，则需要安装 Java 运行环境。
 
-.. tabbed: CentOS
+.. tab-set::
 
-    ::
+    .. tab-item:: CentOS
 
-        $ sudo yum install epel-release
-        $ sudo yum install java-latest-openjdk
+        ::
 
-.. tabbed:: Fedora
+            $ sudo yum install epel-release
+            $ sudo yum install java-11-openjdk
 
-    ::
+    .. tab-item:: Fedora
 
-        $ sudo dnf install java-latest-openjdk
+        ::
 
-.. tabbed:: Ubuntu/Debian
+            $ sudo dnf install java-11-openjdk
 
-    ::
+    .. tab-item:: Ubuntu/Debian
 
-        $ sudo apt update
-        $ sudo apt install default-jdk
+        ::
 
-.. tabbed:: macOS Homebrew
+            $ sudo apt update
+            $ sudo apt install default-jdk
 
-    ::
+    .. tab-item:: macOS Homebrew
 
-        $ brew install openjdk
-        $ sudo ln -sfn $(brew --prefix)/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+        ::
+
+            $ brew install openjdk
+            $ sudo ln -sfn $(brew --prefix)/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk

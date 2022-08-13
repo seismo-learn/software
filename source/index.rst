@@ -11,66 +11,46 @@
 软件列表
 --------
 
-.. panels::
-    :container: container-lg pb-3
-    :column: col-lg-3 col-md-3 col-sm-4 col-xs-6 p-2
+.. grid:: 1 2 2 4
+    :gutter: 4 4 3 3
 
-    理论走时
-    ^^^^^^^^
+    .. grid-item-card:: 理论走时
 
-    - :doc:`/obspy/index`
-    - :doc:`/taup/index`
+        - :doc:`/obspy/index`
+        - :doc:`/taup/index`
 
-    ---
+    .. grid-item-card:: 合成地震图
 
-    合成地震图
-    ^^^^^^^^^^
+        - :doc:`/cps/index`
+        - :doc:`/fk/index`
 
-    - :doc:`/cps/index`
-    - :doc:`/fk/index`
+    .. grid-item-card:: 震源机制反演
 
-    ---
+        - :doc:`/cps/index`
+        - :doc:`/gcap3d/index`
 
-    震源机制反演
-    ^^^^^^^^^^^^
+    .. grid-item-card:: 数据下载
 
-    - :doc:`/cps/index`
-    - :doc:`/gcap3d/index`
+        - :doc:`/hinetpy/index`
+        - :doc:`/obspy/index`
+        - :doc:`/sod/index`
 
-    ---
+    .. grid-item-card:: 数据处理
 
-    数据下载
-    ^^^^^^^^
+        - :doc:`/cps/index`
+        - :doc:`/gmt/index`
+        - :doc:`/obspy/index`
+        - :doc:`/sac/index`
 
-    - :doc:`/hinetpy/index`
-    - :doc:`/obspy/index`
-    - :doc:`/sod/index`
+    .. grid-item-card:: 绘图
 
-    ---
+        - :doc:`/gmt/index`
+        - :doc:`/sac/index`
 
-    数据处理
-    ^^^^^^^^
+    .. grid-item-card:: 实用工具
 
-    - :doc:`/cps/index`
-    - :doc:`/gmt/index`
-    - :doc:`/obspy/index`
-    - :doc:`/sac/index`
-
-    ---
-
-    绘图
-    ^^^^
-
-    - :doc:`/gmt/index`
-    - :doc:`/sac/index`
-
-    ---
-
-    实用工具
-    ^^^^^^^^
-
-    - :doc:`/utilities/distaz`
-    - :doc:`/utilities/saclst`
+        - :doc:`/utilities/distaz`
+        - :doc:`/utilities/saclst`
 
 
 .. toctree::
@@ -104,3 +84,4 @@
    template/index
    anaconda/index
    java/index
+   intel-oneapi/index
