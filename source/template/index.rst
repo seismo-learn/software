@@ -20,6 +20,6 @@
 .. toctree::
    :hidden:
 
-   introduction
+   intro
    install
    style

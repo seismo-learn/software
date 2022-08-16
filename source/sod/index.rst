@@ -20,5 +20,5 @@ SOD
 .. toctree::
    :hidden:
 
-   introduction
+   intro
    install

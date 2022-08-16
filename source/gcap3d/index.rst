@@ -24,4 +24,4 @@ gCAP3D
 .. toctree::
    :hidden:
 
-   introduction
+   intro
