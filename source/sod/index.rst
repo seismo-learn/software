@@ -22,3 +22,4 @@ SOD
 
    intro
    install
+   recipe
