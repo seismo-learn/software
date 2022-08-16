@@ -22,5 +22,5 @@ CPS
 .. toctree::
    :hidden:
 
-   introduction
+   intro
    install

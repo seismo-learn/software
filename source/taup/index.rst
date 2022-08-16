@@ -20,7 +20,7 @@ TauP
 .. toctree::
    :hidden:
 
-   introduction
+   intro
    install
    taup_time
    taup_curve

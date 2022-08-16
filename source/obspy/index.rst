@@ -20,5 +20,5 @@ ObsPy
 .. toctree::
    :hidden:
 
-   introduction
+   intro
    install

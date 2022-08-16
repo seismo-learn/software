@@ -23,5 +23,5 @@ fk
 .. toctree::
    :hidden:
 
-   introduction
+   intro
    install
