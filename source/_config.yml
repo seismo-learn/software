@@ -3,32 +3,49 @@
 
 title: '地震“学”软件'
 author: seismo-learn
+copyright : "2020–2023"
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: auto
+  timeout: 300
 
-# Define the name of the latex output file for PDF builds
-latex:
-  latex_documents:
-    targetname: book.tex
+# Parse and render settings
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - deflist
+    - dollarmath
+    - linkify
+    - substitution
+    - tasklist
+  myst_substitutions:
+    田冬冬: "[田冬冬](https://me.seisman.info/)"
+    姚家园: "[姚家园](https://github.com/core-man)"
+    王亮: "[王亮](https://github.com/wangliang1989)"
+    赵志远: "[赵志远](https://github.com/zhaozhiyuan1989)"
 
-# Add a bibtex file so that we can create citations
+# citation
 bibtex_bibfiles:
   - references.bib
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/seismo-learn/seismology101
+  url: https://github.com/seismo-learn/software
   path_to_book: source
   branch: main
 
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
+  favicon: favicon.ico
+  use_edit_page_button: true
   use_issues_button: true
   use_repository_button: true
+
+# LaTeX-specific settings
+latex:
+  latex_documents:
+    targetname: book.tex
 
 # Advanced sphinx settings
 sphinx:

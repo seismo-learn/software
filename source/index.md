@@ -5,48 +5,44 @@
 
 教程源码在 [GitHub](https://github.com/seismo-learn/software) 上开源，
 欢迎使用这些软件的用户参与到教程的维护与更新中。
-# 软件列表
 
-```{eval-rst}
-.. grid:: 1 2 2 4
-    :gutter: 4 4 3 3
+::::{grid} 1 2 2 4
+:gutter: 4 4 3 3
 
-    .. grid-item-card:: 理论走时
+:::{grid-item-card} 理论走时
+- [](obspy/index.md)
+- [](taup/index.md)
+:::
 
-        - :doc:`/obspy/index`
-        - :doc:`/taup/index`
+:::{grid-item-card} 合成地震图
+- [](cps/index.md)
+- [](fk/index.md)
+:::
 
-    .. grid-item-card:: 合成地震图
+:::{grid-item-card} 震源机制反演
+- [](cps/index.md)
+- [](gcap3d/index.md)
+:::
 
-        - :doc:`/cps/index`
-        - :doc:`/fk/index`
+:::{grid-item-card} 数据下载
+- [](hinetpy/index.md)
+- [](obspy/index.md)
+- [](sod/index.md)
+:::
 
-    .. grid-item-card:: 震源机制反演
+:::{grid-item-card} 数据处理
+- [](cps/index.md)
+- [](gmt/index.md)
+- [](obspy/index.md)
+- [](sac/index.md)
+:::
 
-        - :doc:`/cps/index`
-        - :doc:`/gcap3d/index`
+:::{grid-item-card} 绘图
+- [](gmt/index.md)
+:::
 
-    .. grid-item-card:: 数据下载
-
-        - :doc:`/hinetpy/index`
-        - :doc:`/obspy/index`
-        - :doc:`/sod/index`
-
-    .. grid-item-card:: 数据处理
-
-        - :doc:`/cps/index`
-        - :doc:`/gmt/index`
-        - :doc:`/obspy/index`
-        - :doc:`/sac/index`
-
-    .. grid-item-card:: 绘图
-
-        - :doc:`/gmt/index`
-        - :doc:`/sac/index`
-
-    .. grid-item-card:: 实用工具
-
-        - :doc:`/utilities/distaz`
-        - :doc:`/utilities/saclst`
-
-```
+:::{grid-item-card} 实用工具
+- [](utilities/distaz.md)
+- [](/utilities/saclst.md)
+:::
+::::
