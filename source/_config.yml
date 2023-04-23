@@ -1,0 +1,62 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: '地震“学”软件'
+author: seismo-learn
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/seismo-learn/seismology101
+  path_to_book: source
+  branch: main
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
+
+# Advanced sphinx settings
+sphinx:
+  extra_extensions:
+    - sphinx.ext.intersphinx
+  config:
+    intersphinx_mapping:
+      seis:
+        - https://seismo-learn.org/seismology/
+        - null
+      seis101:
+        - https://seismo-learn.org/seismology101/
+        - null
+      software:
+        - https://seismo-learn.org/software/
+        - null
+      matplotlib:
+        - https://matplotlib.org/stable/
+        - null
+      numpy:
+        - https://numpy.org/doc/stable/
+        - null
+      obspy:
+        - https://docs.obspy.org/
+        - null
+    copybutton_prompt_text: '>>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}:'
+    copybutton_prompt_is_regexp: true
+    copybutton_only_copy_prompt_lines: true
+    copybutton_remove_prompts: true
+    bibtex_default_style: plain
+    bibtex_reference_style: super
