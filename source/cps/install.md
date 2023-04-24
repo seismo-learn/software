@@ -1,9 +1,3 @@
----
-作者
-"\u6700\u8FD1\u66F4\u65B0\u65E5\u671F": '2021-01-26'
-"\u672C\u8282\u8D21\u732E\u8005": "{{ \u7530\u51AC\u51AC }}\uFF08\u4F5C\u8005\uFF09\
-  \u3001\n{{ \u59DA\u5BB6\u56ED }}\uFF08\u5BA1\u7A3F\uFF09"
----
 
 # 安装
 
@@ -12,10 +6,8 @@
 
 ---
 
-______________________________________________________________________
-
 ```{eval-rst}
-.. include:: /snippets/install-notes.rst_
+.. include:: snippets/install-notes.rst_
 ```
 
 1. 下载:
@@ -23,9 +15,7 @@ ______________________________________________________________________
    CPS 源码需要先填写申请表格才可以下载。
    在 <http://www.eas.slu.edu/eqc/eqc_cps/CPS/cpslisc.html> 填写表格并提交。
 
-   % CPS 的源码也可以直接 http://www.eas.slu.edu/eqc/eqc_cps/
-
-   % 的 download 目录下载
+   % CPS 的源码也可以直接 http://www.eas.slu.edu/eqc/eqc_cps/ 的 download 目录下载
 
 2. 解压:
 
