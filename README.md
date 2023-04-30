@@ -1,5 +1,6 @@
 # 地震“学”软件
 
+[![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://seismo-learn.org/software/)
 [![Deploy](https://github.com/seismo-learn/software/actions/workflows/deploy.yml/badge.svg)](https://github.com/seismo-learn/software/actions/workflows/deploy.yml)
 [![Tests](https://github.com/seismo-learn/software/actions/workflows/tests.yml/badge.svg)](https://github.com/seismo-learn/software/actions/workflows/tests.yml)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh)
@@ -7,8 +8,8 @@
 
 本文档主要介绍地震学常用软件，包括简介、安装、用法等。
 
-- 项目主页：https://github.com/seismo-learn/software
-- 网页版：https://seismo-learn.org/software/
+- 主页：https://seismo-learn.org/software/
+- 源码：https://github.com/seismo-learn/software
 
 ## 文档维护
 
