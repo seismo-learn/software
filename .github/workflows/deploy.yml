@@ -5,13 +5,21 @@ name: Deploy
 
 # Run on main branch only
 on:
+  # uncomment 'pull_request' line to test the workflow in PR
+  # pull_request:
   push:
     branches:
       - main
+  schedule:
+    # Run weekly at 00:00 on Sunday
+    - cron: '0 0 * * 0'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
     steps:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.11.0
@@ -19,15 +27,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Setup Micromamba
+        uses: mamba-org/provision-with-micromamba@v15
         with:
-          python-version: '3.x'
+          environment-file: environment.yml
+          cache-downloads: true
+          cache-env: true
 
-      - name: Install dependencies
+      - uses: actions/cache@v3
+        id: cache
+        with:
+          path: |
+            _build/jupyter_execute/
+            ~/.matplotlib/
+          key: caches
+
+      - name: Disable notebook cache for scheduled jobs
+        if: github.event_name == 'schedule'
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          sed -i"" 's/execute_notebooks: auto/execute_notebooks: force/' source/_config.yml
 
       - name: Build documentation
         run: make dirhtml
@@ -36,7 +54,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@373f7f263a76c20808c831209c920827a82a2847
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/dirhtml
+          publish_dir: ./_build/dirhtml
           # Only keep the latest commit to avoid bloating the repository
           force_orphan: true
           user_name: 'github-actions[bot]'

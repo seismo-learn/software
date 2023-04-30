@@ -1,0 +1,65 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: index
+parts:
+  - caption: 软件
+    chapters:
+    - file: cps/index
+      sections:
+        - file: cps/intro
+        - file: cps/install
+    - file: fk/index
+      sections:
+        - file: fk/intro
+        - file: fk/install
+    - file: gcap3d/index
+      sections:
+        - file: gcap3d/intro
+    - file: gmt/index
+    - file: hinetpy/index
+    - file: obspy/index
+      sections:
+        - file: obspy/intro
+        - file: obspy/install
+    - file: sod/index
+      sections:
+        - file: sod/intro
+        - file: sod/install
+        - file: sod/recipe
+    - file: sac/index
+    - file: taup/index
+      sections:
+        - file: taup/intro
+        - file: taup/install
+        - file: taup/taup_curve
+        - file: taup/taup_path
+        - file: taup/taup_setsac
+        - file: taup/taup_slowplot
+        - file: taup/taup_table
+        - file: taup/taup_time
+        - file: taup/taup_velplot
+        - file: taup/taup_wavefront
+  - caption: 实用工具
+    chapters:
+      - file: utilities/distaz
+      - file: utilities/saclst
+  - caption: 附录
+    chapters:
+      - file: template/index
+        sections:
+          - file: template/intro
+          - file: template/install
+          - file: template/style
+      - file: anaconda/index
+      - file: java/index
+      - file: intel-oneapi/index
+  - caption: 外部链接
+    chapters:
+    - url: https://seismo-learn.org/
+      title: 地震“学”主站
+    - url: https://seismo-learn.org/contributing/
+      title: 贡献指南
+    - url: https://github.com/seismo-learn/seismology101/discussions
+      title: 参与讨论
