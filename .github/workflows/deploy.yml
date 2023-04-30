@@ -39,6 +39,7 @@ jobs:
         with:
           path: |
             _build/jupyter_execute/
+            ~/.local/share/cartopy/
             ~/.matplotlib/
           key: caches
 
