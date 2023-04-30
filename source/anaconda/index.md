@@ -1,16 +1,12 @@
+# Anaconda/Miniconda
+
+- 本节贡献者: {{田冬冬}}（作者）、{{姚家园}}（审稿）
+- 最近更新时间：2023-04-30
+
 ---
-"\u6700\u8FD1\u66F4\u65B0\u65F6\u95F4": '2022-01-12'
-"\u672C\u8282\u8D21\u732E\u8005": "{{ \u7530\u51AC\u51AC }}\uFF08\u4F5C\u8005\uFF09\
-  \u3001\n{{ \u59DA\u5BB6\u56ED }}\uFF08\u5BA1\u7A3F\uFF09"
----
 
-# Anaconda
-
-______________________________________________________________________
-
-[Anaconda](https://www.anaconda.com/products/individual) 是一个跨平台的、
-用于科学计算的 Python 发行版，其提供了 Python、包管理器 `conda` 并内置了几百个
-科学计算相关的软件包。
+[Anaconda](https://www.anaconda.com/download/) 是一个跨平台的、用于科学计算的 Python 发行版，
+其提供了 Python、包管理器 `conda` 并内置了几百个科学计算相关的软件包。
 [Miniconda](https://docs.conda.io/en/latest/miniconda.html) 可以看做是
 Anaconda 的精简版，其只提供了 Python、包管理器 `conda` 以及相关的必须依赖包。
 
@@ -40,29 +36,29 @@ Anaconda 内置的数百个软件包也都可以很容易通过 `conda` 安装�
 
 2. 安装 Miniconda
 
-   > ```{eval-rst}
-   > .. tab-set::
-   >
-   >     .. tab-item:: Windows
-   >
-   >         直接双击安装包即可安装。
-   >
-   >     .. tab-item:: Linux
-   >
-   >         ::
-   >
-   >             $ bash Miniconda3-latest-Linux-x86_64.sh
-   >
-   >     .. tab-item:: macOS
-   >
-   >         ::
-   >
-   >             # Intel 芯片
-   >             $ bash Miniconda3-latest-MacOSX-x86_64.sh
-   >
-   >             # M1 芯片
-   >             $ bash Miniconda3-latest-MacOSX-arm64.sh
-   > ```
+    ::::{tab-set}
+
+    :::{tab-item} Windows
+    直接双击安装包即可安装。
+    :::
+
+    :::{tab-item} Linux
+    ```
+    $ bash Miniconda3-latest-Linux-x86_64.sh
+    ```
+    Content 2
+    :::
+
+    :::{tab-item} macOS
+    ```
+    # Intel 芯片
+    $ bash Miniconda3-latest-MacOSX-x86_64.sh
+    # M1 芯片
+    $ bash Miniconda3-latest-MacOSX-arm64.sh
+    ```
+    :::
+
+    ::::
 
    Miniconda 默认会安装到 {file}`${HOME}/miniconda3` 下，在安装过程中可以
    设置为其他路径。
@@ -90,37 +86,62 @@ Anaconda 内置的数百个软件包也都可以很容易通过 `conda` 安装�
    >>>
    ```
 
-## 使用 conda
+# 配置 `conda`
 
-Anaconda/Miniconda 中提供的 `conda` 命令可以用于安装 Python 包、管理虚拟环境，其详细用法见
-[conda 官方文档](https://docs.conda.io/projects/conda/en/latest/index.html)。
+Anaconda/Miniconda 中提供的 `conda` 命令可以用于安装 Python 包、管理虚拟环境，
 此外，也可以使用 Python 自带的工具 `pip` 来安装 Python 包，其详细用法见
 [pip 官方文档](https://pip.pypa.io/en/stable/)。我们建议尽可能使用 `conda` 来安装 Python 包，
 仅在 conda 没有提供需要的程序包时才使用 `pip` 来安装。
-以下仅介绍常用的命令。
 
-添加 conda 的第三方软件包源 conda-forge:
+在使用 `conda` 前需要对 `conda` 做简单的配置。
 
+[conda-forge](https://conda-forge.org/) 是一个由社区维护的大量 Python 包的通道。
+为 conda 增加 conda-forge 通道，可以安装更多的软件包：
 ```
 $ conda config --add channels conda-forge
 ```
 
-创建虚拟环境:
+设置通道优先级为 strict。当一个包同时位于 conda-forge 和 main 通道时，总是使用 conda-forge 提供的包，
+以避免混用 conda-forge 和 main 通道导致环境依赖关系解析变慢： 
+```
+$ conda config --set channel_priority true
+```
 
+显示通道 URL，以更清楚地知道每个包是从哪个通道安装的：
+```
+$ conda config --set show_channel_urls true
+```
+
+配置使用国内清华源以加快软件包下载速度：
+```
+$ conda config --add default_channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+$ conda config --set 'custom_channels.conda-forge' https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+```
+
+设置 `conda` 使用更快的 libmamab solver：
+```
+$ conda install -n base conda-libmamba-solver
+$ conda config --set solver libmamba
+```
+
+## 使用 conda
+
+以下仅介绍一些 `conda` 的常用命令，其详细用法见
+[conda 官方文档](https://docs.conda.io/projects/conda/en/latest/index.html)。
+
+创建虚拟环境:
 ```
 # 虚拟环境名为 seismo-learn，初始 Python 版本与 base 环境相同
 $ conda create --name seismo-learn
 ```
 
 激活虚拟环境:
-
 ```
 # 激活名为 seismo-learn 的虚拟环境
 $ conda activate seismo-learn
 ```
 
 取消激活当前虚拟环境:
-
 ```
 $ conda deactivate
 ```
@@ -134,73 +155,40 @@ $ conda config --set auto_activate_base False
 ```
 
 取消后，可以临时激活 base 环境:
-
 ```
 $ conda activate base
 ```
 
 重新激活此默认设置:
-
 ```
 $ conda config --set auto_activate_base True
 ```
 :::
 
 搜索模块:
-
 ```
 $ conda search numpy
 ```
 
 安装模块:
-
 ```
 $ conda install numpy
 ```
 
 更新模块:
-
 ```
 $ conda update numpy
 ```
 
 使用 pip 安装模块:
-
 ```
 $ pip install numpy
 ```
-
-## 使用 mamba
-
-conda 在解析依赖以及下载软件包时经常速度很慢。
-[mamba](https://github.com/mamba-org/mamba) 可以看做是 conda 的替代品，
-其解析依赖更高效，且可以多线程并行下载软件包，因而比 conda 快很多。
-
-**推荐所有用户使用 mamba 而非 conda！**
-
-安装 mamba:
-
-```
-$ conda install -c conda-forge 'mamba>=0.16'
-```
-
-mamba 几乎完全兼容 conda，因而将 conda 替换为 mamba 即可执行大部分 conda 命令。
-例如，使用 mamba 安装模块:
-
-```
-$ mamba install numpy
-```
-
-## 加速下载
-
-在中国使用 conda 或 pip 下载模块时，可能速度较慢，此时可考虑使用清华大学提供的 Anaconda 和 pypi
-镜像以实现加速（pypi 是 pip 默认的软件包下载源）。具体用法见:
-
-- <https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/>
-- <https://mirrors.tuna.tsinghua.edu.cn/help/pypi/>
 
 ## 参考文档
 
 - <https://docs.anaconda.com/anaconda/install/>
 - <https://conda.io/projects/conda/en/latest/user-guide/install/index.html>
 - <https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html>
+- <https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/>
+- <https://mirrors.tuna.tsinghua.edu.cn/help/pypi/>
