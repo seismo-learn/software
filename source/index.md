@@ -31,20 +31,13 @@
 :::
 
 :::{grid-item-card} 数据下载
-- [](hinetpy/index.md)
 - [](obspy/index.md)
 - [](sod/index.md)
 :::
 
 :::{grid-item-card} 数据处理
 - [](cps/index.md)
-- [](gmt/index.md)
 - [](obspy/index.md)
-- [](sac/index.md)
-:::
-
-:::{grid-item-card} 绘图
-- [](gmt/index.md)
 :::
 
 :::{grid-item-card} 实用工具
