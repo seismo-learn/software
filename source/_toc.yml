@@ -17,8 +17,6 @@ parts:
     - file: gcap3d/index
       sections:
         - file: gcap3d/intro
-    - file: gmt/index
-    - file: hinetpy/index
     - file: obspy/index
       sections:
         - file: obspy/intro
@@ -28,7 +26,6 @@ parts:
         - file: sod/intro
         - file: sod/install
         - file: sod/recipe
-    - file: sac/index
     - file: taup/index
       sections:
         - file: taup/intro
