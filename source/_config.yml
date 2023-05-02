@@ -25,9 +25,9 @@ parse:
     姚家园: "[姚家园](https://github.com/core-man)"
     王亮: "[王亮](https://github.com/wangliang1989)"
     赵志远: "[赵志远](https://github.com/zhaozhiyuan1989)"
-    Linux: "{fa}`linux;fa-brands`"
-    macOS: "{fa}`apple;fa-brands`"
-    Windows: "{fa}`windows;fa-brands`"
+    Linux: "{fab}`linux;fa-brands`"
+    macOS: "{fab}`apple;fa-brands`"
+    Windows: "{fab}`windows;fa-brands`"
 
 # HTML-specific settings
 html:
