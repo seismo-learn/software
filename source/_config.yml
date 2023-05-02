@@ -42,10 +42,6 @@ repository:
   path_to_book: source
   branch: main
 
-# Citation settings
-bibtex_bibfiles:
-  - references.bib
-
 # Advanced sphinx settings
 sphinx:
   config:
