@@ -22,7 +22,7 @@ OpenJDK 64-Bit Server VM (build 14.0.2+12-46, mixed mode, sharing)
 
 :::{tab-item} Fedora
 ```
-$ sudo yum install java-11-openjdk
+$ sudo yum install java-17-openjdk
 ```
 :::
 
