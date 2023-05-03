@@ -34,15 +34,6 @@ jobs:
           cache-downloads: true
           cache-env: true
 
-      - uses: actions/cache@v3
-        id: cache
-        with:
-          path: |
-            _build/jupyter_execute/
-            ~/.local/share/cartopy/
-            ~/.matplotlib/
-          key: caches
-
       - name: Disable notebook cache for scheduled jobs
         if: github.event_name == 'schedule'
         run: |
