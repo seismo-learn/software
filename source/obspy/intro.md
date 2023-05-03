@@ -11,7 +11,7 @@ ObsPy 是地震学数据处理的 Python 软件包，极大促进了地震学应
 
 ## 特色功能
 
-我们在日常的地震学科研工作中，需要下载、处理和分析波形数据，然后提取出有效的
+日常的地震学科研工作需要下载、处理和分析波形数据，然后提取出有效的
 观测物理量（如震相到时、振幅），用来反演震源和地下结构。下载、处理和分析波形数据的
 一般步骤如下：
 
@@ -44,7 +44,7 @@ ObsPy 是地震学数据处理的 Python 软件包，极大促进了地震学应
   <https://doi.org/10.1785/gssrl.81.3.530>
 - Megies, T., Beyreuther, M., Barsch, R., Krischer, L., & Wassermann, J. (2011).
   ObsPy – What can it do for data centers and observatories?
-  *Annals Of Geophysics*, 54(1), 47-58
+  *Annals Of Geophysics*, 54(1), 47-58.
   <https://doi.org/10.4401/ag-4838>
 - Krischer, L., Megies, T., Barsch, R., Beyreuther, M., Lecocq, T., Caudron, C., & Wassermann, J. (2015).
   ObsPy: a bridge for seismology into the scientific Python ecosystem.
@@ -52,5 +52,4 @@ ObsPy 是地震学数据处理的 Python 软件包，极大促进了地震学应
   <https://doi.org/10.1088/1749-4699/8/1/014003>
 
 此外，也可引用实际使用的 ObsPy 版本，
-如 ObsPy 1.3.0（[10.5281/zenodo.6327346](http://dx.doi.org/10.5281/zenodo.6327346)）。
-其他版本可查看[已发布的 ObsPy 版本](https://zenodo.org/search?ln=en&p=obspy&sort=mostrecent)。
+如 ObsPy 1.4.0（[10.5281/zenodo.6645832](https://doi.org/10.5281/zenodo.6645832)）。

@@ -8,15 +8,13 @@
 1. {doc}`安装并配置 Anaconda/Miniconda </anaconda/index>`
 
 2. 安装 ObsPy 及其依赖:
-
    ```
-   $ conda install obspy cartopy --channel conda-forge
+   $ conda install obspy cartopy
    ```
 
 3. 检查安装是否成功
 
-   终端键入以下命令，若出现 obspy 版本号则表示安装成功:
-
+   终端键入以下命令，若出现 ObsPy 版本号则表示安装成功:
    ```
    $ python -c "import obspy; print(obspy.__version__)"
    1.4.0
