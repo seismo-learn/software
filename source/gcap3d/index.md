@@ -1,17 +1,15 @@
----
-"\u4E3B\u9875": <http://www.eas.slu.edu/People/LZhu/home.html>
-"\u4F5C\u8005": '[Lupei Zhu](http://www.eas.slu.edu/People/LZhu/home.html)'
-"\u6700\u65B0\u7248\u672C": v1.2
-"\u6E90\u7801\u5730\u5740": <http://www.eas.slu.edu/People/LZhu/home.html>
-"\u7F16\u7A0B\u8BED\u8A00": "C\u3001Fortran\u3001Perl"
-"\u8BB8\u53EF\u534F\u8BAE": MIT
-"\u8F6F\u4EF6\u540D\u79F0": gCAP3D
-"\u9002\u7528\u5E73\u53F0": "Linux\u3001macOS"
----
-
 # gCAP3D
 
-______________________________________________________________________
+- 软件名称: gCAP3D
+- 主页: <http://www.eas.slu.edu/People/LZhu/home.html>
+- 作者: [Lupei Zhu](http://www.eas.slu.edu/People/LZhu/home.html)
+- 最新版本: v1.2
+- 源码地址: <http://www.eas.slu.edu/People/LZhu/home.html>
+- 许可协议: MIT
+- 适用平台: {{Linux}} {{macOS}}
+- 编程语言: C、Fortran、Perl
+
+---
 
 :::{note}
 gCAP3D v1.2 发布后，程序中的一些小问题被开发者修复，但并未更新版本号。
@@ -21,9 +19,3 @@ gCAP3D v1.2 发布后，程序中的一些小问题被开发者修复，但并�
 （下载于 2021-01-13，软件包中文件的最新日期为 2020-01-31）
 测试通过，其余版本或系统可能有所差异。
 :::
-
-```{toctree}
-:hidden: true
-
-intro
-```
