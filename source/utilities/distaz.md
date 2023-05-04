@@ -5,9 +5,7 @@
 
 ---
 
-```{eval-rst}
-.. include:: /snippets/install-notes.rst_
-```
+{{ install_notes }}
 
 `distaz` 是一个可以用于计算球面上任意两点间球面距离、方位角和反方位角的小工具。
 

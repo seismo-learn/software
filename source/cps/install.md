@@ -5,9 +5,7 @@
 
 ---
 
-```{eval-rst}
-.. include:: /snippets/install-notes.rst_
-```
+{{ install_notes }}
 
 1.  下载:
 

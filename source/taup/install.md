@@ -5,9 +5,7 @@
 
 ---
 
-```{eval-rst}
-.. include:: /snippets/install-notes.rst_
-```
+{{ install_notes }}
 
 1. {doc}`安装 Java 运行环境 </java/index>`
 

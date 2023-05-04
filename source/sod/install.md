@@ -3,9 +3,9 @@
 - 本节贡献者: {{ 田冬冬 }}（作者）、{{ 姚家园 }}（审稿）
 - 最近更新日期: 2020-12-30
 
-```{eval-rst}
-.. include:: /snippets/install-notes.rst_
-```
+---
+
+{{ install_notes }}
 
 1. {doc}`安装 Java 运行环境 </java/index>`
 
