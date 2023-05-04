@@ -46,7 +46,6 @@ Anaconda 内置的数百个软件包也都可以很容易通过 `conda` 安装�
     ```
     $ bash Miniconda3-latest-Linux-x86_64.sh
     ```
-    Content 2
     :::
 
     :::{tab-item} macOS
@@ -102,7 +101,7 @@ $ conda config --add channels conda-forge
 ```
 
 设置通道优先级为 strict。当一个包同时位于 conda-forge 和 main 通道时，总是使用 conda-forge 提供的包，
-以避免混用 conda-forge 和 main 通道导致环境依赖关系解析变慢： 
+以避免混用 conda-forge 和 main 通道导致环境依赖关系解析变慢：
 ```
 $ conda config --set channel_priority true
 ```
