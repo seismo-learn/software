@@ -30,14 +30,14 @@ parts:
       sections:
         - file: taup/intro
         - file: taup/install
-        - file: taup/taup_curve
-        - file: taup/taup_path
-        - file: taup/taup_setsac
-        - file: taup/taup_slowplot
-        - file: taup/taup_table
         - file: taup/taup_time
-        - file: taup/taup_velplot
+        - file: taup/taup_path
+        - file: taup/taup_curve
+        - file: taup/taup_setsac
         - file: taup/taup_wavefront
+        - file: taup/taup_slowplot
+        - file: taup/taup_velplot
+        - file: taup/taup_table
   - caption: 实用工具
     chapters:
       - file: utilities/distaz

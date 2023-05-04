@@ -52,9 +52,11 @@ $ bash taup_wavefront.gmt
 
 绘制出来的图件效果如下：
 
-```{image} taup_wavefront.jpg
+```{figure} taup_wavefront.jpg
 :align: center
 :width: 500 px
+
+`taup wavefront` 绘制波前面
 ```
 
 ## 进阶用法
@@ -72,9 +74,11 @@ $ bash taup_wavefront.gmt
 
 绘制出来的图件效果如下：
 
-```{image} taup_wavefront_ray20-time25.jpg
+```{figure} taup_wavefront_ray20-time25.jpg
 :align: center
 :width: 500 px
+
+`taup wavefront` 绘制波前面
 ```
 
 ## 波场动画
@@ -116,7 +120,9 @@ $ gm convert -delay 10 -density 150x150 taup_wavefront_*.pdf taup_wavefront.gif
 
 生成的动画如下图所示：
 
-```{image} taup_wavefront.gif
+```{figure} taup_wavefront.gif
 :align: center
 :width: 500 px
+
+`taup wavefront` 绘制波场传播动画
 ```
