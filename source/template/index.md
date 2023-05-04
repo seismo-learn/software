@@ -1,14 +1,14 @@
 # 教程模板
 
 - 软件名称: Template
-- 主页: <https://seismo-learn.org>
 - 作者: [seismo-learn](https://seismo-learn.org)
-- 源码地址: <https://github.com/seismo-learn/software>
+- 主页: <https://seismo-learn.org>
 - 官方文档: <https://seismo-learn.org/software/template/>
+- 源码地址: <https://github.com/seismo-learn/software>
 - 最新版本: v1.0.0 (2021-01-02)
-- 许可协议: GPL、LGPL、MIT、未知
 - 适用平台: {{Linux}} {{macOS}} {{Windows}}
 - 编程语言: Python、C
+- 许可协议: GPL、LGPL、MIT、未知
 
 ---
 

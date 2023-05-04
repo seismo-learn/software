@@ -6,8 +6,8 @@
 - 官方文档: <https://docs.obspy.org/>
 - 源码地址: <https://github.com/obspy/obspy>
 - 最新版本: ![GitHub release)](https://img.shields.io/github/v/release/obspy/obspy)
-- 编程语言: Python
 - 适用平台: {{Linux}} {{macOS}} {{Windows}}
+- 编程语言: Python
 - 许可协议: LGPL
 
 ---

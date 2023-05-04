@@ -1,9 +1,9 @@
 # CPS
 
 - 软件名称: Computer Programs in Seismology
+- 作者: [Robert B. Herrmann](https://www.eas.slu.edu/People/RBHerrmann/)
 - 主页: <http://www.eas.slu.edu/eqc/eqccps.html>
 - 官方文档: <http://www.eas.slu.edu/eqc/eqc_cps/CPS/CPS330.html>
-- 作者: [Robert B. Herrmann](https://www.eas.slu.edu/People/RBHerrmann/)
 - 最新版本: v3.30 (2022-11-08)
 - 适用平台: {{Linux}} {{macOS}} {{Windows}}
 - 编程语言: Fortran、C
