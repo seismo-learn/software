@@ -33,12 +33,15 @@ fk 中提供了如下几个命令和脚本。通常只需要调用 `fk.pl` 生�
 - Haskell, N. A. (1964).
   Radiation pattern of surface waves from point sources in a multi-layered medium.
   *Bulletin of the Seismological Society of America*, 54(1), 377–393.
+  <https://doi.org/10.1785/BSSA0540010377>
 - Takeuchi, H., & Saito, M. (1972).
   Seismic surface waves.
-  *Methods in computational physics*, 11, 217-295.
+  *Methods in Computational Physics: Advances in Research and Applications*, 11, 217-295.
+  <https://doi.org/10.1016/B978-0-12-460811-5.50010-6>
 - Wang, C. Y., & Herrmann, R. B. (1980).
   A numerical study of P-, SV-, and SH-wave generation in a plane layered medium.
   *Bulletin of the Seismological Society of America*, 70(4), 1015–1036.
+  <https://doi.org/10.1785/BSSA0700041015>
 - Zhu, L., & Rivera, L. A. (2002).
   A note on the dynamic and static displacements from a point source in multilayered media.
   *Geophysical Journal International*, 148(3), 619–627.

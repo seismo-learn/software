@@ -1,7 +1,7 @@
 # 简介
 
-- 最近更新日期: 2021-01-13
 - 本节贡献者: {{ 田冬冬 }}（作者）、{{ 姚家园 }}（审稿）
+- 最近更新日期: 2021-01-13
 
 ---
 
@@ -28,9 +28,11 @@ gCAP3D 中提供了如下几个命令和脚本：
 - Zhao, L. S., & Helmberger, D. V. (1994).
   Source estimation from broadband regional seismograms.
   *Bulletin of the Seismological Society of America*, 84(1), 91-104.
+  <https://doi.org/10.1785/BSSA0840010091>
 - Zhu, L., & Helmberger, D. V. (1996).
   Advancement in source estimation techniques using broadband regional seismograms.
   *Bulletin of the Seismological Society of America*, 86(5), 1634-1641.
+  <https://doi.org/10.1785/BSSA0860051634>
 - Zhu, L., & Ben-Zion, Y. (2013).
   Parametrization of general seismic potency and moment tensors for source inversion of seismic waveform data.
   *Geophysical Journal International*, 194(2), 839-843.
