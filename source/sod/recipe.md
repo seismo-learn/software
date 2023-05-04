@@ -76,58 +76,56 @@ Otherwise, SOD will consider any work in this database as already completed and 
 SOD 配置文件是一个 XML 格式的纯文本文件。可以用文本编辑器查看示例配置文件 {file}`demo.xml`，
 对配置文件结构和格式有个初步印象。
 
-```{eval-rst}
-.. dropdown:: :fa:`exclamation-circle,mr-1` XML 格式简介
-   :color: info
-   :icon: info
+:::{dropdown} XML 格式简介
 
-   XML 的全称是 E\ **x**\ tensible **M**\ arkup **L**\ anguage，即可扩展标记语言，
-   用来结构化、存储以及传输信息。这种文件格式是一种“树”状结构，从“根部”开始，不断扩展到“枝叶”。
-   一个简单的 XML 文件如下：
+XML 的全称是 E**x**tensible **M**arkup **L**anguage，即可扩展标记语言，
+用来结构化、存储以及传输信息。这种文件格式是一种“树”状结构，从“根部”开始，不断扩展到“枝叶”。
+一个简单的 XML 文件如下：
 
-   .. code-block:: xml
-
-       <?xml version="1.0"?>
-       <root>
-           <!-- this is a comment -->
-           <child>
-               <name>Child One</name>
-               <age>10</age>
-           </child>
-           <child>
-               <name>Child Two</name>
-               <age>8</age>
-           </child>
-           <printline/>
-       </root>
-
-   其中：
-
-   - ``<?xml version="1.0"?>`` 是 XML 声明，定义了 XML 的版本信息（``1.0``）
-   - ``<root>`` 和 ``</root>`` 是一个根标签的开始标签和关闭标签
-   - 标签可以嵌套多层，如 ``root`` 标签嵌套了一系列子标签
-   - 所有标签都必须有关闭标签
-   - 标签区分大小写
-   - 若某个标签中没有嵌套其他标签，则该标签可以简写为 ``<tagName/>`` 的形式，例如 ``<printline/>``
-   - ``<!-- -->`` 用于注释
+```xml
+<?xml version="1.0"?>
+<root>
+    <!-- this is a comment -->
+    <child>
+        <name>Child One</name>
+        <age>10</age>
+    </child>
+    <child>
+        <name>Child Two</name>
+        <age>8</age>
+    </child>
+    <printline/>
+</root>
 ```
+
+其中：
+
+- `<?xml version="1.0"?>` 是 XML 声明，定义了 XML 的版本信息（`1.0`）
+- `<root>` 和 `</root>` 是一个根标签的开始标签和关闭标签
+- 标签可以嵌套多层，如 `root` 标签嵌套了一系列子标签
+- 所有标签都必须有关闭标签
+- 标签区分大小写
+- 若某个标签中没有嵌套其他标签，则该标签可以简写为 `<tagName/>` 的形式，例如 `<printline/>`
+- `<!-- -->` 用于注释
+:::
 
 配置文件的根标签为 `sod`，根标签下有五个子标签，分别是：
 
-- `properties`：SOD 程序相关的属性配置【一般不用】
+- `properties`：SOD 程序相关的属性配置 [一般不用]
 - `eventArm`：事件筛选规则
 - `networkArm`：台站/通道筛选规则
 - `waveformArm`：波形数据筛选规则、下载和处理波形数据
-- `waveformVectorArm`：处理三分量波形数据【不常用】
+- `waveformVectorArm`：处理三分量波形数据 [不常用]
 
 通常我们只需要用到 `eventArm`、`networkArm`、`waveformArm` 。
 `eventArm` 和 `networkArm` 是互相独立的，
 而 `waveformArm` 则依赖于 `eventArm` 和 `networkArm`。
 
-```{image} http://www.seis.sc.edu/sod/images/documentation/tutorials/arm_overview.png
+```{figure} http://www.seis.sc.edu/sod/images/documentation/tutorials/arm_overview.png
 :align: center
-:alt: "SOD \u914D\u7F6E\u6587\u4EF6\u7684\u7ED3\u6784"
 :width: 50%
+
+SOD 配置文件的结构
 ```
 
 所有的配置文件都符合如下基本结构：
