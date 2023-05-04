@@ -5,9 +5,7 @@
 
 ---
 
-```{eval-rst}
-.. include:: /snippets/install-notes.rst_
-```
+{{ install_notes }}
 
 这一节将介绍如何在 Linux 和 macOS 上安装 XXX 软件。
 
