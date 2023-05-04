@@ -1,13 +1,12 @@
 # gCAP3D
 
 - 软件名称: gCAP3D
-- 主页: <http://www.eas.slu.edu/People/LZhu/home.html>
 - 作者: [Lupei Zhu](http://www.eas.slu.edu/People/LZhu/home.html)
+- 主页: <http://www.eas.slu.edu/People/LZhu/home.html>
 - 最新版本: v1.2
-- 源码地址: <http://www.eas.slu.edu/People/LZhu/home.html>
-- 许可协议: MIT
 - 适用平台: {{Linux}} {{macOS}}
 - 编程语言: C、Fortran、Perl
+- 许可协议: MIT
 
 ---
 

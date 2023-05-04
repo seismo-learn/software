@@ -1,8 +1,8 @@
 # fk
 
 - 软件名称: fk
-- 主页: <https://www.eas.slu.edu/People/LZhu/home.html>
 - 作者: [Lupei Zhu](https://www.eas.slu.edu/People/LZhu/home.html)
+- 主页: <https://www.eas.slu.edu/People/LZhu/home.html>
 - 最新版本: v3.4
 - 适用平台: {{Linux}} {{macOS}}
 - 编程语言: Fortran, C, Perl
