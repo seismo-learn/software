@@ -19,7 +19,7 @@ $ taup path -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP
 ```
 
 该命令会将射线路径信息以 GMT **plot** 或 **psxy** 命令可识别的格式输出到文件
-{file}`taup path.gmt` 中。
+{file}`taup_path.gmt` 中。
 
 可以使用 `-o` 选项指定输出的文件名或输出到标准输出（屏幕）。例如，下面的第一行命令
 会将射线路径输出到文件 {file}`raypath.gmt` 中，第二行会输出到屏幕上:
@@ -69,7 +69,7 @@ $ taup path -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP -svg
 
 ```
 $ taup path -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP -gmt
-$ sh taup_path.gmt
+$ bash taup_path.gmt
 ```
 
 :::{note}
@@ -79,7 +79,9 @@ $ sh taup_path.gmt
 
 绘制出来的图件效果如下：
 
-```{image} taup_path.jpg
+```{figure} taup_path.jpg
 :align: center
 :width: 400 px
+
+`taup path` 绘制的射线路径图
 ```

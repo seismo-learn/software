@@ -5,7 +5,7 @@
 
 ---
 
-`taup curve` 用于计算并绘制震相的走时曲线（走时—震中距关系曲线）。
+`taup curve` 用于计算并绘制震相的走时曲线（走时-震中距关系曲线）。
 
 ## 基本用法
 
@@ -69,7 +69,7 @@ $ taup_curve -h 300 -ph P,S,PcP,ScS,PKiKP -o stdout
 
 ```
 $ taup_curve -h 300 -ph P,S,PcP,ScS,PKiKP -gmt
-$ sh taup_curve.gmt
+$ bash taup_curve.gmt
 ```
 
 :::{note}
@@ -79,7 +79,9 @@ $ sh taup_curve.gmt
 
 绘制出来的图件效果如下：
 
-```{image} taup_curve.jpg
+```{figure} taup_curve.jpg
 :align: center
 :width: 400 px
+
+`taup curve` 绘制的震相走时曲线
 ```

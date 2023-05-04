@@ -50,6 +50,7 @@ TauP 的实现原理基于如下文献：
 - Buland, R., & Chapman, C. H. (1983).
   The computation of seismic travel times.
   *Bulletin of the Seismological Society of America*, 73(5), 1271–1302.
+  <https://doi.org/10.1785/BSSA0730051271>
 
 ## 引用
 

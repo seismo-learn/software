@@ -18,12 +18,14 @@ $ taup velplot -mod iasp91
 执行以上命令生成的脚本 {file}`iasp91_vel.gmt`，生成 PDF 格式的速度-深度剖面:
 
 ```
-$ sh iasp91_vel.gmt
+$ bash iasp91_vel.gmt
 ```
 
 绘制出来的图件效果如下（蓝线为 P 波速度，红线为 S 波速度）：
 
-```{image} taup_velplot.jpg
+```{figure} taup_velplot.jpg
 :align: center
 :width: 400 px
+
+`taup velplot` 绘制速度-深度剖面
 ```

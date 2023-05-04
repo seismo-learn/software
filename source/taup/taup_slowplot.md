@@ -29,14 +29,16 @@ $ taup slowplot -mod iasp91
 执行该命令会生成脚本 {file}`iasp91_slow.gmt`。执行该脚本即可生成 PDF 格式的速度模型图片:
 
 ```
-$ sh iasp91_slow.gmt
+$ bash iasp91_slow.gmt
 ```
 
 绘制出来的图件效果如下（图中蓝线为 P 波慢度，红线为 S 波慢度）：
 
-```{image} taup_slowplot.jpg
+```{figure} taup_slowplot.jpg
 :align: center
 :width: 400 px
+
+`taup slowplot` 绘制深度-慢度图
 ```
 
 例如，射线参数为 400 s/rad 的 P 波的折返深度约为 1500 km，因而无法采样到更深
