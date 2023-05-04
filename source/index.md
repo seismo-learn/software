@@ -15,6 +15,16 @@
 ::::{grid} 1 2 2 4
 :gutter: 4 4 3 3
 
+:::{grid-item-card} 数据下载
+- [](obspy/index.md)
+- [](sod/index.md)
+:::
+
+:::{grid-item-card} 数据处理
+- [](cps/index.md)
+- [](obspy/index.md)
+:::
+
 :::{grid-item-card} 震相走时
 - [](obspy/index.md)
 - [](taup/index.md)
@@ -28,16 +38,6 @@
 :::{grid-item-card} 震源机制反演
 - [](cps/index.md)
 - [](gcap3d/index.md)
-:::
-
-:::{grid-item-card} 数据下载
-- [](obspy/index.md)
-- [](sod/index.md)
-:::
-
-:::{grid-item-card} 数据处理
-- [](cps/index.md)
-- [](obspy/index.md)
 :::
 
 :::{grid-item-card} 实用工具
