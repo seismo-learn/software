@@ -28,11 +28,18 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup Micromamba
-        uses: mamba-org/provision-with-micromamba@v15
+        uses: mamba-org/setup-micromamba@v1.4.0
         with:
           environment-file: environment.yml
           cache-downloads: true
-          cache-env: true
+          cache-environment: true
+
+      - uses: actions/cache@v3
+        id: cache
+        with:
+          path: |
+            _build/jupyter_execute/
+          key: caches
 
       - name: Disable notebook cache for scheduled jobs
         if: github.event_name == 'schedule'
