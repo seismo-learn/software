@@ -21,7 +21,7 @@ kernelspec:
 SAC 零极点文件是一种常见的仪器响应格式。若有 SAC 零极点格式的仪器响应文件，
 则可以使用 {func}`obspy.io.sac.sacpz.attach_paz` 函数将对应的零极点文件添加到
 {class}`~obspy.core.trace.Trace` 的 `stats.paz` 属性中，再使用
-{meth}`obspy.core.trace.Trace.simulate` 函数去除仪器响应。
+{meth}`Trace.simulate <obspy.core.trace.Trace.simulate>` 函数去除仪器响应。
 
 首先准备一些示例所需的波形数据和 SAC 零极点文件：
 ```{code-cell} ipython3
@@ -60,7 +60,7 @@ attach_paz(tr, paz_file="IU.ANMO.00.BHZ.SACPZ")
 from pprint import pprint
 pprint(dict(tr.stats.paz))
 ```
-使用 {meth}`obspy.core.trace.Trace.simulate` 函数去除仪器响应：
+使用 {meth}`Trace.simulate <obspy.core.trace.Trace.simulate>` 函数去除仪器响应：
 ```{code-cell} ipython3
 tr.simulate(paz_remove=tr.stats.paz)
 ```
@@ -72,7 +72,8 @@ for tr in st:
     attach_paz(tr, paz_file=f"{tr.id}.SACPZ")
     tr.simulate(paz_remove=tr.stats.paz)
 ```
-也可以在为每个 `Trace` 附加 SAC 零极点文件后，调用 `Stream.simulate` 函数批量去除
+也可以在为每个 `Trace` 附加 SAC 零极点文件后，调用
+{meth}`Stream.simulate <obspy.core.stream.Stream.simulate>` 函数批量去除
 仪器响应：
 ```
 for tr in st:
