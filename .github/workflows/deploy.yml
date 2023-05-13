@@ -34,6 +34,13 @@ jobs:
           cache-downloads: true
           cache-environment: true
 
+      - uses: actions/cache@v3
+        id: cache
+        with:
+          path: |
+            _build/jupyter_execute/
+          key: caches
+
       - name: Disable notebook cache for scheduled jobs
         if: github.event_name == 'schedule'
         run: |
