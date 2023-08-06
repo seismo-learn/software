@@ -12,7 +12,7 @@
 :::::{tab-set}
 
 ::::{tab-item} Fedora
-Fedora 系统下，官方手册提供了[多种安装方式](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/)。
+Fedora 系统下，官方手册提供了[多种安装方式](https://www.intel.com/content/www/us/en/developer/articles/guide/installation-guide-for-oneapi-toolkits.html)。
 这里，我们推荐使用 ``dnf`` 安装。
 
 下载 {file}`.repo` 文件 {download}`oneapi.repo`，并将其放在 {file}`/etc/yum.repos.d` 目录下：
@@ -43,7 +43,7 @@ $ sudo -E dnf --disablerepo="*" --enablerepo="oneAPI" list available
 ::::
 
 ::::{tab-item} Ubuntu
-Ubuntu 系统下，官方手册提供了[多种安装方式](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/)。
+Ubuntu 系统下，官方手册提供了[多种安装方式](https://www.intel.com/content/www/us/en/developer/articles/guide/installation-guide-for-oneapi-toolkits.html)。
 这里，我们推荐使用 ``apt`` 安装。
 
 添加 Intel 软件仓库：
@@ -83,7 +83,7 @@ $ sudo -E apt-cache pkgnames intel
 ::::
 
 ::::{tab-item} macOS
-macOS 下，官方手册提供了[多种安装方式](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-macos/)。
+macOS 下，官方手册提供了[多种安装方式](https://www.intel.com/content/www/us/en/developer/articles/guide/installation-guide-for-oneapi-toolkits.html)。
 这里，我们下载离线安装包进行安装。
 
 根据自己的需要，从官网下载 [C/C++ 编辑器](https://software.intel.com/content/www/us/en/develop/articles/oneapi-standalone-components.html#compilerclassic)
