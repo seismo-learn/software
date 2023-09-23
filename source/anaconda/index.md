@@ -1,7 +1,7 @@
 # Anaconda/Miniconda
 
 - 本节贡献者: {{田冬冬}}（作者）、{{姚家园}}（审稿）
-- 最近更新时间：2023-04-30
+- 最近更新时间：2023-09-23
 
 ---
 
@@ -119,7 +119,6 @@ $ conda config --set 'custom_channels.conda-forge' https://mirrors.tuna.tsinghua
 
 设置 `conda` 使用更快的 libmamab solver：
 ```
-$ conda install -n base conda-libmamba-solver
 $ conda config --set solver libmamba
 ```
 
