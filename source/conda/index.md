@@ -63,16 +63,6 @@
 
    安装通常只需要十几秒，在安装的最后会出现:
    ```
-   To activate this environment, use:
-
-       micromamba activate /Users/seisman/opt/miniforge
-
-   Or to execute a single command in this environment, use:
-
-       micromamba run -p /Users/seisman/opt/miniforge mycommand
-
-   installation finished.
-
    Do you wish to update your shell profile to automatically initialize conda?
    This will activate conda on startup and change the command prompt when activated.
    If you'd prefer that conda's base environment not be activated on startup,
