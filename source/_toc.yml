@@ -50,7 +50,7 @@ parts:
           - file: template/intro
           - file: template/install
           - file: template/style
-      - file: anaconda/index
+      - file: conda/index
       - file: java/index
       - file: intel-oneapi/index
   - caption: 外部链接
