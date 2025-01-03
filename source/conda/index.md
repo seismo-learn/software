@@ -135,25 +135,6 @@ $ conda activate seismo-learn
 $ conda deactivate
 ```
 
-:::{note}
-安装 Anaconda/Miniconda 后，打开终端默认会激活 base 环境。不经常使用
-Python 的读者可以通过如下命令取消此默认设置:
-
-```
-$ conda config --set auto_activate_base False
-```
-
-取消后，可以临时激活 base 环境:
-```
-$ conda activate base
-```
-
-重新激活此默认设置:
-```
-$ conda config --set auto_activate_base True
-```
-:::
-
 搜索模块:
 ```
 $ conda search numpy
@@ -167,11 +148,6 @@ $ conda install numpy
 更新模块:
 ```
 $ conda update numpy
-```
-
-使用 pip 安装模块:
-```
-$ pip install numpy
 ```
 
 ## 参考文档
