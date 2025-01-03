@@ -9,7 +9,7 @@
 安装各种软件包。
 
 对于 Python 用户而言，其可以用于安装各种 Python 软件包并管理虚拟环境。建议所有 Python 用户使用
-`conda` 安装和管理 Python 环境，而不使用 Linux 或 macOS 系统自带的 Python。**
+`conda` 安装和管理 Python 环境，而不使用 Linux 或 macOS 系统自带的 Python。
 
 ## 安装
 
@@ -31,7 +31,7 @@
      [官方链接](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-x86_64.sh) |
      [清华镜像](https://mirrors.tuna.tsinghua.edu.cn/github-release/conda-forge/miniforge/LatestRelease/Miniforge3-MacOSX-x86_64.sh)
    - macOS (Apple Silicon 芯片):
-     [官方链接](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh)
+     [官方链接](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh) |
      [清华镜像](https://mirrors.tuna.tsinghua.edu.cn/github-release/conda-forge/miniforge/LatestRelease/Miniforge3-MacOSX-arm64.sh)
 
 2. 安装 Miniforge
@@ -97,11 +97,16 @@
    >>>
    ```
 
+4. 卸载 Miniforge
+
+   如果因为各种原因不想再使用 Miniforge 和 `conda`，可以直接删除 Miniforge 整个安装目录。
+   在 Linux/macOS 下默认是 {file}`${HOME}/miniforge3`。
+
 # 配置 `conda`
 
 `conda` 命令可以用于安装 Python 包、管理虚拟环境，此外，也可以使用 Python 自带的工具 `pip` 来安装
 Python 包，其详细用法见 [pip 官方文档](https://pip.pypa.io/en/stable/)。我们建议尽可能使用 `conda`
-来安装 Python 包，仅在 conda 没有提供需要的程序包时才使用 `pip` 来安装。
+来安装 Python 包，仅在 `conda` 没有提供需要的程序包时才使用 `pip` 来安装。
 
 在使用 `conda` 前可以配置使用国内清华源以加快软件包下载速度：
 ```
