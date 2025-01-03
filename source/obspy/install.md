@@ -5,7 +5,7 @@
 
 ---
 
-1. {doc}`安装并配置 Anaconda/Miniconda </anaconda/index>`
+1. {doc}`安装并配置 conda </conda/index>`
 
 2. 安装 ObsPy 及其依赖:
    ```
