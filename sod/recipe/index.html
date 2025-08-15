@@ -1,0 +1,741 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>配置文件 &#8212; 地震“学”软件</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=55b5f74b"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=61152374"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'sod/recipe';</script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="TauP" href="../../taup/" />
+    <link rel="prev" title="安装" href="../install/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">地震“学”软件</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../">
+                    地震”学”软件
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">软件</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../cps/">CPS</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cps/intro/">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cps/install/">安装</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../fk/">fk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../fk/intro/">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fk/install/">安装</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../gcap3d/">gCAP3D</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../gcap3d/intro/">简介</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../obspy/">ObsPy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../obspy/intro/">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../obspy/install/">安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../obspy/instrument-response/">仪器响应</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../">SOD</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../intro/">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/">安装</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">配置文件</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../taup/">TauP</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../taup/intro/">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../taup/install/">安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../taup/taup_time/">taup time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../taup/taup_path/">taup path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../taup/taup_curve/">taup curve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../taup/taup_setsac/">taup setsac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../taup/taup_wavefront/">taup wavefront</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../taup/taup_slowplot/">taup slowplot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../taup/taup_velplot/">taup velplot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../taup/taup_table/">taup table</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">实用工具</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/distaz/">distaz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/saclst/">saclst</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">附录</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../template/">教程模板</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../template/intro/">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../template/install/">安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../template/style/">风格指南</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../conda/">conda</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../java/">Java 运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intel-oneapi/">Intel OneAPI 软件开发工具包</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">外部链接</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://seismo-learn.org/">地震“学”主站</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://seismo-learn.org/contributing/">贡献指南</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/orgs/seismo-learn/discussions">参与讨论</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/seismo-learn/software" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/seismo-learn/software/edit/main/source/sod/recipe.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/seismo-learn/software/issues/new?title=Issue%20on%20page%20%2Fsod/recipe.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/sod/recipe.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>配置文件</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">初识配置文件</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">运行第一个配置文件</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sod">SOD 数据库文件</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">配置文件结构</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>配置文件<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>本节贡献者: <a class="reference external" href="https://me.seisman.info/">田冬冬</a>（作者）、<a class="reference external" href="https://github.com/core-man">姚家园</a>（作者）</p></li>
+<li><p>最近更新日期: 2022-08-16</p></li>
+</ul>
+<hr class="docutils" />
+<p>运行 SOD 需要使用配置文件（称为 recipe），是一个 XML 格式的纯文本文件，其定义了数据筛选和处理的一系列规则。
+在终端输入以下命令，即可按照配置文件（假设文件名为 <code class="file docutils literal notranslate"><span class="pre">recipe.xml</span></code>）定义的规则下载数据:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sod -f recipe.xml
+</pre></div>
+</div>
+<section id="id2">
+<h2>初识配置文件<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h3>运行第一个配置文件<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>在终端中执行以下命令，会生成一个名为 <code class="file docutils literal notranslate"><span class="pre">demo.xml</span></code> 的配置文件示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sod --demo -r &gt; demo.xml
+</pre></div>
+</div>
+<p>执行以下命令，运行该配置文件（大约需要一分钟）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sod -f demo.xml
+Congratulations, valid recipe.
+262 km WNW of Haveluloto, Tonga (-20.6, -177.7) 378 km 2003/01/04 05:15:03 UTC 6.5 mwc
+25 km WSW of Bolitoc, Philippines (15.7, 119.7) 10 km 2003/01/06 23:43:50 UTC 6.0 mwb
+...
+...
+Channel: II.AAK.00.BHE
+Channel: II.AAK.00.BHN
+Channel: II.AAK.00.BHZ
+...
+...
+Got 1 seismograms for II.AAK.00.BHE for eq on 2003/01/06 23:43:50 UTC
+Got 1 seismograms for II.ARU.00.BHE for eq on 2003/01/06 23:43:50 UTC
+...
+...
+</pre></div>
+</div>
+<p>运行后，可以看到一系列输出信息：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Congratulations,</span> <span class="pre">valid</span> <span class="pre">recipe.</span></code> 表明当前配置文件可以使用</p></li>
+<li><p>事件信息，如 <code class="docutils literal notranslate"><span class="pre">262</span> <span class="pre">km</span> <span class="pre">WNW</span> <span class="pre">of</span> <span class="pre">Haveluloto,</span> <span class="pre">Tonga</span> <span class="pre">(-20.6,</span> <span class="pre">-177.7)</span></code></p></li>
+<li><p>通道信息，如 <code class="docutils literal notranslate"><span class="pre">Channel:</span> <span class="pre">II.AAK.00.BHE</span></code></p></li>
+<li><p>获取地震波形信息，如 <code class="docutils literal notranslate"><span class="pre">Got</span> <span class="pre">1</span> <span class="pre">seismograms</span> <span class="pre">for</span> <span class="pre">II.AAK.00.BHE</span></code></p></li>
+</ul>
+<p>下载的地震波形数据保存在 <code class="file docutils literal notranslate"><span class="pre">seismograms</span></code> 目录中，每个地震事件的波形数据则默认保存在以发震
+发震时刻命名的目录中。</p>
+</section>
+<section id="sod">
+<h3>SOD 数据库文件<a class="headerlink" href="#sod" title="Link to this heading">#</a></h3>
+<p>每次执行 SOD 时，SOD 还会在当前目录生成一些日志文件（文件名以 <code class="docutils literal notranslate"><span class="pre">log</span></code> 为后缀）和一个数据库文件夹 <code class="file docutils literal notranslate"><span class="pre">SodDb</span></code>。
+这些日志文件记录了 SOD 的运行和报错信息。数据库文件夹里的数据库文件中包含了单次运行时的全部信息，
+如选中了哪些事件、哪些台站、事件台站对所对应的波形，也包含了哪些数据已经下载、哪些数据尚未下载的信息。</p>
+<p>在下载数据过程中，若 SOD 意外退出，或由于网络等问题某些数据未成功下载，仍可重新执行 SOD 命令，
+继续下载那些尚未被下载的数据，即实现断点续传的功能，这是因为数据库记录了哪些数据已经下载、
+哪些数据尚未下载。再次运行 SOD 时，会有以下提示：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">database</span> <span class="k">for</span> <span class="n">this</span> <span class="n">run</span><span class="p">,</span> <span class="n">SodDb</span><span class="o">/</span><span class="n">SodDb</span><span class="o">.</span><span class="n">log</span> <span class="n">appears</span> <span class="n">to</span> <span class="n">already</span> <span class="n">exist</span><span class="o">.</span>
+<span class="n">This</span> <span class="ow">is</span> <span class="n">fine</span> <span class="k">if</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">restart</span> <span class="n">a</span> <span class="n">run</span> <span class="n">that</span> <span class="n">crashed</span><span class="p">,</span> <span class="n">but</span> <span class="k">if</span> <span class="n">you</span> <span class="n">are</span> <span class="n">trying</span> <span class="n">to</span>
+<span class="n">start</span> <span class="n">a</span> <span class="n">fresh</span> <span class="n">SOD</span> <span class="n">run</span><span class="p">,</span> <span class="n">you</span> <span class="n">may</span> <span class="n">wish</span> <span class="n">to</span> <span class="n">delete</span> <span class="n">this</span> <span class="n">database</span> <span class="n">directory</span> <span class="n">first</span><span class="o">.</span>
+<span class="n">Otherwise</span><span class="p">,</span> <span class="n">SOD</span> <span class="n">will</span> <span class="n">consider</span> <span class="nb">any</span> <span class="n">work</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">database</span> <span class="k">as</span> <span class="n">already</span> <span class="n">completed</span> <span class="ow">and</span> <span class="n">will</span> <span class="ow">not</span> <span class="n">redo</span> <span class="n">it</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>若修改了当前目录中的配置文件，再次运行 SOD 前，建议删除上一次运行时生成的数据库文件夹 <code class="file docutils literal notranslate"><span class="pre">SodDb</span></code>。</p>
+</section>
+</section>
+<section id="id4">
+<h2>配置文件结构<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>SOD 配置文件是一个 XML 格式的纯文本文件。可以用文本编辑器查看示例配置文件 <code class="file docutils literal notranslate"><span class="pre">demo.xml</span></code>，
+对配置文件结构和格式有个初步印象。</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">XML 格式简介</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">XML 的全称是 E<strong>x</strong>tensible <strong>M</strong>arkup <strong>L</strong>anguage，即可扩展标记语言，
+用来结构化、存储以及传输信息。这种文件格式是一种“树”状结构，从“根部”开始，不断扩展到“枝叶”。
+一个简单的 XML 文件如下：</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;root&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- this is a comment --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;child&gt;</span>
+<span class="w">        </span><span class="nt">&lt;name&gt;</span>Child<span class="w"> </span>One<span class="nt">&lt;/name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;age&gt;</span>10<span class="nt">&lt;/age&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/child&gt;</span>
+<span class="w">    </span><span class="nt">&lt;child&gt;</span>
+<span class="w">        </span><span class="nt">&lt;name&gt;</span>Child<span class="w"> </span>Two<span class="nt">&lt;/name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;age&gt;</span>8<span class="nt">&lt;/age&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/child&gt;</span>
+<span class="w">    </span><span class="nt">&lt;printline/&gt;</span>
+<span class="nt">&lt;/root&gt;</span>
+</pre></div>
+</div>
+<p class="sd-card-text">其中：</p>
+<ul class="simple">
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">&lt;?xml</span> <span class="pre">version=&quot;1.0&quot;?&gt;</span></code> 是 XML 声明，定义了 XML 的版本信息（<code class="docutils literal notranslate"><span class="pre">1.0</span></code>）</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">&lt;root&gt;</span></code> 和 <code class="docutils literal notranslate"><span class="pre">&lt;/root&gt;</span></code> 是一个根标签的开始标签和关闭标签</p></li>
+<li><p class="sd-card-text">标签可以嵌套多层，如 <code class="docutils literal notranslate"><span class="pre">root</span></code> 标签嵌套了一系列子标签</p></li>
+<li><p class="sd-card-text">所有标签都必须有关闭标签</p></li>
+<li><p class="sd-card-text">标签区分大小写</p></li>
+<li><p class="sd-card-text">若某个标签中没有嵌套其他标签，则该标签可以简写为 <code class="docutils literal notranslate"><span class="pre">&lt;tagName/&gt;</span></code> 的形式，例如 <code class="docutils literal notranslate"><span class="pre">&lt;printline/&gt;</span></code></p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">--&gt;</span></code> 用于注释</p></li>
+</ul>
+</div>
+</details><p>配置文件的根标签为 <code class="docutils literal notranslate"><span class="pre">sod</span></code>，根标签下有五个子标签，分别是：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code>：SOD 程序相关的属性配置 [一般不用]</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventArm</span></code>：事件筛选规则</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkArm</span></code>：台站/通道筛选规则</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">waveformArm</span></code>：波形数据筛选规则、下载和处理波形数据</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">waveformVectorArm</span></code>：处理三分量波形数据 [不常用]</p></li>
+</ul>
+<p>通常我们只需要用到 <code class="docutils literal notranslate"><span class="pre">eventArm</span></code>、<code class="docutils literal notranslate"><span class="pre">networkArm</span></code>、<code class="docutils literal notranslate"><span class="pre">waveformArm</span></code> 。
+<code class="docutils literal notranslate"><span class="pre">eventArm</span></code> 和 <code class="docutils literal notranslate"><span class="pre">networkArm</span></code> 是互相独立的，
+而 <code class="docutils literal notranslate"><span class="pre">waveformArm</span></code> 则依赖于 <code class="docutils literal notranslate"><span class="pre">eventArm</span></code> 和 <code class="docutils literal notranslate"><span class="pre">networkArm</span></code>。</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="http://www.seis.sc.edu/sod/images/documentation/tutorials/arm_overview.png"><img alt="http://www.seis.sc.edu/sod/images/documentation/tutorials/arm_overview.png" src="http://www.seis.sc.edu/sod/images/documentation/tutorials/arm_overview.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">SOD 配置文件的结构</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>所有的配置文件都符合如下基本结构：</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;sod&gt;</span>
+<span class="w">    </span><span class="nt">&lt;properties&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- sod 属性，很少使用 --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/properties&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;eventArm&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- eventArm 全部内容 --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/eventArm&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;networkArm&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- networkArm 全部内容 --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/networkArm&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;waveformArm&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- waveformArm 全部内容 --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/waveformArm&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;waveformVectorArm&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- waveformVectorArm 全部内容 --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/waveformVectorArm&gt;</span>
+<span class="nt">&lt;/sod&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./sod"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../install/"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">安装</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../taup/"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">TauP</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">初识配置文件</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">运行第一个配置文件</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sod">SOD 数据库文件</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">配置文件结构</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By seismo-learn
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2020–2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
