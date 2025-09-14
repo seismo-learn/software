@@ -1,0 +1,774 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>taup time &#8212; 地震“学”软件</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=55b5f74b"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=61152374"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'taup/taup_time';</script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="taup path" href="../taup_path/" />
+    <link rel="prev" title="安装" href="../install/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">地震“学”软件</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../">
+                    地震”学”软件
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">软件</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../cps/">CPS</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cps/intro/">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cps/install/">安装</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../fk/">fk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../fk/intro/">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fk/install/">安装</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../gcap3d/">gCAP3D</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../gcap3d/intro/">简介</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../obspy/">ObsPy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../obspy/intro/">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../obspy/install/">安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../obspy/instrument-response/">仪器响应</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../sod/">SOD</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../sod/intro/">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sod/install/">安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sod/recipe/">配置文件</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../">TauP</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../intro/">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/">安装</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">taup time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../taup_path/">taup path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../taup_curve/">taup curve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../taup_setsac/">taup setsac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../taup_wavefront/">taup wavefront</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../taup_slowplot/">taup slowplot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../taup_velplot/">taup velplot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../taup_table/">taup table</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">实用工具</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/distaz/">distaz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/saclst/">saclst</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">附录</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../template/">教程模板</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../template/intro/">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../template/install/">安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../template/style/">风格指南</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../conda/">conda</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../java/">Java 运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intel-oneapi/">Intel OneAPI 软件开发工具包</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">外部链接</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://seismo-learn.org/">地震“学”主站</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://seismo-learn.org/contributing/">贡献指南</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/orgs/seismo-learn/discussions">参与讨论</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/seismo-learn/software" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/seismo-learn/software/edit/main/source/taup/taup_time.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/seismo-learn/software/issues/new?title=Issue%20on%20page%20%2Ftaup/taup_time.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/taup/taup_time.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>taup time</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">基本用法</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">输出格式</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">信息提取</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">走时</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">射线参数</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="taup-time">
+<h1>taup time<a class="headerlink" href="#taup-time" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>本节贡献者: <a class="reference external" href="https://me.seisman.info/">田冬冬</a>（作者）、<a class="reference external" href="https://github.com/core-man">姚家园</a>（审稿）</p></li>
+<li><p>最近更新日期: 2021-05-31</p></li>
+</ul>
+<hr class="docutils" />
+<p><code class="docutils literal notranslate"><span class="pre">taup</span> <span class="pre">time</span></code> 命令可用于计算震相走时、射线参数、出射角、入射角等信息。</p>
+<section id="id1">
+<h2>基本用法<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>使用 <code class="docutils literal notranslate"><span class="pre">taup</span> <span class="pre">time</span> <span class="pre">--help</span></code> 可查询该命令的完整用法和选项，此处仅介绍常用用法。</p>
+<p>计算震源深度为 300 km，震中距 60° 处，P、S、PcP、ScS、PKiKP 震相的走时信息:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup time -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-h</span></code>：震源深度（单位 km），默认深度为 0.0 km。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-deg</span></code>：震中距（单位 °）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-ph</span></code>：以逗号分隔的震相名</p></li>
+</ul>
+<p>TauP 默认使用 iasp91 模型，可以使用 <code class="docutils literal notranslate"><span class="pre">-mod</span></code> 选项设置其他 TauP 预定义速度模型:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup time -mod prem -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP
+$ taup time -mod ak135 -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP
+</pre></div>
+</div>
+<p>TauP 默认台站位于地表，可使用 <code class="docutils literal notranslate"><span class="pre">--stadepth</span></code> 选项设置台站深度（单位为 km）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup time -h 300 -deg 60 --stadepth 0.5 -ph P,S,PcP,ScS,PKiKP
+</pre></div>
+</div>
+<p>若已知震源和台站位置，也可以使用 <code class="docutils literal notranslate"><span class="pre">-evt</span></code> 和 <code class="docutils literal notranslate"><span class="pre">-sta</span></code> 选项分别指定震源和台站的
+纬度和经度。例如，震源位于 (40 °N，10 °E)，台站位于 (20 °S，10 °W):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup time -h 300 -evt 40 10 -sta -20 -10 -ph P,S,PcP,ScS,PKiKP
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>使用 <code class="docutils literal notranslate"><span class="pre">-evt</span></code> 和 <code class="docutils literal notranslate"><span class="pre">-sta</span></code> 选项时，<code class="docutils literal notranslate"><span class="pre">taup</span> <span class="pre">time</span></code> 会假设地球是完美球体，
+来计算震源和台站的震中距，这会产生一定的误差。例如，根据以上参数
+<code class="docutils literal notranslate"><span class="pre">taup</span> <span class="pre">time</span></code> 计算得到的震中距约为 62.83°，P 波初至到时为 594.27 秒。
+而 ObsPy 的
+<a class="reference external" href="https://docs.obspy.org/packages/autogen/obspy.geodetics.base.gps2dist_azimuth.html#obspy.geodetics.base.gps2dist_azimuth">gps2dist_azimuth</a>
+函数计算得到的震中距约为 6959 km （采用 WGS84 椭球：赤道半径 6378.1370 km、
+扁率约为 0.0033528106647474805），在半径为 6371 km 的完美球状地球上约为 62.585°
+（利用 <a class="reference external" href="https://docs.obspy.org/packages/autogen/obspy.geodetics.base.kilometers2degrees.html#obspy.geodetics.base.kilometers2degrees">kilometers2degrees</a>
+函数计算得到），使用 62.585° 直接计算的 P 波初至到时为 592.64 秒，二者相差 1.63 秒。</p>
+</div>
+<p>在震中距比较小的情况下，可以使用 <code class="docutils literal notranslate"><span class="pre">-km</span></code> 选项指定震中距（单位为 km）。
+比如计算震源深度为 5 km，震中距 100 km 处，P、S、PcP、ScS、PKiKP 震相的走时信息:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup time -h 5 -km 100 -ph P,S,PcP,ScS,PKiKP
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>输出格式<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>下面的命令计算了 PREM 模型下，震源深度 100 km，震中距 60° 处，P 和 pP 震相的走时信息。
+其输出为:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup time -mod prem -h 100 -deg 60 -ph P,pP
+
+Model: prem
+Distance   Depth   Phase   Travel    Ray Param  Takeoff  Incident  Purist    Purist
+  (deg)     (km)   Name    Time (s)  p (s/deg)   (deg)    (deg)   Distance   Name
+-----------------------------------------------------------------------------------
+   60.00   100.0   P        595.40     6.815     30.14    20.82    60.00   = P
+   60.00   100.0   pP       618.89     6.890    149.49    21.06    60.00   = pP
+</pre></div>
+</div>
+<p>输出共 9 列，从左到右分别为：</p>
+<ol class="arabic">
+<li><p>震中距（度）：地震震中与台站的大圆弧路径长度</p></li>
+<li><p>震源深度（km）</p></li>
+<li><p>震相名</p></li>
+<li><p>震相走时（秒）</p></li>
+<li><p>射线参数（秒/度）</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>射线参数有三种常用单位：秒/度（s/deg ）、秒/弧度（s/radian）、秒/千米（s/km）。
+三者之间的关系为（<span class="math notranslate nohighlight">\(R_0\)</span> 为地球半径，假设为 6371 km）：</p>
+<div class="math notranslate nohighlight">
+\[
+1 s/deg = \frac{1}{\pi*R_0/180} s/km = 1/111.19492 s/km
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+1 s/deg = \frac{1}{\pi/180} s/radian = 57.29578 s/radian
+\]</div>
+</div>
+</li>
+<li><p>出射角（度）：即射线从震源出射时与<strong>垂直向下</strong>方向的夹角，取值范围为 0 到 180°。</p>
+<ul class="simple">
+<li><p>0° 到 90° 表示射线向下出射（例如 P 震相）</p></li>
+<li><p>90° 到 180° 表示射线向上出射（例如 pP 震相)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>不同文章对出射角的定义不同，使用时应格外注意。</p>
+<p>老版本的 TauP 对出射角的定义不同，可视为 BUG，应避免使用老版本 TauP。</p>
+</div>
+</li>
+<li><p>入射角（度）：射线入射到台站时与<strong>垂直向上</strong>方向的夹角。</p></li>
+<li><p>Purist 距离：地震波实际走过的圆弧距离。</p>
+<p>该值可能与震中距不同，例如 50° 震中距处记录到的 PKKKP 震相，实际走过的
+圆弧距离为 410°:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup time -deg 50 -ph PKKKP
+
+Model: iasp91
+Distance   Depth   Phase   Travel    Ray Param  Takeoff  Incident  Purist    Purist
+  (deg)     (km)   Name    Time (s)  p (s/deg)   (deg)    (deg)   Distance   Name
+-----------------------------------------------------------------------------------
+  50.00     0.0   PKKKP   2519.56     2.242      6.72     6.72   410.00   = PKKKP
+</pre></div>
+</div>
+</li>
+<li><p>Purist 震相名：地震波的“真实”震相名。</p>
+<p>例如，若想要计算 SS 震相在 660 km 不连续面的下表面的反射波走时，可指定其震相名为
+<code class="docutils literal notranslate"><span class="pre">S^660S</span></code>。由于 PREM 模型中 660 km 不连续面的“真实”深度为 670 km，此时
+TauP 实际返回的时从 670 km 处反射回的震相，此时 Purist 震相名会显示为 <code class="docutils literal notranslate"><span class="pre">S^670S</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup time -mod prem -deg 120 -ph S^660S
+
+Model: prem
+Distance   Depth   Phase    Travel    Ray Param  Takeoff  Incident  Purist    Purist
+  (deg)     (km)   Name     Time (s)  p (s/deg)   (deg)    (deg)   Distance   Name
+------------------------------------------------------------------------------------
+  120.00     0.0   S^660S   1975.75    12.336     20.79    20.79   120.00   * S^670S
+</pre></div>
+</div>
+</li>
+</ol>
+<p>可以使用 <code class="docutils literal notranslate"><span class="pre">--rel</span></code> 选项输出相对于某个指定震相的走时差。例如，
+下面的命令中，最后一列输出了所有震相相对于 PcP 震相的走时差:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup time -mod prem -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP --rel PcP
+
+Model: prem
+Distance   Depth   Phase   Travel    Ray Param  Takeoff  Incident  Purist    Purist Relative to
+  (deg)     (km)   Name    Time (s)  p (s/deg)   (deg)    (deg)   Distance   Name       PcP
+-----------------------------------------------------------------------------------------------
+   60.00   300.0   P        574.72     6.739     33.65    20.58    60.00   = P      -42.32
+   60.00   300.0   PcP      617.05     4.016     19.28    12.09    60.00   = PcP      0.00
+   60.00   300.0   PKiKP    993.45     1.245      5.88     3.72    60.00   = PKiKP  376.41
+   60.00   300.0   S       1043.98    12.659     34.16    21.37    60.00   = S      426.93
+   60.00   300.0   ScS     1134.89     7.480     19.38    12.43    60.00   = ScS    517.85
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>信息提取<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>上面介绍的输出中包含了很多信息，想要在脚本中提取出想要的信息有些麻烦。所以
+<code class="docutils literal notranslate"><span class="pre">taup</span> <span class="pre">time</span></code> 提供了一些选项，使得在脚本中计算走时、射线参数更加方便。</p>
+<section id="id4">
+<h3>走时<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">--time</span></code> 选项使得输出中只包含走时信息，并且小数点的位数更多:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup time -mod prem -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP --time
+574.7245 617.047 993.4524 1043.9805 1134.8923
+</pre></div>
+</div>
+<p>需要注意的是，输出的走时不是按照 <code class="docutils literal notranslate"><span class="pre">-ph</span></code> 选项中震相的顺序进行排序的，
+而是按照走时递增的顺序排序。比如这里，S 震相放在震相列表的第二位，
+而 S 震相的走时 1043.9805 却放在第四位。</p>
+</section>
+<section id="id5">
+<h3>射线参数<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">--rayp</span></code> 选项使得输出中只包含射线参数信息，并且小数点的位数更多:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ taup time -mod prem -h 300 -deg 60 -ph P,S,PcP,ScS,PKiKP --rayp
+6.739042 4.0158706 1.2450149 12.65922 7.480467
+</pre></div>
+</div>
+<p>此时，输出的射线参数是按照 <code class="docutils literal notranslate"><span class="pre">-ph</span></code> 选项中震相的顺序进行排序的。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">--rayp</span></code> 和 <code class="docutils literal notranslate"><span class="pre">--time</span></code> 选项不能一起使用。
+当两个选项同时使用时，会以后出现的选项为准。</p>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./taup"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../install/"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">安装</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../taup_path/"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">taup path</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">基本用法</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">输出格式</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">信息提取</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">走时</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">射线参数</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By seismo-learn
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2020–2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
