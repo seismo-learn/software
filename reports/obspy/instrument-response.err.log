@@ -1,0 +1,100 @@
+Traceback (most recent call last):
+  File "/home/runner/micromamba/envs/seismo-learn/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/runner/micromamba/envs/seismo-learn/lib/python3.11/site-packages/nbclient/client.py", line 1323, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/micromamba/envs/seismo-learn/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/micromamba/envs/seismo-learn/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/micromamba/envs/seismo-learn/lib/python3.11/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/home/runner/micromamba/envs/seismo-learn/lib/python3.11/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/runner/micromamba/envs/seismo-learn/lib/python3.11/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from obspy import UTCDateTime
+from obspy.clients.fdsn import Client
+from obspy.clients.iris.client import Client as irisClient
+
+starttime=UTCDateTime("2022-09-22T06:18:00")
+
+# 下载 IU.ANMO 台站的三分量波形数据
+client = Client("IRIS")
+st = client.get_waveforms("IU", "ANMO", "00", "BH?", starttime, starttime + 720)
+
+# 下载 IU.ANMO 台站三分量对应的 SAC 零极点文件
+irisclient = irisClient()
+irisclient.sacpz("IU", "ANMO", "00", "BH1", starttime, filename="IU.ANMO.00.BH1.SACPZ")
+irisclient.sacpz("IU", "ANMO", "00", "BH2", starttime, filename="IU.ANMO.00.BH2.SACPZ")
+irisclient.sacpz("IU", "ANMO", "00", "BHZ", starttime, filename="IU.ANMO.00.BHZ.SACPZ")
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mModuleNotFoundError[39m                       Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m [38;5;28;01mfrom[39;00m obspy [38;5;28;01mimport[39;00m UTCDateTime
+[32m      2[39m [38;5;28;01mfrom[39;00m obspy.clients.fdsn [38;5;28;01mimport[39;00m Client
+[32m      3[39m [38;5;28;01mfrom[39;00m obspy.clients.iris.client [38;5;28;01mimport[39;00m Client [38;5;28;01mas[39;00m irisClient
+[32m      4[39m 
+
+[36mFile [39m[32m~/micromamba/envs/seismo-learn/lib/python3.11/site-packages/obspy/__init__.py:33[39m
+[32m     30[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01msys[39;00m
+[32m     32[39m [38;5;66;03m# don't change order[39;00m
+[32m---> [39m[32m33[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mobspy[39;00m[34;01m.[39;00m[34;01mcore[39;00m[34;01m.[39;00m[34;01mutcdatetime[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m UTCDateTime  [38;5;66;03m# NOQA[39;00m
+[32m     34[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mobspy[39;00m[34;01m.[39;00m[34;01mcore[39;00m[34;01m.[39;00m[34;01mutil[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m _get_version_string
+[32m     35[39m __version__ = _get_version_string(abbrev=[32m10[39m)
+
+[36mFile [39m[32m~/micromamba/envs/seismo-learn/lib/python3.11/site-packages/obspy/core/__init__.py:120[39m
+[32m     12[39m [33;03m"""[39;00m
+[32m     13[39m [33;03mobspy.core - Core classes of ObsPy[39;00m
+[32m     14[39m [33;03m==================================[39;00m
+[32m   (...)[39m[32m    117[39m [33;03m.. _NumPy: http://www.numpy.org[39;00m
+[32m    118[39m [33;03m"""[39;00m
+[32m    119[39m [38;5;66;03m# don't change order[39;00m
+[32m--> [39m[32m120[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mobspy[39;00m[34;01m.[39;00m[34;01mcore[39;00m[34;01m.[39;00m[34;01mutcdatetime[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m UTCDateTime  [38;5;66;03m# NOQA[39;00m
+[32m    121[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mobspy[39;00m[34;01m.[39;00m[34;01mcore[39;00m[34;01m.[39;00m[34;01mutil[39;00m[34;01m.[39;00m[34;01mattribdict[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m AttribDict  [38;5;66;03m# NOQA[39;00m
+[32m    122[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mobspy[39;00m[34;01m.[39;00m[34;01mcore[39;00m[34;01m.[39;00m[34;01mtrace[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m Stats, Trace  [38;5;66;03m# NOQA[39;00m
+
+[36mFile [39m[32m~/micromamba/envs/seismo-learn/lib/python3.11/site-packages/obspy/core/utcdatetime.py:21[39m
+[32m     18[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mwarnings[39;00m
+[32m     20[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m
+[32m---> [39m[32m21[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mobspy[39;00m[34;01m.[39;00m[34;01mcore[39;00m[34;01m.[39;00m[34;01mutil[39;00m[34;01m.[39;00m[34;01mdeprecation_helpers[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m ObsPyDeprecationWarning
+[32m     24[39m [38;5;66;03m# based on https://www.myintervals.com/blog/2009/05/20/iso-8601, w/ week 53 fix[39;00m
+[32m     25[39m _ISO8601_REGEX = re.compile([33mr[39m[33m"""[39m
+[32m     26[39m [33m    ^[39m
+[32m     27[39m [33m    ([[39m[33m\[39m[33m+-]?[39m[33m\[39m[33md[39m[38;5;132;01m{4}[39;00m[33m(?![39m[33m\[39m[33md[39m[38;5;132;01m{2}[39;00m[33m\[39m[33mb))[39m
+[32m   (...)[39m[32m     40[39m [33m    $[39m
+[32m     41[39m [33m    [39m[33m"""[39m, re.VERBOSE)
+
+[36mFile [39m[32m~/micromamba/envs/seismo-learn/lib/python3.11/site-packages/obspy/core/util/__init__.py:22[39m
+[32m     20[39m [38;5;66;03m# import order matters - NamedTemporaryFile must be one of the first![39;00m
+[32m     21[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mobspy[39;00m[34;01m.[39;00m[34;01mcore[39;00m[34;01m.[39;00m[34;01mutil[39;00m[34;01m.[39;00m[34;01mattribdict[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m AttribDict
+[32m---> [39m[32m22[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mobspy[39;00m[34;01m.[39;00m[34;01mcore[39;00m[34;01m.[39;00m[34;01mutil[39;00m[34;01m.[39;00m[34;01mbase[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m (ALL_MODULES, DEFAULT_MODULES,
+[32m     23[39m                                   NATIVE_BYTEORDER, NETWORK_MODULES,
+[32m     24[39m                                   NamedTemporaryFile, _read_from_plugin,
+[32m     25[39m                                   create_empty_data_chunk, get_example_file,
+[32m     26[39m                                   get_script_dir_name, MATPLOTLIB_VERSION,
+[32m     27[39m                                   SCIPY_VERSION, NUMPY_VERSION,
+[32m     28[39m                                   CARTOPY_VERSION, CatchAndAssertWarnings)
+[32m     29[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mobspy[39;00m[34;01m.[39;00m[34;01mcore[39;00m[34;01m.[39;00m[34;01mutil[39;00m[34;01m.[39;00m[34;01mmisc[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m (BAND_CODE, CatchOutput, complexify_string,
+[32m     30[39m                                   guess_delta, score_at_percentile,
+[32m     31[39m                                   to_int_or_zero, SuppressOutput)
+[32m     32[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mobspy[39;00m[34;01m.[39;00m[34;01mcore[39;00m[34;01m.[39;00m[34;01mutil[39;00m[34;01m.[39;00m[34;01mobspy_types[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m (ComplexWithUncertainties, Enum,
+[32m     33[39m                                          FloatWithUncertainties)
+
+[36mFile [39m[32m~/micromamba/envs/seismo-learn/lib/python3.11/site-packages/obspy/core/util/base.py:26[39m
+[32m     23[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mpathlib[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m PurePath
+[32m     25[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m
+[32m---> [39m[32m26[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mpkg_resources[39;00m
+[32m     27[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mpkg_resources[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m get_entry_info, iter_entry_points
+[32m     29[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mobspy[39;00m[34;01m.[39;00m[34;01mcore[39;00m[34;01m.[39;00m[34;01mutil[39;00m[34;01m.[39;00m[34;01mmisc[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m to_int_or_zero, buffered_load_entry_point
+
+[31mModuleNotFoundError[39m: No module named 'pkg_resources'
+
