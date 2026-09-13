@@ -1,0 +1,18 @@
+diff --git a/Makefile b/Makefile
+index 5676245..11aac94 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,9 +1,10 @@
++FC=gfortran
+ optimize=-O
+-FFLAGS=$(optimize) -ffpe-trap=overflow,invalid,denormal
++FFLAGS=$(optimize) -ffpe-trap=overflow,invalid,denormal -ffixed-line-length-none
+ CFLAGS=$(optimize)
+ #if SAC library has been installed, uncomment the next two lines
+-#CFLAGS=$(optimize) -DSAC_LIB
+-#SACLIB=-L$(SACHOME)/lib -lsac -lsacio
++CFLAGS=$(optimize) -DSAC_LIB
++SACLIB=-L$(SACHOME)/lib -lsac -lsacio
+ #
+ 
+ SUBS = fft.o Complex.o sacio.o
